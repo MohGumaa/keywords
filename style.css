@@ -158,15 +158,26 @@ body {
 }
 
 .button {
-  display: initial;
+  display: inline-flex;
   background: #32b39e;
   color: #fff;
-  padding: 4px 12px;
+  padding: 0 9px;
   border-radius: 24px;
   box-shadow: 0px 1px 0px 0px #dcdcdc;
+  align-items: center;
+  justify-content: center;
 }
 
 .shap-one {
-  border: 1px solid #5bc2b1;
+  border: 1px solid #1f9a86;
   box-shadow: 0 2px 5px 0 rgba(213, 217, 217, 0.5);
+}
+
+.button-text {
+  line-height: initial;
+}
+
+.button-text-2 {
+  line-height: 18px;
+  font-size: 16px;
 }
