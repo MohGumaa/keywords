@@ -167,6 +167,12 @@ body {
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  opacity: 1;
+  transition: 0.15s ease-in-out;
+}
+
+.button:hover {
+  opacity: 0.9;
 }
 
 .shap-one {
@@ -203,4 +209,12 @@ body {
 
 .btn-yellow.shap-one {
   border-color: #fcd200;
+}
+
+.fa-cart-plus {
+  font-size: 16px;
+}
+
+.bi-cart-check-fill {
+  font-size: 17px;
 }
