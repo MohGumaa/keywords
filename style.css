@@ -229,4 +229,9 @@ body {
   .button-text-2 {
     line-height: initial;
   }
+
+  .text-arabic {
+    line-height: 10px;
+    height: 5px;
+  }
 }
