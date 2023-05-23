@@ -13,13 +13,16 @@ p {
   color: #0f1111;
 }
 
+.button-shape {
+  transform: translate(120%);
+}
+
 .active-ar {
   border-radius: 24px;
   box-shadow: 0px 1px 0px 0px #dcdcdc;
   color: white;
   padding: 0px 8px;
   text-transform: capitalize;
-  font-size: 16px;
 }
 
 .active-ar:hover {
