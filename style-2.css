@@ -32,3 +32,14 @@ p {
 .active-ar.yellow-btn {
   color: #141416;
 }
+
+@media screen and (max-width: 600px) {
+  .active-ar {
+    padding: 3px 8px;
+  }
+
+  .active-ar .text {
+    line-height: 10px;
+    height: 5px;
+  }
+}
