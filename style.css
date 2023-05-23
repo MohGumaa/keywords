@@ -208,6 +208,10 @@ body {
   color: #0f1111;
 }
 
+.btn-yellow:hover {
+  color: #0f1111;
+}
+
 .btn-yellow.shap-one {
   border-color: #fcd200;
 }
