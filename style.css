@@ -134,6 +134,10 @@ body {
   font-size: 16px;
 }
 
+.active:hover {
+  color: #fff;
+}
+
 .active.yellow-btn {
   color: #141416;
 }
