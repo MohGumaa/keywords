@@ -118,7 +118,9 @@
           <a class="p-2 link-secondary" href="version-three.html"
             >النسخة الثالثة تأثير</a
           >
-          <a class="p-2 link-secondary" href="version-four.html">النسخة الرابعة</a>
+          <a class="p-2 link-secondary" href="version-four.html"
+            >النسخة الرابعة</a
+          >
           <a class="p-2 link-secondary" href="#">ثقافة</a>
           <a class="p-2 link-secondary" href="#">أعمال</a>
           <a class="p-2 link-secondary" href="#">سياسة</a>
@@ -472,9 +474,10 @@
             <a
               href="https://jubna.com"
               target="_blank"
-              class="button text-decoration-none"
-              ><span class="button-text-2" title="شراء"
-                ><span class="text-arabic">كريم شان</span
+              class="new-button text-decoration-none"
+              id="targetText"
+              ><span class="text" title="شراء"
+                ><span class="text-value">شان Shann</span
                 ><svg
                   width="16"
                   height="16"
@@ -505,8 +508,10 @@
                       <rect width="18" height="18" fill="white" />
                     </clipPath>
                   </defs>
-                </svg> </span
-            ></a>
+                </svg>
+              </span>
+              <span class="new-button-after" id="shap-btn"></span>
+            </a>
             يبلغ 120 جنيه.
           </p>
           <p>قد يهمك: 8 طرق منزلية لعلاج جفاف البشرة في فصل الشتاء</p>
@@ -541,5 +546,28 @@
       integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
       crossorigin="anonymous"
     ></script>
+
+    <script>
+      window.addEventListener("scroll", function () {
+        const targetText = document.getElementById("targetText");
+        const shapBtn = document.getElementById("shap-btn");
+        const SVGBTN = document.querySelector(".new-button svg");
+        const targetPosition = targetText.getBoundingClientRect();
+        const windowHeight = window.innerHeight;
+
+        // Check if the target text is within the viewport
+        if (targetPosition.top >= 0 && targetPosition.bottom <= windowHeight) {
+          // console.log(shapBtn);
+          setTimeout(() => {
+            shapBtn.style.transform = "translate(0%)";
+            targetText.classList.add("active");
+            SVGBTN.style.display = "inline-flex";
+            // console.log(SVGBTN);rr
+          }, 50);
+        } else {
+          console.log("none");
+        }
+      });
+    </script>
   </body>
 </html>
