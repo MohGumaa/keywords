@@ -270,16 +270,24 @@
             problem, without the stress of the medical costs affecting your
             life’s savings.
           </p>
-          <p>
+          <p id="paragraph">
             Though a medical condition is not certain, it is probable given the
             sedentary lifestyle and environment we live in. So, having
             sufficient health insurance as a part of your financial plan is
             extremely important and should effectively top the list of your
             financial planning agenda. This will help you from facing any
-            financial crunch. Further, any financial goal can be efficiently met
-            if you have good health associated with it. Thus, choosing the right
-            health insurance plan with adequate coverage benefit goes a long way
-            in your current and future well-being. Additionally, procuring a
+            <a
+              href="#"
+              target="_blank"
+              class="text-decoration-none btn-amazon"
+              id="amazon-1"
+              ><span>financial crunch</span
+              ><span class="price-text"> (buy from amazon 120)</span>
+              <span class="shape-amazon"></span> </a
+            >. Further, any financial goal can be efficiently met if you have
+            good health associated with it. Thus, choosing the right health
+            insurance plan with adequate coverage benefit goes a long way in
+            your current and future well-being. Additionally, procuring a
             suitable medical insurance policy early in your career can go a long
             way in mitigating your financial risk arising out of health
             concerns.
@@ -405,7 +413,7 @@
             sufficient health insurance as a part of your financial plan is
             extremely important and should effectively top the list of your
             financial planning agenda. This will help you from facing any
-            financial crunch. Further, any financial goal can be efficiently met
+            financial-crunch. Further, any financial goal can be efficiently met
             if you have good health associated with it. Thus, choosing the right
             health insurance plan with adequate coverage benefit goes a long way
             in your current and future well-being. Additionally, procuring a
@@ -482,6 +490,26 @@
         const textFour = document.querySelector("#key-4 .text");
         const iconFour = document.querySelector("#key-4 .bi");
 
+        const amazonOne = document.getElementById("amazon-1");
+        const amazonOnePosition = amazonOne.getBoundingClientRect();
+        const priceOne = document.querySelector("#amazon-1 .price-text");
+        const amazonShapeOne = document.querySelector(
+          "#amazon-1 .shape-amazon"
+        );
+
+        if (
+          amazonOnePosition.top < middleOfViewport &&
+          amazonOnePosition.bottom > middleOfViewport
+        ) {
+          setTimeout(() => {
+            amazonOne.classList.add("amazon-active");
+            amazonShapeOne.style.transform = "translate(0%)";
+            priceOne.style.display = "inline-flex";
+          }, 500);
+        }
+
+        // Other
+
         if (
           keyOnePosition.top < middleOfViewport &&
           keyOnePosition.bottom > middleOfViewport
@@ -527,6 +555,17 @@
           }, 500);
         }
       });
+    </script>
+
+    <script>
+      // const keyword = "financial crunch";
+      // const paragraph = document.getElementById("paragraph").innerHTML;
+      // const modifiedParagraph = paragraph.replace(
+      //   new RegExp(keyword, "gi"),
+      //   '<strong class="highlighted">$&</strong>'
+      // );
+      // console.log(modifiedParagraph);
+      // document.getElementById("paragraph").innerHTML = modifiedParagraph;
     </script>
   </body>
 </html>
