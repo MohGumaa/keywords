@@ -23,6 +23,7 @@ p {
   color: white;
   padding: 0px 8px;
   text-transform: capitalize;
+  font-weight: 500;
 }
 
 .active-ar:hover {

@@ -407,18 +407,12 @@
             ShapeOne.style.transform = "translate(0%)";
             svgOne.style.display = "inline-flex";
           }, 500);
-        } else if (
-          keyOnePosition.top < middleOfViewport &&
-          keyOnePosition.bottom > middleOfViewport
-        ) {
-          setTimeout(() => {
-            keyOne.classList.add("active-ar");
-            ShapeOne.style.transform = "translate(0%)";
-            svgOne.style.display = "inline-flex";
-          }, 500);
         }
 
-        if (keyTwoPosition.top >= 0 && keyTwoPosition.bottom <= windowHeight) {
+        if (
+          keyTwoPosition.top < middleOfViewport &&
+          keyTwoPosition.bottom > middleOfViewport
+        ) {
           setTimeout(() => {
             keyTwo.classList.add("active-ar");
             ShapeTwo.style.transform = "translate(0%)";

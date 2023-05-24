@@ -211,7 +211,7 @@
               href="https://jubna.com"
               target="_blank"
               class="button text-decoration-none yellow-btn"
-              id="key-3"
+              id="key-2"
               ><span class="button-item" title="Buy"
                 ><span class="text">health</span
                 ><svg
@@ -246,7 +246,7 @@
                   </defs>
                 </svg>
               </span>
-              <span class="button-shape yellow" id="btn-shape-3"></span>
+              <span class="button-shape yellow" id="btn-shape-2"></span>
             </a>
             insurance connects you to a network of doctors, specialists,
             hospitals, and clinics. By having health insurance, you can select
@@ -300,7 +300,7 @@
                   href="https://jubna.com"
                   target="_blank"
                   class="button text-decoration-none"
-                  id="key-2"
+                  id="key-3"
                   ><span class="button-item" title="Buy"
                     ><span class="text">medical emergency</span
                     ><svg
@@ -335,7 +335,7 @@
                       </defs>
                     </svg>
                   </span>
-                  <span class="button-shape" id="btn-shape-2"></span>
+                  <span class="button-shape" id="btn-shape-3"></span>
                 </a>
                 can have the potential to squeeze out all your funds in one go.
                 This is because nothing is more critical than your life and the
@@ -407,6 +407,7 @@
       window.addEventListener("scroll", function () {
         const windowHeight = window.innerHeight;
         const middleOfViewport = windowHeight / 2;
+
         const keyOne = document.getElementById("key-1");
         const keyOnePosition = keyOne.getBoundingClientRect();
         const ShapeOne = document.getElementById("btn-shape-1");
@@ -433,18 +434,12 @@
             ShapeOne.style.transform = "translate(0%)";
             svgOne.style.display = "inline-flex";
           }, 500);
-        } else if (
-          keyOnePosition.top < middleOfViewport &&
-          keyOnePosition.bottom > middleOfViewport
-        ) {
-          setTimeout(() => {
-            keyOne.classList.add("active");
-            ShapeOne.style.transform = "translate(0%)";
-            svgOne.style.display = "inline-flex";
-          }, 500);
         }
 
-        if (keyTwoPosition.top >= 0 && keyTwoPosition.bottom <= windowHeight) {
+        if (
+          keyTwoPosition.top < middleOfViewport &&
+          keyTwoPosition.bottom > middleOfViewport
+        ) {
           setTimeout(() => {
             keyTwo.classList.add("active");
             ShapeTwo.style.transform = "translate(0%)";
