@@ -355,9 +355,9 @@
                 some form or the other. Under Section 80D of the Income Tax Act,
                 1961, you can claim an exemption of up to ₹25,000 on the medical
                 insurance premium paid for self, spouse, and children. Further,
-                additional health insurance benefit can be claimed up to ₹25,000
-                for parents less than 60 years and ₹50,000 for those above the
-                age of 60 years.</span
+                additional health benefit can be claimed up to ₹25,000 for
+                parents less than 60 years and ₹50,000 for those above the age
+                of 60 years.</span
               >
             </li>
           </ol>
@@ -370,6 +370,56 @@
             various plans and their features before availing the right health
             insurance plan for you and your family post considering your needs,
             budget, and income.
+          </p>
+          <p>
+            condition can result in a hefty bill that could potentially drain
+            your savings. However, with health insurance, you gain access to
+            negotiated rates with healthcare providers, ensuring you pay
+            significantly less for medical services, medications, and
+            treatments.
+          </p>
+          <p>
+            It is a common saying that “Health is Wealth”! And especially when
+            lifestyle diseases such as cardiovascular ailments, cancer,
+            diabetes, high blood pressure, respiratory diseases are on the rise,
+            having a health insurance plan is a must. Healthcare costs have
+            skyrocketed, and
+            <a
+              href="https://jubna.com"
+              target="_blank"
+              class="button text-decoration-none py-0 button-caret"
+              id="key-4"
+              ><span class="button-item" title="Buy"
+                ><span class="text">medical insurance</span>
+                <i class="bi bi-caret-right small"></i>
+              </span>
+              <span class="button-shape" id="btn-shape-4"></span>
+            </a>
+            offers you a solution to this problem, without the stress of the
+            medical costs affecting your life’s savings.
+          </p>
+          <h5 class="mt-5 fs-semibold">Access to Quality Healthcare:</h5>
+          <p>
+            Though a medical condition is not certain, it is probable given the
+            sedentary lifestyle and environment we live in. So, having
+            sufficient health insurance as a part of your financial plan is
+            extremely important and should effectively top the list of your
+            financial planning agenda. This will help you from facing any
+            financial crunch. Further, any financial goal can be efficiently met
+            if you have good health associated with it. Thus, choosing the right
+            health insurance plan with adequate coverage benefit goes a long way
+            in your current and future well-being. Additionally, procuring a
+            suitable medical insurance policy early in your career can go a long
+            way in mitigating your financial risk arising out of health
+            concerns.
+          </p>
+          <p>
+            any financial goal can be efficiently met if you have good health
+            associated with it. Thus, choosing the right health insurance plan
+            with adequate coverage benefit goes a long way in your current and
+            future well-being. Additionally, procuring a suitable medical
+            insurance policy early in your career can go a long way in
+            mitigating your financial risk arising out of health concerns.
           </p>
         </div>
         <div class="col-md-4">
@@ -425,6 +475,13 @@
         const ShapeThree = document.getElementById("btn-shape-3");
         const svgThree = document.querySelector("#key-3 svg");
 
+        // Key Four
+        const keyFour = document.getElementById("key-4");
+        const keyFourPosition = keyFour.getBoundingClientRect();
+        const ShapeFour = document.getElementById("btn-shape-4");
+        const textFour = document.querySelector("#key-4 .text");
+        const iconFour = document.querySelector("#key-4 .bi");
+
         if (
           keyOnePosition.top < middleOfViewport &&
           keyOnePosition.bottom > middleOfViewport
@@ -455,6 +512,18 @@
             keyThree.classList.add("active");
             ShapeThree.style.transform = "translate(0%)";
             svgThree.style.display = "inline-flex";
+          }, 500);
+        }
+
+        if (
+          keyFourPosition.top < middleOfViewport &&
+          keyFourPosition.bottom > middleOfViewport
+        ) {
+          setTimeout(() => {
+            ShapeFour.style.transform = "translate(0%)";
+            keyFour.classList.add("active");
+            textFour.classList.add("border-end", "pe-1");
+            iconFour.style.display = "inline-flex";
           }, 500);
         }
       });

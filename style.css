@@ -130,14 +130,37 @@ body {
   color: white;
   padding: 2px 7px;
   text-transform: capitalize;
+  opacity: 1;
+  transition: all 0.5s ease;
 }
 
 .active:hover {
   color: #fff;
+  opacity: 0.85;
 }
 
 .active.yellow-btn {
   color: #141416;
+}
+
+.fs-12 {
+  font-size: 12px;
+}
+
+.button-caret.active .button-item {
+  column-gap: 0;
+}
+
+.button-caret.active .text {
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
+.bi-caret-right {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
 }
 
 @media screen and (max-width: 600px) {
