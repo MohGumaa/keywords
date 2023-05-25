@@ -170,10 +170,20 @@ body {
   padding: 4.5px 4px;
 }
 
+.svg-size {
+  width: 18px;
+  height: 18px;
+}
+
 /* Mobile */
 @media screen and (max-width: 600px) {
   body {
     font-size: 16px;
     line-height: 2;
+  }
+
+  .svg-size {
+    width: 16px;
+    height: 16px;
   }
 }

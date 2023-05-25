@@ -15,8 +15,14 @@ p {
 
 .text-height {
   height: 16px;
+  line-height: 16px;
 }
 
 .button-highlight:hover {
   color: white;
+}
+
+.fa-chevron-right,
+.fa-chevron-left {
+  margin-top: 0.5px;
 }
