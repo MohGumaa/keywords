@@ -340,14 +340,14 @@
       const modifiedParagraphOne = paragraphOne.innerHTML.replace(
         new RegExp(keywordOne, "gi"),
         `<a href="#" target="_blank"class="text-decoration-none"id="amazon-1">
-      <span>$&</span>
-      <span>(اشترالآن مقابل 45 جنيهًا)</span>
-    </a>`
+          <span class="text-height">$&</span>
+          <span>(اشترالآن مقابل 45 جنيهًا)</span>
+        </a>`
       );
       const modifiedParagraphTwo = paragraphTwo.innerHTML.replace(
         new RegExp(keywordTwo, "gi"),
         `<a href="#" target="_blank"class="text-decoration-none"id="amazon-2">
-          <span>$&</span>
+          <span class="text-height">$&</span>
           <span>(اشترالآن مقابل 70 جنيهًا)</span>
         </a>`
       );
@@ -364,13 +364,13 @@
       const modifiedParagraphCartOne = paragraphCartOne.innerHTML.replace(
         new RegExp(keywordCartOne, "gi"),
         `<a href="#" target="_blank"class="text-decoration-none button flex-gap"id="cart-1">
-          <span>$&</span>${SVGICON}<span class="button-shape"></span>
+          <span class="text-height">$&</span>${SVGICON}<span class="button-shape"></span>
         </a>`
       );
       const modifiedParagraphCartTwo = paragraphCartTwo.innerHTML.replace(
         new RegExp(keywordCartTwo, "gi"),
         `<a href="#" target="_blank"class="text-decoration-none button flex-gap"id="cart-2">
-          <span>$&</span>${SVGICONBlack}<span class="button-shape yellow"></span>
+          <span class="text-height">$&</span>${SVGICONBlack}<span class="button-shape yellow"></span>
         </a>`
       );
       paragraphCartOne.innerHTML = modifiedParagraphCartOne;
@@ -386,18 +386,18 @@
       const modifiedParagraphArrowOne = paragraphArrowOne.innerHTML.replace(
         new RegExp(keywordArrowOne, "gi"),
         `<a href="#" target="_blank"class="text-decoration-none button"id="arrow-1">
-      <span class="text">$&</span>
-      <i class="bi bi-caret-left-fill"></i>
-      <span class="button-shape"></span>
-    </a>`
+          <span class="text text-height">$&</span>
+          <i class="bi bi-caret-left-fill"></i>
+          <span class="button-shape"></span>
+        </a>`
       );
       const modifiedParagraphArrowTwo = paragraphArrowTwo.innerHTML.replace(
         new RegExp(keywordArrowTwo, "gi"),
         `<a href="#" target="_blank"class="text-decoration-none button"id="arrow-2">
-      <span class="text">$&</span>
-      <i class="bi bi-caret-left-fill"></i>
-      <span class="button-shape yellow"></span>
-    </a>`
+          <span class="text text-height">$&</span>
+          <i class="bi bi-caret-left-fill"></i>
+          <span class="button-shape yellow"></span>
+        </a>`
       );
 
       paragraphArrowOne.innerHTML = modifiedParagraphArrowOne;
@@ -411,10 +411,10 @@
       const modifiedParagraphPlusOne = paragraphPlusOne.innerHTML.replace(
         new RegExp(keywordPlusOne, "gi"),
         `<a href="#" target="_blank"class="text-decoration-none button flex-gap"id="plus-1">
-      <span class="text">$&</span>
-      <i class="fa-solid fa-plus p-0"></i>
-      <span class="button-shape yellow"></span>
-    </a>`
+          <span class="text text-height">$&</span>
+          <i class="fa-solid fa-plus p-0"></i>
+          <span class="button-shape yellow"></span>
+        </a>`
       );
 
       paragraphPlusOne.innerHTML = modifiedParagraphPlusOne;
@@ -427,7 +427,7 @@
       const modifiedParagraphChevronOne = paragraphChevronOne.innerHTML.replace(
         new RegExp(keywordChevronOne, "gi"),
         `<a href="#" target="_blank"class="text-decoration-none button flex-gap"id="chevron-1">
-          <span class="text">$&</span>
+          <span class="text text-height">$&</span>
           <i class="fa-solid fa-chevron-left"></i>
           <span class="button-shape"></span>
         </a>`

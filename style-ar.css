@@ -13,9 +13,13 @@ p {
   transform: translate(150%);
 }
 
-.button-highlight {
-  padding: 1.5px 8px;
+.text-height {
+  height: 16px;
 }
+
+/* .button-highlight {
+  padding: 1.5px 8px;
+} */
 
 /* .button-highlight {
   padding-top: 2px;
