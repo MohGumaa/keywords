@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Keywords Deducation</title>
+    <title>تحديد الكلمات</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -25,7 +25,7 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
     />
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="style-2.css" />
+    <link rel="stylesheet" href="style-ar.css" />
   </head>
   <body>
     <div class="container mb-3">
@@ -130,6 +130,7 @@
         </nav>
       </div>
     </div>
+
     <div class="container">
       <h1>بالأسماء والأسعار.. أفضل 5 كريمات مرطبة للبشرة في الشتاء</h1>
       <div class="row mt-5">
@@ -149,16 +150,16 @@
             الجلد، بالإضافة إلى الشعور المستمر بالحكة.
           </p>
           <p>
-            اقرأ أيضًا: هاني الناظر يوضح كيفية الحفاظ على صحة الجلد في الشتاء
+            اقرأ أيضًا: هاني الناظر يوضح كيفية الحفاظ على صحة الجلد في الشتاء.
           </p>
-          <p>
+          <p id="amazonOne">
             وجفاف البشرة في الشتاء يمكن علاجه بمجموعة من الكريمات المرطبة ،
             يستعرضها "الكونسلتو" في التقرير التالي، وفقًا للدكتور محمد رضوان،
             مفتش صيدلي بوزارة الصحة والسكان. قد يهمك: أخطرهم الصدفية.. 4 أمراض
-            جلدية يسببها جفاف البشرة في فصل الشتاء
+            جلدية يسببها جفاف البشرة في فصل الشتاء.
           </p>
-          <h5>كريمات لعلاج جفاف البشرة في الشتاء</h5>
-          <p>
+          <h5 class="mt-5">كريمات لعلاج جفاف البشرة في الشتاء:</h5>
+          <p id="cartOne">
             <strong>1- بانثينول </strong>
           </p>
           <p>
@@ -167,167 +168,32 @@
             على نسبة عالية من فيتامين B5.
           </p>
           <p>
-            ويساهم
-            <a
-              href="https://jubna.com"
-              target="_blank"
-              class="button text-decoration-none"
-              id="key-1"
-              ><span class="button-item" title="Buy"
-                ><span class="text">كريم بانثينول</span
-                ><svg
-                  width="16"
-                  height="16"
-                  viewBox="0 0 18 18"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <g clip-path="url(#clip0_120_7899)">
-                    <path
-                      d="M9.46732 0.793274C10.0454 0.792867 10.6235 0.792867 11.2017 0.793274C11.2021 1.66044 11.2012 2.52761 11.2021 3.39477C12.0692 3.39518 12.9364 3.39437 13.8036 3.39518C13.804 3.97329 13.8036 4.5514 13.8036 5.12911C12.9364 5.13033 12.0688 5.1287 11.2017 5.12992C11.2021 5.99709 11.2017 6.86425 11.2017 7.73101C10.6235 7.73142 10.0454 7.73142 9.46732 7.73101C9.46732 6.86425 9.46691 5.99709 9.46732 5.12992C8.60015 5.1287 7.73258 5.13033 6.86542 5.12911C6.86542 4.55099 6.86501 3.97329 6.86542 3.39518C7.73258 3.39437 8.59975 3.39518 9.46691 3.39477C9.46773 2.52761 9.46651 1.66044 9.46732 0.793274Z"
-                      fill="white"
-                    />
-                    <path
-                      d="M0.79425 3.39479C0.793844 2.81668 0.793844 2.23857 0.79425 1.66046C1.73947 1.66046 2.6847 1.66005 3.62951 1.66046C4.85526 4.26521 6.09116 6.86508 7.32503 9.46577C9.35411 9.46618 11.3836 9.46577 13.4127 9.46618C14.5307 7.44197 15.6491 5.41818 16.763 3.39195C17.2692 3.6684 17.7745 3.94688 18.2782 4.22821C17.2074 6.17395 16.1357 8.11928 15.0645 10.065C14.9645 10.2451 14.8718 10.4325 14.736 10.5895C14.4156 10.9728 13.9213 11.2001 13.4224 11.2001C11.2657 11.2017 9.10856 11.1997 6.95182 11.2009C6.70302 11.6502 6.45624 12.0998 6.20703 12.5486C6.15458 12.6381 6.11352 12.7617 6.19158 12.8499C6.27573 12.9641 6.43104 12.9308 6.553 12.9357C9.83709 12.9348 13.1212 12.9352 16.4053 12.9357C16.4053 13.5134 16.4053 14.0915 16.4053 14.6696C12.9447 14.6704 9.48421 14.67 6.02367 14.6696C5.45085 14.6802 4.88615 14.3842 4.5662 13.9097C4.21006 13.3987 4.16169 12.6877 4.4605 12.1388C4.85648 11.4176 5.25489 10.6984 5.65087 9.97721C4.6097 7.78307 3.57016 5.58852 2.52818 3.39479C1.95007 3.39479 1.37236 3.3952 0.79425 3.39479Z"
-                      fill="white"
-                    />
-                    <path
-                      d="M5.67507 15.5684C6.12309 15.4827 6.60403 15.5819 6.97765 15.8441C7.37566 16.1153 7.65089 16.5584 7.71432 17.0361C7.77692 17.4756 7.65903 17.9362 7.39558 18.2931C7.13051 18.6582 6.71827 18.9127 6.27229 18.9826C5.84786 19.053 5.39821 18.9554 5.04208 18.7135C4.64244 18.448 4.36233 18.0094 4.2924 17.5341C4.22858 17.1215 4.31924 16.6869 4.54609 16.336C4.79693 15.9404 5.21445 15.6554 5.67507 15.5684Z"
-                      fill="white"
-                    />
-                    <path
-                      d="M14.3373 15.5704C14.7662 15.4855 15.2264 15.57 15.5948 15.8066C16.0115 16.068 16.3079 16.514 16.3827 17.0007C16.4514 17.4243 16.3538 17.8719 16.1139 18.228C15.8558 18.6208 15.4317 18.9005 14.9683 18.9789C14.5438 19.0549 14.0922 18.9627 13.7324 18.7244C13.3819 18.4968 13.1189 18.1378 13.0087 17.7345C12.8924 17.3161 12.9396 16.8551 13.1417 16.4705C13.3783 16.0111 13.8295 15.6692 14.3373 15.5704Z"
-                      fill="white"
-                    />
-                  </g>
-                  <defs>
-                    <clipPath id="clip0_120_7899">
-                      <rect width="18" height="18" fill="white" />
-                    </clipPath>
-                  </defs>
-                </svg>
-              </span>
-              <span class="button-shape" id="btn-shape-1"></span>
-            </a>
-            -المتوفر في الصيدليات بسعر 9 جنيهات- أيضًا في تحسين ملمس الجلد وعلاج
-            الحروق الخفيفة بصورة فعالة.
-          </p>
-          <p>
             قد يهمك أيضًا: ما سبب حكة الجلد في الشتاء؟.. 6 نصائح فعالة للوقاية
             منها
           </p>
           <p>
             <strong>2- مويست-1 Moist</strong>
           </p>
-          <p>
+          <p id="arrowTwo">
             يلعب الكريمات مويست-1 دورًا كبيرًا في علاج جفاف البشرة وحمايتها من
             التقشر والالتهاب في الشتاء، ويرجع السبب إلى احتوائها على عناصر
-            طبيعية، تمد الجلد بالترطيب اللازم، مثل الجلسرين وزيت البرافين وشمع
+            طبيعية، تمد الجلد بالترطيب اللازم، مثل الجلسرين و زيت البرافين وشمع
             العسل.
           </p>
-          <p>3- بيبانثين Bepanthen</p>
-          <p>
-            عادةً ما يصف أطباء الجلدية كريم بيبانثين لمرضى جفاف البشرة، لأن
-            مادته الفعالة وهي
-            <a
-              href="https://jubna.com"
-              target="_blank"
-              class="button text-decoration-none yellow-btn"
-              id="key-2"
-              ><span class="button-item" title="Buy"
-                ><span class="text">ديكسابنثينول</span
-                ><svg
-                  width="16"
-                  height="16"
-                  viewBox="0 0 18 18"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <g clip-path="url(#clip0_120_7883)">
-                    <path
-                      d="M9.46732 0.793274C10.0454 0.792867 10.6235 0.792867 11.2017 0.793274C11.2021 1.66044 11.2012 2.52761 11.2021 3.39477C12.0692 3.39518 12.9364 3.39437 13.8036 3.39518C13.804 3.97329 13.8036 4.5514 13.8036 5.12911C12.9364 5.13033 12.0688 5.1287 11.2017 5.12992C11.2021 5.99709 11.2017 6.86425 11.2017 7.73101C10.6235 7.73142 10.0454 7.73142 9.46732 7.73101C9.46732 6.86425 9.46691 5.99709 9.46732 5.12992C8.60015 5.1287 7.73258 5.13033 6.86542 5.12911C6.86542 4.55099 6.86501 3.97329 6.86542 3.39518C7.73258 3.39437 8.59975 3.39518 9.46691 3.39477C9.46773 2.52761 9.46651 1.66044 9.46732 0.793274Z"
-                      fill="black"
-                    ></path>
-                    <path
-                      d="M0.79425 3.39479C0.793844 2.81668 0.793844 2.23857 0.79425 1.66046C1.73947 1.66046 2.6847 1.66005 3.62951 1.66046C4.85526 4.26521 6.09116 6.86508 7.32503 9.46577C9.35411 9.46618 11.3836 9.46577 13.4127 9.46618C14.5307 7.44197 15.6491 5.41818 16.763 3.39195C17.2692 3.6684 17.7745 3.94688 18.2782 4.22821C17.2074 6.17395 16.1357 8.11928 15.0645 10.065C14.9645 10.2451 14.8718 10.4325 14.736 10.5895C14.4156 10.9728 13.9213 11.2001 13.4224 11.2001C11.2657 11.2017 9.10856 11.1997 6.95182 11.2009C6.70302 11.6502 6.45624 12.0998 6.20703 12.5486C6.15458 12.6381 6.11352 12.7617 6.19158 12.8499C6.27573 12.9641 6.43104 12.9308 6.553 12.9357C9.83709 12.9348 13.1212 12.9352 16.4053 12.9357C16.4053 13.5134 16.4053 14.0915 16.4053 14.6696C12.9447 14.6704 9.48421 14.67 6.02367 14.6696C5.45085 14.6802 4.88615 14.3842 4.5662 13.9097C4.21006 13.3987 4.16169 12.6877 4.4605 12.1388C4.85648 11.4176 5.25489 10.6984 5.65087 9.97721C4.6097 7.78307 3.57016 5.58852 2.52818 3.39479C1.95007 3.39479 1.37236 3.3952 0.79425 3.39479Z"
-                      fill="black"
-                    ></path>
-                    <path
-                      d="M5.67507 15.5684C6.12309 15.4827 6.60403 15.5819 6.97765 15.8441C7.37566 16.1153 7.65089 16.5584 7.71432 17.0361C7.77692 17.4756 7.65903 17.9362 7.39558 18.2931C7.13051 18.6582 6.71827 18.9127 6.27229 18.9826C5.84786 19.053 5.39821 18.9554 5.04208 18.7135C4.64244 18.448 4.36233 18.0094 4.2924 17.5341C4.22858 17.1215 4.31924 16.6869 4.54609 16.336C4.79693 15.9404 5.21445 15.6554 5.67507 15.5684Z"
-                      fill="black"
-                    ></path>
-                    <path
-                      d="M14.3373 15.5704C14.7662 15.4855 15.2264 15.57 15.5948 15.8066C16.0115 16.068 16.3079 16.514 16.3827 17.0007C16.4514 17.4243 16.3538 17.8719 16.1139 18.228C15.8558 18.6208 15.4317 18.9005 14.9683 18.9789C14.5438 19.0549 14.0922 18.9627 13.7324 18.7244C13.3819 18.4968 13.1189 18.1378 13.0087 17.7345C12.8924 17.3161 12.9396 16.8551 13.1417 16.4705C13.3783 16.0111 13.8295 15.6692 14.3373 15.5704Z"
-                      fill="black"
-                    ></path>
-                  </g>
-                  <defs>
-                    <clipPath id="clip0_120_7883">
-                      <rect width="18" height="18" fill="white"></rect>
-                    </clipPath>
-                  </defs>
-                </svg>
-              </span>
-              <span class="button-shape yellow" id="btn-shape-2"></span> </a
-            >، يحولها الجسم إلى فيتامين B5، الذي يعمل على ترطيب الجلد وتخفيف
-            الاحمرار.
+          <p></p>
+          <p><strong>3- بيبانثين Bepanthen</strong></p>
+          <p id="amazonTwo">
+            ويتوافر كريم بيبانثين في الصيدليات بسعر 70 جنيهًا.
           </p>
-          <p>ويتوافر كريم بيبانثين في الصيدليات بسعر 70 جنيهًا.</p>
           <p><strong>4- شان Shann</strong></p>
-          <p>
-            دهن البشرة الجافة بكريم شان بكريم شان قد يساهم في ترطيبها، لاحتوائه
-            على مواد تقلل فقدان الجسم للماء، مثل البانثينول واللألنتوين،
-            بالإضافة إلى غناه بمجموعة من الفيتامينات الضرورية للجلد.
+          <p id="cartTwo">
+            دهن البشرة الجافة بكريم شان قد يساهم في ترطيبها، لاحتوائه على مواد
+            تقلل فقدان الجسم للماء، مثل البانثينول واللألنتوين، بالإضافة إلى
+            غناه بمجموعة من الفيتامينات الضرورية للجلد.
           </p>
-          <p>وسعر العبوة الواحدة من شان Shann يبلغ 120 جنيه.</p>
+          <p id="plusOne">وسعر العبوة الواحدة من شان Shann يبلغ 120 جنيه.</p>
           <p>قد يهمك: 8 طرق منزلية لعلاج جفاف البشرة في فصل الشتاء</p>
-          <p>
-            <strong
-              >5-
-              <a
-                href="https://jubna.com"
-                target="_blank"
-                class="button text-decoration-none"
-                id="key-3"
-                ><span class="button-item" title="Buy"
-                  ><span class="text">اتوديرم</span
-                  ><svg
-                    width="16"
-                    height="16"
-                    viewBox="0 0 18 18"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <g clip-path="url(#clip0_120_7899)">
-                      <path
-                        d="M9.46732 0.793274C10.0454 0.792867 10.6235 0.792867 11.2017 0.793274C11.2021 1.66044 11.2012 2.52761 11.2021 3.39477C12.0692 3.39518 12.9364 3.39437 13.8036 3.39518C13.804 3.97329 13.8036 4.5514 13.8036 5.12911C12.9364 5.13033 12.0688 5.1287 11.2017 5.12992C11.2021 5.99709 11.2017 6.86425 11.2017 7.73101C10.6235 7.73142 10.0454 7.73142 9.46732 7.73101C9.46732 6.86425 9.46691 5.99709 9.46732 5.12992C8.60015 5.1287 7.73258 5.13033 6.86542 5.12911C6.86542 4.55099 6.86501 3.97329 6.86542 3.39518C7.73258 3.39437 8.59975 3.39518 9.46691 3.39477C9.46773 2.52761 9.46651 1.66044 9.46732 0.793274Z"
-                        fill="white"
-                      />
-                      <path
-                        d="M0.79425 3.39479C0.793844 2.81668 0.793844 2.23857 0.79425 1.66046C1.73947 1.66046 2.6847 1.66005 3.62951 1.66046C4.85526 4.26521 6.09116 6.86508 7.32503 9.46577C9.35411 9.46618 11.3836 9.46577 13.4127 9.46618C14.5307 7.44197 15.6491 5.41818 16.763 3.39195C17.2692 3.6684 17.7745 3.94688 18.2782 4.22821C17.2074 6.17395 16.1357 8.11928 15.0645 10.065C14.9645 10.2451 14.8718 10.4325 14.736 10.5895C14.4156 10.9728 13.9213 11.2001 13.4224 11.2001C11.2657 11.2017 9.10856 11.1997 6.95182 11.2009C6.70302 11.6502 6.45624 12.0998 6.20703 12.5486C6.15458 12.6381 6.11352 12.7617 6.19158 12.8499C6.27573 12.9641 6.43104 12.9308 6.553 12.9357C9.83709 12.9348 13.1212 12.9352 16.4053 12.9357C16.4053 13.5134 16.4053 14.0915 16.4053 14.6696C12.9447 14.6704 9.48421 14.67 6.02367 14.6696C5.45085 14.6802 4.88615 14.3842 4.5662 13.9097C4.21006 13.3987 4.16169 12.6877 4.4605 12.1388C4.85648 11.4176 5.25489 10.6984 5.65087 9.97721C4.6097 7.78307 3.57016 5.58852 2.52818 3.39479C1.95007 3.39479 1.37236 3.3952 0.79425 3.39479Z"
-                        fill="white"
-                      />
-                      <path
-                        d="M5.67507 15.5684C6.12309 15.4827 6.60403 15.5819 6.97765 15.8441C7.37566 16.1153 7.65089 16.5584 7.71432 17.0361C7.77692 17.4756 7.65903 17.9362 7.39558 18.2931C7.13051 18.6582 6.71827 18.9127 6.27229 18.9826C5.84786 19.053 5.39821 18.9554 5.04208 18.7135C4.64244 18.448 4.36233 18.0094 4.2924 17.5341C4.22858 17.1215 4.31924 16.6869 4.54609 16.336C4.79693 15.9404 5.21445 15.6554 5.67507 15.5684Z"
-                        fill="white"
-                      />
-                      <path
-                        d="M14.3373 15.5704C14.7662 15.4855 15.2264 15.57 15.5948 15.8066C16.0115 16.068 16.3079 16.514 16.3827 17.0007C16.4514 17.4243 16.3538 17.8719 16.1139 18.228C15.8558 18.6208 15.4317 18.9005 14.9683 18.9789C14.5438 19.0549 14.0922 18.9627 13.7324 18.7244C13.3819 18.4968 13.1189 18.1378 13.0087 17.7345C12.8924 17.3161 12.9396 16.8551 13.1417 16.4705C13.3783 16.0111 13.8295 15.6692 14.3373 15.5704Z"
-                        fill="white"
-                      />
-                    </g>
-                    <defs>
-                      <clipPath id="clip0_120_7899">
-                        <rect width="18" height="18" fill="white" />
-                      </clipPath>
-                    </defs>
-                  </svg>
-                </span>
-                <span class="button-shape" id="btn-shape-3"></span>
-              </a>
-              Atoderm</strong
-            >
-          </p>
+          <p><strong id="arrowOne">5- اتوديرم Atoderm</strong></p>
           <p>
             يعمل كريم اتوديرم على ترطيب البشرة الجافة وزيادة نعومتها، بالإضافة
             إلى قدرته الكبيرة على توحيد لون الجلد، عن طريق التخلص من البقع
@@ -335,30 +201,49 @@
           </p>
           <p>ويبلغ سعر اتوديرم في الصيدليات 279 جنيه.</p>
           <p>قد يهمك أيضًا: 3 خطوات تخلصك من جفاف البشرة في الشتاء</p>
-          <p>
+          <p id="chevronOne">
             وجفاف البشرة في الشتاء يمكن علاجه بمجموعة من الكريمات المرطبة ،
             يستعرضها "الكونسلتو" في التقرير التالي، وفقًا للدكتور محمد رضوان،
             مفتش صيدلي بوزارة الصحة والسكان. قد يهمك: أخطرهم الصدفية.. 4 أمراض
             جلدية يسببها جفاف البشرة في فصل الشتاء
           </p>
           <p>
-            وجفاف البشرة في الشتاء يمكن علاجه بمجموعة من الكريمات المرطبة ،
-            يستعرضها "الكونسلتو" في التقرير التالي، وفقًا للدكتور محمد رضوان،
-            مفتش صيدلي بوزارة الصحة والسكان. قد يهمك: أخطرهم الصدفية.. 4 أمراض
-            جلدية يسببها جفاف البشرة في فصل الشتاء
+            هناك الكثير من منتجات العناية بالجسم والبشرة، التي تحتوي على
+            اليوريا، نظرا لأنها تعتبر من المكونات الطبيعية للبشرة، وتدعم
+            التركيزات المنخفضة من اليوريا ربط الماء من خلال الكيراتين في البشرة،
+            وبالتالي فإنها تصبح ناعمة وملساء، ولكن على الجانب الآخر فإن
+            التركيزات العالية من اليوريا تعمل على تقشير الطبقة العليا من البشرة
+            وإمداد الطبقات العميقة بالمغذيات، وتتناسب الكريمات المحتوية على
+            اليوريا مع أجزاء الجسم واليدين والقدمين أكثر من بشرة الوجه الحساسة.
+            السوائل
           </p>
           <p>
-            وجفاف البشرة في الشتاء يمكن علاجه بمجموعة من الكريمات المرطبة ،
-            يستعرضها "الكونسلتو" في التقرير التالي، وفقًا للدكتور محمد رضوان،
-            مفتش صيدلي بوزارة الصحة والسكان. قد يهمك: أخطرهم الصدفية.. 4 أمراض
-            جلدية يسببها جفاف البشرة في فصل الشتاء
+            يؤدي هواء التدفئة الجاف إلى جفاف بشرة الوجه الحساسة بسرعة، ولذلك
+            فإنه من الأفضل الإكثار من شرب السوائل مثل الماء والشاي غير المحلى،
+            وعادة ما تميل البشرة الجافة إلى ظهور التجاعيد بكثرة، فضلا عن أنها
+            تظهر بصورة مجهدة وشاحبة.
           </p>
+          <p>
+            تعمل زيوت الجسم المحتوية على الأفوكادو والروزماري وجوز الهند على جعل
+            البشرة ملساء وناعمة، وهناك بعض الزيوت المهدئة التي يمكن استعمالها مع
+            بشرة الوجه، مثل زيت الجوجوبا وزيت زهرة الربيع المسائية، حيث يتم
+            تدليك البشرة ببعض قطرات الزيت في الصباح والمساء للحصول على تأثير
+            الترطيب المثالي للبشرة.
+          </p>
+          <p>
+            ودائما ما ينصح الخبراء بعدم أخذ حمامات ساخنة للغاية في حالات البشرة
+            الجافة، نظرا لأن الجلد يفقد المزيد من الرطوبة، بل يجب ضبط درجة
+            الحرارة على 25 مئوية، وألا تزيد مدة الاستحمام على 15 دقيقة.
+          </p>
+          <h5 class="mt-5">
+            قد يهمك أيضًا: 3 خطوات تخلصك من جفاف البشرة في الشتاء
+          </h5>
         </div>
         <div class="col-md-4">
-          <div class="card">
+          <a href="index.html" class="card text-decoration-none">
             <img src="./img/news.jpg" class="card-img-top" alt="Post" />
             <div class="card-body">
-              <h5 class="card-title">
+              <h5 class="card-title text-primary">
                 أهمية التأمين الصحي: الحفاظ على صحتك واستقرارك المالي
               </h5>
               <p class="card-text mt-0 small text-muted">
@@ -366,10 +251,14 @@
                 يوفرها. على غرار أ بطاقة ائتمان تغطي نفقات غير متوقعة
               </p>
             </div>
-          </div>
+          </a>
         </div>
       </div>
     </div>
+
+    <footer class="blog-footer">
+      <p>UAE24</p>
+    </footer>
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
@@ -378,57 +267,296 @@
     ></script>
 
     <script>
+      const SVGICON = `<svg
+              width="16"
+              height="16"
+              viewBox="0 0 18 18"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g clip-path="url(#clip0_120_7899)">
+                <path
+                  d="M9.46732 0.793274C10.0454 0.792867 10.6235 0.792867 11.2017 0.793274C11.2021 1.66044 11.2012 2.52761 11.2021 3.39477C12.0692 3.39518 12.9364 3.39437 13.8036 3.39518C13.804 3.97329 13.8036 4.5514 13.8036 5.12911C12.9364 5.13033 12.0688 5.1287 11.2017 5.12992C11.2021 5.99709 11.2017 6.86425 11.2017 7.73101C10.6235 7.73142 10.0454 7.73142 9.46732 7.73101C9.46732 6.86425 9.46691 5.99709 9.46732 5.12992C8.60015 5.1287 7.73258 5.13033 6.86542 5.12911C6.86542 4.55099 6.86501 3.97329 6.86542 3.39518C7.73258 3.39437 8.59975 3.39518 9.46691 3.39477C9.46773 2.52761 9.46651 1.66044 9.46732 0.793274Z"
+                  fill="white"
+                />
+                <path
+                  d="M0.79425 3.39479C0.793844 2.81668 0.793844 2.23857 0.79425 1.66046C1.73947 1.66046 2.6847 1.66005 3.62951 1.66046C4.85526 4.26521 6.09116 6.86508 7.32503 9.46577C9.35411 9.46618 11.3836 9.46577 13.4127 9.46618C14.5307 7.44197 15.6491 5.41818 16.763 3.39195C17.2692 3.6684 17.7745 3.94688 18.2782 4.22821C17.2074 6.17395 16.1357 8.11928 15.0645 10.065C14.9645 10.2451 14.8718 10.4325 14.736 10.5895C14.4156 10.9728 13.9213 11.2001 13.4224 11.2001C11.2657 11.2017 9.10856 11.1997 6.95182 11.2009C6.70302 11.6502 6.45624 12.0998 6.20703 12.5486C6.15458 12.6381 6.11352 12.7617 6.19158 12.8499C6.27573 12.9641 6.43104 12.9308 6.553 12.9357C9.83709 12.9348 13.1212 12.9352 16.4053 12.9357C16.4053 13.5134 16.4053 14.0915 16.4053 14.6696C12.9447 14.6704 9.48421 14.67 6.02367 14.6696C5.45085 14.6802 4.88615 14.3842 4.5662 13.9097C4.21006 13.3987 4.16169 12.6877 4.4605 12.1388C4.85648 11.4176 5.25489 10.6984 5.65087 9.97721C4.6097 7.78307 3.57016 5.58852 2.52818 3.39479C1.95007 3.39479 1.37236 3.3952 0.79425 3.39479Z"
+                  fill="white"
+                />
+                <path
+                  d="M5.67507 15.5684C6.12309 15.4827 6.60403 15.5819 6.97765 15.8441C7.37566 16.1153 7.65089 16.5584 7.71432 17.0361C7.77692 17.4756 7.65903 17.9362 7.39558 18.2931C7.13051 18.6582 6.71827 18.9127 6.27229 18.9826C5.84786 19.053 5.39821 18.9554 5.04208 18.7135C4.64244 18.448 4.36233 18.0094 4.2924 17.5341C4.22858 17.1215 4.31924 16.6869 4.54609 16.336C4.79693 15.9404 5.21445 15.6554 5.67507 15.5684Z"
+                  fill="white"
+                />
+                <path
+                  d="M14.3373 15.5704C14.7662 15.4855 15.2264 15.57 15.5948 15.8066C16.0115 16.068 16.3079 16.514 16.3827 17.0007C16.4514 17.4243 16.3538 17.8719 16.1139 18.228C15.8558 18.6208 15.4317 18.9005 14.9683 18.9789C14.5438 19.0549 14.0922 18.9627 13.7324 18.7244C13.3819 18.4968 13.1189 18.1378 13.0087 17.7345C12.8924 17.3161 12.9396 16.8551 13.1417 16.4705C13.3783 16.0111 13.8295 15.6692 14.3373 15.5704Z"
+                  fill="white"
+                />
+              </g>
+              <defs>
+                <clipPath id="clip0_120_7899">
+                  <rect width="18" height="18" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>`;
+      const SVGICONBlack = `<svg
+              width="16"
+              height="16"
+              viewBox="0 0 18 18"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g clip-path="url(#clip0_120_7883)">
+                <path
+                  d="M9.46732 0.793274C10.0454 0.792867 10.6235 0.792867 11.2017 0.793274C11.2021 1.66044 11.2012 2.52761 11.2021 3.39477C12.0692 3.39518 12.9364 3.39437 13.8036 3.39518C13.804 3.97329 13.8036 4.5514 13.8036 5.12911C12.9364 5.13033 12.0688 5.1287 11.2017 5.12992C11.2021 5.99709 11.2017 6.86425 11.2017 7.73101C10.6235 7.73142 10.0454 7.73142 9.46732 7.73101C9.46732 6.86425 9.46691 5.99709 9.46732 5.12992C8.60015 5.1287 7.73258 5.13033 6.86542 5.12911C6.86542 4.55099 6.86501 3.97329 6.86542 3.39518C7.73258 3.39437 8.59975 3.39518 9.46691 3.39477C9.46773 2.52761 9.46651 1.66044 9.46732 0.793274Z"
+                  fill="black"
+                ></path>
+                <path
+                  d="M0.79425 3.39479C0.793844 2.81668 0.793844 2.23857 0.79425 1.66046C1.73947 1.66046 2.6847 1.66005 3.62951 1.66046C4.85526 4.26521 6.09116 6.86508 7.32503 9.46577C9.35411 9.46618 11.3836 9.46577 13.4127 9.46618C14.5307 7.44197 15.6491 5.41818 16.763 3.39195C17.2692 3.6684 17.7745 3.94688 18.2782 4.22821C17.2074 6.17395 16.1357 8.11928 15.0645 10.065C14.9645 10.2451 14.8718 10.4325 14.736 10.5895C14.4156 10.9728 13.9213 11.2001 13.4224 11.2001C11.2657 11.2017 9.10856 11.1997 6.95182 11.2009C6.70302 11.6502 6.45624 12.0998 6.20703 12.5486C6.15458 12.6381 6.11352 12.7617 6.19158 12.8499C6.27573 12.9641 6.43104 12.9308 6.553 12.9357C9.83709 12.9348 13.1212 12.9352 16.4053 12.9357C16.4053 13.5134 16.4053 14.0915 16.4053 14.6696C12.9447 14.6704 9.48421 14.67 6.02367 14.6696C5.45085 14.6802 4.88615 14.3842 4.5662 13.9097C4.21006 13.3987 4.16169 12.6877 4.4605 12.1388C4.85648 11.4176 5.25489 10.6984 5.65087 9.97721C4.6097 7.78307 3.57016 5.58852 2.52818 3.39479C1.95007 3.39479 1.37236 3.3952 0.79425 3.39479Z"
+                  fill="black"
+                ></path>
+                <path
+                  d="M5.67507 15.5684C6.12309 15.4827 6.60403 15.5819 6.97765 15.8441C7.37566 16.1153 7.65089 16.5584 7.71432 17.0361C7.77692 17.4756 7.65903 17.9362 7.39558 18.2931C7.13051 18.6582 6.71827 18.9127 6.27229 18.9826C5.84786 19.053 5.39821 18.9554 5.04208 18.7135C4.64244 18.448 4.36233 18.0094 4.2924 17.5341C4.22858 17.1215 4.31924 16.6869 4.54609 16.336C4.79693 15.9404 5.21445 15.6554 5.67507 15.5684Z"
+                  fill="black"
+                ></path>
+                <path
+                  d="M14.3373 15.5704C14.7662 15.4855 15.2264 15.57 15.5948 15.8066C16.0115 16.068 16.3079 16.514 16.3827 17.0007C16.4514 17.4243 16.3538 17.8719 16.1139 18.228C15.8558 18.6208 15.4317 18.9005 14.9683 18.9789C14.5438 19.0549 14.0922 18.9627 13.7324 18.7244C13.3819 18.4968 13.1189 18.1378 13.0087 17.7345C12.8924 17.3161 12.9396 16.8551 13.1417 16.4705C13.3783 16.0111 13.8295 15.6692 14.3373 15.5704Z"
+                  fill="black"
+                ></path>
+              </g>
+              <defs>
+                <clipPath id="clip0_120_7883">
+                  <rect width="18" height="18" fill="white"></rect>
+                </clipPath>
+              </defs>
+            </svg>`;
+
+      // Amazon Buttons
+      const keywordOne = "الكريمات";
+      const keywordTwo = "بيبانثين";
+      const paragraphOne = document.getElementById("amazonOne");
+      const paragraphTwo = document.getElementById("amazonTwo");
+
+      // Add Link Highlight Amazon
+      const modifiedParagraphOne = paragraphOne.innerHTML.replace(
+        new RegExp(keywordOne, "gi"),
+        `<a href="#" target="_blank"class="text-decoration-none"id="amazon-1">
+        <span>$&</span>
+        <span>(اشترالآن مقابل 70 درهمًا)</span>
+      </a>`
+      );
+      const modifiedParagraphTwo = paragraphTwo.innerHTML.replace(
+        new RegExp(keywordTwo, "gi"),
+        `<a href="#" target="_blank"class="text-decoration-none"id="amazon-2">
+        <span>$&</span>
+        <span>(اشترالآن مقابل 35 درهمًا)</span>
+      </a>`
+      );
+
+      paragraphOne.innerHTML = modifiedParagraphOne;
+      paragraphTwo.innerHTML = modifiedParagraphTwo;
+
+      // Cart Buttons
+      const keywordCartOne = "بانثينول";
+      const keywordCartTwo = "بكريم شان";
+      const paragraphCartOne = document.getElementById("cartOne");
+      const paragraphCartTwo = document.getElementById("cartTwo");
+
+      // Add Link Highlight Cart
+      const modifiedParagraphCartOne = paragraphCartOne.innerHTML.replace(
+        new RegExp(keywordCartOne, "gi"),
+        `<a href="#" target="_blank"class="text-decoration-none button flex-gap"id="cart-1">
+      <span>$&</span>${SVGICON}<span class="button-shape"></span>
+      </a>`
+      );
+      const modifiedParagraphCartTwo = paragraphCartTwo.innerHTML.replace(
+        new RegExp(keywordCartTwo, "gi"),
+        `<a href="#" target="_blank"class="text-decoration-none button flex-gap"id="cart-2">
+      <span>$&</span>${SVGICONBlack}<span class="button-shape yellow"></span>
+      </a>`
+      );
+
+      paragraphCartOne.innerHTML = modifiedParagraphCartOne;
+      paragraphCartTwo.innerHTML = modifiedParagraphCartTwo;
+
+      // Arrow Buttons
+      const keywordArrowOne = "اتوديرم Atoderm";
+      const keywordArrowTwo = "زيت البرافين";
+      const paragraphArrowOne = document.getElementById("arrowOne");
+      const paragraphArrowTwo = document.getElementById("arrowTwo");
+
+      // Add Link Arrow
+      const modifiedParagraphArrowOne = paragraphArrowOne.innerHTML.replace(
+        new RegExp(keywordArrowOne, "gi"),
+        `<a href="#" target="_blank"class="text-decoration-none button"id="arrow-1">
+        <span class="text">$&</span>
+        <i class="bi bi-caret-left-fill"></i>
+        <span class="button-shape"></span>
+      </a>`
+      );
+      const modifiedParagraphArrowTwo = paragraphArrowTwo.innerHTML.replace(
+        new RegExp(keywordArrowTwo, "gi"),
+        `<a href="#" target="_blank"class="text-decoration-none button"id="arrow-2">
+        <span class="text">$&</span>
+        <i class="bi bi-caret-left-fill"></i>
+        <span class="button-shape yellow"></span>
+      </a>`
+      );
+
+      paragraphArrowOne.innerHTML = modifiedParagraphArrowOne;
+      paragraphArrowTwo.innerHTML = modifiedParagraphArrowTwo;
+
+      // Add Plus
+      const keywordPlusOne = "شان Shann";
+      const paragraphPlusOne = document.getElementById("plusOne");
+
+      // Add Link Plus
+      const modifiedParagraphPlusOne = paragraphPlusOne.innerHTML.replace(
+        new RegExp(keywordPlusOne, "gi"),
+        `<a href="#" target="_blank"class="text-decoration-none button"id="plus-1">
+        <span class="text">$&</span>
+        <i class="fa-solid fa-plus"></i>
+        <span class="button-shape yellow"></span>
+      </a>`
+      );
+
+      paragraphPlusOne.innerHTML = modifiedParagraphPlusOne;
+
+      // Chevron Buttons
+      const keywordChevronOne = "محمد رضوان";
+      const paragraphChevronOne = document.getElementById("chevronOne");
+
+      // Add Chevron Arrow
+      const modifiedParagraphChevronOne = paragraphChevronOne.innerHTML.replace(
+        new RegExp(keywordChevronOne, "gi"),
+        `<a href="#" target="_blank"class="text-decoration-none button flex-gap"id="chevron-1">
+        <span class="text">$&</span>
+        <i class="fa-solid fa-chevron-left"></i>
+        <span class="button-shape"></span>
+      </a>`
+      );
+
+      paragraphChevronOne.innerHTML = modifiedParagraphChevronOne;
+
+      // Listen to event scroll
       window.addEventListener("scroll", function () {
         const windowHeight = window.innerHeight;
         const middleOfViewport = windowHeight / 2;
-        
-        const keyOne = document.getElementById("key-1");
-        const keyOnePosition = keyOne.getBoundingClientRect();
-        const ShapeOne = document.getElementById("btn-shape-1");
-        const svgOne = document.querySelector("#key-1 svg");
 
-        // Key Two
-        const keyTwo = document.getElementById("key-2");
-        const keyTwoPosition = keyTwo.getBoundingClientRect();
-        const ShapeTwo = document.getElementById("btn-shape-2");
-        const svgTwo = document.querySelector("#key-2 svg");
+        // Cart Button One
+        const cartOne = document.getElementById("cart-1");
+        const cartOnePosition = cartOne.getBoundingClientRect();
+        const cartShapeOne = document.querySelector("#cart-1 .button-shape");
+        const cartSVGOne = document.querySelector("#cart-1 svg");
 
-        // Key Three
-        const keyThree = document.getElementById("key-3");
-        const keyThreePosition = keyThree.getBoundingClientRect();
-        const ShapeThree = document.getElementById("btn-shape-3");
-        const svgThree = document.querySelector("#key-3 svg");
+        // Cart Button Two
+        const cartTwo = document.getElementById("cart-2");
+        const cartTwoPosition = cartTwo.getBoundingClientRect();
+        const cartShapeTwo = document.querySelector("#cart-2 .button-shape");
+        const cartSVGTwo = document.querySelector("#cart-2 svg");
 
+        // Show Cart Buttons
         if (
-          keyOnePosition.top < middleOfViewport &&
-          keyOnePosition.bottom > middleOfViewport
+          cartOnePosition.top < middleOfViewport &&
+          cartOnePosition.bottom > middleOfViewport
         ) {
           setTimeout(() => {
-            keyOne.classList.add("active-ar");
-            ShapeOne.style.transform = "translate(0%)";
-            svgOne.style.display = "inline-flex";
+            cartOne.classList.add("button-highlight", "py-0");
+            cartShapeOne.style.transform = "translate(0%)";
+            cartSVGOne.style.display = "inline-flex";
           }, 500);
         }
 
         if (
-          keyTwoPosition.top < middleOfViewport &&
-          keyTwoPosition.bottom > middleOfViewport
+          cartTwoPosition.top < middleOfViewport &&
+          cartTwoPosition.bottom > middleOfViewport
         ) {
           setTimeout(() => {
-            keyTwo.classList.add("active-ar");
-            ShapeTwo.style.transform = "translate(0%)";
-            svgTwo.style.display = "inline-flex";
+            cartTwo.classList.add("button-highlight", "text-black", "py-0");
+            cartShapeTwo.style.transform = "translate(0%)";
+            cartSVGTwo.style.display = "inline-flex";
+          }, 500);
+        }
+
+        // Arrow Button One
+        const arrowOne = document.getElementById("arrow-1");
+        const arrowOnePosition = arrowOne.getBoundingClientRect();
+        const arrowShapeOne = document.querySelector("#arrow-1 .button-shape");
+        const arrowOneText = document.querySelector("#arrow-1 .text");
+        const iconArrowOne = document.querySelector("#arrow-1 .bi");
+
+        const arrowTwo = document.getElementById("arrow-2");
+        const arrowTwoPosition = arrowTwo.getBoundingClientRect();
+        const arrowShapeTwo = document.querySelector("#arrow-2 .button-shape");
+        const arrowTwoText = document.querySelector("#arrow-2 .text");
+        const iconArrowTwo = document.querySelector("#arrow-2 .bi");
+
+        // Show Arrow Buttons
+        if (
+          arrowOnePosition.top < middleOfViewport &&
+          arrowOnePosition.bottom > middleOfViewport
+        ) {
+          setTimeout(() => {
+            arrowOne.classList.add("button-highlight", "p-0");
+            arrowOneText.classList.add("pe-1", "ps-2");
+            arrowShapeOne.style.transform = "translate(0%)";
+            iconArrowOne.style.display = "inline-flex";
+            iconArrowOne.classList.add("bg-green");
           }, 500);
         }
 
         if (
-          keyThreePosition.top < middleOfViewport &&
-          keyThreePosition.bottom > middleOfViewport
+          arrowTwoPosition.top < middleOfViewport &&
+          arrowTwoPosition.bottom > middleOfViewport
         ) {
           setTimeout(() => {
-            keyThree.classList.add("active-ar");
-            ShapeThree.style.transform = "translate(0%)";
-            svgThree.style.display = "inline-flex";
+            arrowTwo.classList.add("button-highlight", "p-0", "text-black");
+            arrowTwoText.classList.add("pe-1", "ps-2");
+            arrowShapeTwo.style.transform = "translate(0%)";
+            iconArrowTwo.style.display = "inline-flex";
+            iconArrowTwo.classList.add("dark-yellow");
+          }, 500);
+        }
+
+        // Plus Button One
+        const plusOne = document.getElementById("plus-1");
+        const plusOnePosition = plusOne.getBoundingClientRect();
+        const plusShapeOne = document.querySelector("#plus-1 .button-shape");
+        const plusOneText = document.querySelector("#plus-1 .text");
+        const iconPlusOne = document.querySelector("#plus-1 .fa-plus");
+
+        // Show Plus Buttons
+        if (
+          plusOnePosition.top < middleOfViewport &&
+          plusOnePosition.bottom > middleOfViewport
+        ) {
+          setTimeout(() => {
+            plusOne.classList.add("button-highlight", "p-0", "text-black");
+            plusOneText.classList.add("pe-1", "ps-2");
+            plusShapeOne.style.transform = "translate(0%)";
+            iconPlusOne.style.display = "inline-flex";
+            iconPlusOne.classList.add("dark-yellow");
+          }, 500);
+        }
+
+        // Chevron Button
+        const chevronOne = document.getElementById("chevron-1");
+        const chevronOnePosition = cartOne.getBoundingClientRect();
+        const chevronShapeOne = document.querySelector(
+          "#chevron-1 .button-shape"
+        );
+        const chevronIconOne = document.querySelector(
+          "#chevron-1 .fa-chevron-left"
+        );
+
+        // Show Chevron Buttons
+        if (
+          chevronOnePosition.top < middleOfViewport &&
+          chevronOnePosition.bottom > middleOfViewport
+        ) {
+          setTimeout(() => {
+            chevronOne.classList.add("button-highlight");
+            chevronShapeOne.style.transform = "translate(0%)";
+            chevronIconOne.style.display = "inline-flex";
           }, 500);
         }
       });

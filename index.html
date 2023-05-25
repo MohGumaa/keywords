@@ -172,7 +172,7 @@
             This access ensures that you receive the best possible care, leading
             to improved health outcomes.
           </p>
-          <p>
+          <p id="plusOne">
             condition can result in a hefty bill that could potentially drain
             your savings. However, with health insurance, you gain access to
             negotiated rates with healthcare providers, ensuring you pay
@@ -207,7 +207,7 @@
             integral part of your financial planning:
           </p>
           <ol>
-            <li>
+            <li id="chevronOne">
               <strong>Medical Emergencies</strong><br />Life is uncertain and
               unpredictable, so you never know when some medical emergency may
               befall upon you or your loved ones. You may take years to
@@ -325,14 +325,14 @@
           </p>
         </div>
         <div class="col-md-4">
-          <div class="card">
+          <a href="version-two.html" class="card text-decoration-none">
             <img
               src="./img/أفضل 5 كريمات مرطبة للبشرة في الشتاء.jpg"
               class="card-img-top"
               alt="Post"
             />
             <div class="card-body">
-              <h5 class="card-title">
+              <h5 class="card-title text-primary">
                 The 5 best moisturizing creams for the skin in winter
               </h5>
               <p class="card-text mt-0 small text-muted">
@@ -340,7 +340,7 @@
                 as a result of exposure to...
               </p>
             </div>
-          </div>
+          </a>
         </div>
       </div>
     </div>
@@ -428,19 +428,17 @@
       // Add Link Highlight Amazon
       const modifiedParagraphOne = paragraphOne.innerHTML.replace(
         new RegExp(keywordOne, "gi"),
-        `<a href="#" target="_blank"class="text-decoration-none button"id="amazon-1">
-        <span>$&</span>
-        <span class="buy-text">(buy from amazon 70)</span>
-        <span class="button-shape"></span>
-      </a>`
+        `<a href="#" target="_blank"class="text-decoration-none"id="amazon-1">
+          <span>$&</span>
+          <span>(Buy now for 70 AED)</span>
+        </a>`
       );
       const modifiedParagraphTwo = paragraphTwo.innerHTML.replace(
         new RegExp(keywordTwo, "gi"),
-        `<a href="#" target="_blank"class="text-decoration-none button"id="amazon-2">
-        <span>$&</span>
-        <span class="buy-text">(buy from amazon 40)</span>
-        <span class="button-shape yellow"></span>
-      </a>`
+        `<a href="#" target="_blank"class="text-decoration-none"id="amazon-2">
+          <span>$&</span>
+          <span>(Buy now for 25 AED)</span>
+        </a>`
       );
 
       paragraphOne.innerHTML = modifiedParagraphOne;
@@ -455,13 +453,13 @@
       // Add Link Highlight Cart
       const modifiedParagraphCartOne = paragraphCartOne.innerHTML.replace(
         new RegExp(keywordCartOne, "gi"),
-        `<a href="#" target="_blank"class="text-decoration-none button cart"id="cart-1">
+        `<a href="#" target="_blank"class="text-decoration-none button flex-gap"id="cart-1">
         <span>$&</span>${SVGICON}<span class="button-shape"></span>
         </a>`
       );
       const modifiedParagraphCartTwo = paragraphCartTwo.innerHTML.replace(
         new RegExp(keywordCartTwo, "gi"),
-        `<a href="#" target="_blank"class="text-decoration-none button cart"id="cart-2">
+        `<a href="#" target="_blank"class="text-decoration-none button flex-gap"id="cart-2">
         <span>$&</span>${SVGICONBlack}<span class="button-shape yellow"></span>
         </a>`
       );
@@ -496,49 +494,42 @@
       paragraphArrowOne.innerHTML = modifiedParagraphArrowOne;
       paragraphArrowTwo.innerHTML = modifiedParagraphArrowTwo;
 
+      // Add Plus
+      const keywordPlusOne = "hefty";
+      const paragraphPlusOne = document.getElementById("plusOne");
+
+      // Add Link Plus
+      const modifiedParagraphPlusOne = paragraphPlusOne.innerHTML.replace(
+        new RegExp(keywordPlusOne, "gi"),
+        `<a href="#" target="_blank"class="text-decoration-none button"id="plus-1">
+          <span class="text">$&</span>
+          <i class="fa-solid fa-plus"></i>
+          <span class="button-shape yellow"></span>
+        </a>`
+      );
+
+      paragraphPlusOne.innerHTML = modifiedParagraphPlusOne;
+
+      // Chevron Buttons
+      const keywordChevronOne = "corpus";
+      const paragraphChevronOne = document.getElementById("chevronOne");
+
+      // Add Chevron Arrow
+      const modifiedParagraphChevronOne = paragraphChevronOne.innerHTML.replace(
+        new RegExp(keywordChevronOne, "gi"),
+        `<a href="#" target="_blank"class="text-decoration-none button flex-gap"id="chevron-1">
+          <span class="text">$&</span>
+          <i class="fa-solid fa-chevron-right"></i>
+          <span class="button-shape"></span>
+        </a>`
+      );
+
+      paragraphChevronOne.innerHTML = modifiedParagraphChevronOne;
+
       // Listen to event scroll
       window.addEventListener("scroll", function () {
         const windowHeight = window.innerHeight;
         const middleOfViewport = windowHeight / 2;
-
-        // Amazon Button One
-        const amazonOne = document.getElementById("amazon-1");
-        const amazonOnePosition = amazonOne.getBoundingClientRect();
-        const amazonShapeOne = document.querySelector(
-          "#amazon-1 .button-shape"
-        );
-        const BuyTextOne = document.querySelector("#amazon-1 .buy-text");
-
-        // Amazon Button Two
-        const amazonTwo = document.getElementById("amazon-2");
-        const amazonTwoPosition = amazonTwo.getBoundingClientRect();
-        const amazonShapeTwo = document.querySelector(
-          "#amazon-2 .button-shape"
-        );
-        const BuyTextTwo = document.querySelector("#amazon-2 .buy-text");
-
-        // Show Amazon Buttons
-        if (
-          amazonOnePosition.top < middleOfViewport &&
-          amazonOnePosition.bottom > middleOfViewport
-        ) {
-          setTimeout(() => {
-            amazonOne.classList.add("button-highlight");
-            amazonShapeOne.style.transform = "translate(0%)";
-            BuyTextOne.style.display = "inline-flex";
-          }, 500);
-        }
-
-        if (
-          amazonTwoPosition.top < middleOfViewport &&
-          amazonTwoPosition.bottom > middleOfViewport
-        ) {
-          setTimeout(() => {
-            amazonTwo.classList.add("button-highlight", "text-dark");
-            amazonShapeTwo.style.transform = "translate(0%)";
-            BuyTextTwo.style.display = "inline-flex";
-          }, 500);
-        }
 
         // Cart Button One
         const cartOne = document.getElementById("cart-1");
@@ -569,7 +560,7 @@
           cartTwoPosition.bottom > middleOfViewport
         ) {
           setTimeout(() => {
-            cartTwo.classList.add("button-highlight", "text-dark");
+            cartTwo.classList.add("button-highlight", "text-black");
             cartShapeTwo.style.transform = "translate(0%)";
             cartSVGTwo.style.display = "inline-flex";
           }, 500);
@@ -588,14 +579,14 @@
         const arrowTwoText = document.querySelector("#arrow-2 .text");
         const iconArrowTwo = document.querySelector("#arrow-2 .bi");
 
-        // Show Cart Buttons
+        // Show Arrow Buttons
         if (
           arrowOnePosition.top < middleOfViewport &&
           arrowOnePosition.bottom > middleOfViewport
         ) {
           setTimeout(() => {
             arrowOne.classList.add("button-highlight", "p-0");
-            arrowOneText.classList.add("px-2");
+            arrowOneText.classList.add("pe-1", "ps-2");
             arrowShapeOne.style.transform = "translate(0%)";
             iconArrowOne.style.display = "inline-flex";
             iconArrowOne.classList.add("bg-green");
@@ -607,11 +598,54 @@
           arrowTwoPosition.bottom > middleOfViewport
         ) {
           setTimeout(() => {
-            arrowTwo.classList.add("button-highlight", "p-0", "text-dark");
-            arrowTwoText.classList.add("px-2");
+            arrowTwo.classList.add("button-highlight", "p-0", "text-black");
+            arrowTwoText.classList.add("pe-1", "ps-2");
             arrowShapeTwo.style.transform = "translate(0%)";
             iconArrowTwo.style.display = "inline-flex";
             iconArrowTwo.classList.add("dark-yellow");
+          }, 500);
+        }
+
+        // Plus Button One
+        const plusOne = document.getElementById("plus-1");
+        const plusOnePosition = plusOne.getBoundingClientRect();
+        const plusShapeOne = document.querySelector("#plus-1 .button-shape");
+        const plusOneText = document.querySelector("#plus-1 .text");
+        const iconPlusOne = document.querySelector("#plus-1 .fa-plus");
+
+        // Show Plus Buttons
+        if (
+          plusOnePosition.top < middleOfViewport &&
+          plusOnePosition.bottom > middleOfViewport
+        ) {
+          setTimeout(() => {
+            plusOne.classList.add("button-highlight", "p-0", "text-black");
+            plusOneText.classList.add("pe-1", "ps-2");
+            plusShapeOne.style.transform = "translate(0%)";
+            iconPlusOne.style.display = "inline-flex";
+            iconPlusOne.classList.add("dark-yellow");
+          }, 500);
+        }
+
+        // Chevron Button
+        const chevronOne = document.getElementById("chevron-1");
+        const chevronOnePosition = cartOne.getBoundingClientRect();
+        const chevronShapeOne = document.querySelector(
+          "#chevron-1 .button-shape"
+        );
+        const chevronIconOne = document.querySelector(
+          "#chevron-1 .fa-chevron-right"
+        );
+
+        // Show Chevron Buttons
+        if (
+          chevronOnePosition.top < middleOfViewport &&
+          chevronOnePosition.bottom > middleOfViewport
+        ) {
+          setTimeout(() => {
+            chevronOne.classList.add("button-highlight");
+            chevronShapeOne.style.transform = "translate(0%)";
+            chevronIconOne.style.display = "inline-flex";
           }, 500);
         }
       });

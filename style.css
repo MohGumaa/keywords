@@ -93,11 +93,15 @@ body {
 }
 
 .dark-yellow {
-  background-color: #f1cb0c;
+  background-color: #f1cb0c !important;
 }
 
 .bg-green {
-  background-color: #109244;
+  background-color: #259438 !important;
+}
+
+.text-black {
+  color: #000 !important;
 }
 
 /* Amazon Button */
@@ -129,7 +133,7 @@ body {
   border-radius: 24px;
   box-shadow: 0px 1px 0px 0px #dcdcdc;
   color: #fff;
-  padding: 2px 7px;
+  padding: 3px 8px;
   line-height: initial;
   text-transform: capitalize;
   opacity: 1;
@@ -142,16 +146,28 @@ body {
 
 .buy-text,
 .button svg,
-.bi-caret-right-fill {
+.bi-caret-right-fill,
+.bi-caret-left-fill,
+.fa-plus,
+.fa-chevron-right,
+.fa-chevron-left {
   display: none;
 }
 
-.button.cart {
+.fa-chevron-right,
+.fa-chevron-left {
+  font-size: 13px;
+  margin-top: 2.5px;
+}
+
+.flex-gap {
   column-gap: 4px;
 }
 
-.bi-caret-right-fill {
-  padding: 3.5px 4px;
+.bi-caret-right-fill,
+.bi-caret-left-fill,
+.fa-plus {
+  padding: 4.5px 4px;
 }
 
 /* Mobile */

@@ -9,7 +9,24 @@ p {
   margin-bottom: 1.5rem;
 }
 
-.btn-yellow:hover .button-text-2 {
+.button-shape {
+  transform: translate(150%);
+}
+
+.button-highlight {
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
+.fa-chevron-left {
+  margin-top: 5px;
+}
+
+.button-highlight:hover {
+  color: #fff;
+}
+
+/* .btn-yellow:hover .button-text-2 {
   color: #0f1111;
 }
 
@@ -47,4 +64,4 @@ p {
     line-height: 10px;
     height: 5px;
   }
-}
+} */
