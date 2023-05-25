@@ -17,31 +17,6 @@ p {
   height: 16px;
 }
 
-/* .button-highlight {
-  padding: 1.5px 8px;
-} */
-
-/* .button-highlight {
-  padding-top: 2px;
-  padding-bottom: 2px;
-}
-
-.fa-chevron-left {
-  margin-top: 5px;
-}
-
 .button-highlight:hover {
-  color: #fff;
-} */
-
-/* 
-@media screen and (max-width: 600px) {
-  .active-ar {
-    padding: 3px 8px;
-  }
-
-  .active-ar .text {
-    line-height: 10px;
-    height: 5px;
-  }
-}  */
+  color: white;
+}
