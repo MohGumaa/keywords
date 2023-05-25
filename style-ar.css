@@ -26,35 +26,7 @@ p {
   color: #fff;
 }
 
-/* .btn-yellow:hover .button-text-2 {
-  color: #0f1111;
-}
-
-.button-shape {
-  transform: translate(120%);
-}
-
-.active-ar {
-  border-radius: 24px;
-  box-shadow: 0px 1px 0px 0px #dcdcdc;
-  color: white;
-  padding: 3px 7px;
-  text-transform: capitalize;
-  font-weight: 500;
-}
-
-.active-ar .text {
-  height: 17px;
-}
-
-.active-ar:hover {
-  color: #fff;
-}
-
-.active-ar.yellow-btn {
-  color: #141416;
-}
-
+/* 
 @media screen and (max-width: 600px) {
   .active-ar {
     padding: 3px 8px;
@@ -64,4 +36,4 @@ p {
     line-height: 10px;
     height: 5px;
   }
-} */
+}  */

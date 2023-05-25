@@ -501,9 +501,9 @@
       // Add Link Plus
       const modifiedParagraphPlusOne = paragraphPlusOne.innerHTML.replace(
         new RegExp(keywordPlusOne, "gi"),
-        `<a href="#" target="_blank"class="text-decoration-none button"id="plus-1">
+        `<a href="#" target="_blank"class="text-decoration-none button flex-gap"id="plus-1">
           <span class="text">$&</span>
-          <i class="fa-solid fa-plus"></i>
+          <i class="fa-solid fa-plus p-0"></i>
           <span class="button-shape yellow"></span>
         </a>`
       );
@@ -610,7 +610,6 @@
         const plusOne = document.getElementById("plus-1");
         const plusOnePosition = plusOne.getBoundingClientRect();
         const plusShapeOne = document.querySelector("#plus-1 .button-shape");
-        const plusOneText = document.querySelector("#plus-1 .text");
         const iconPlusOne = document.querySelector("#plus-1 .fa-plus");
 
         // Show Plus Buttons
@@ -619,11 +618,9 @@
           plusOnePosition.bottom > middleOfViewport
         ) {
           setTimeout(() => {
-            plusOne.classList.add("button-highlight", "p-0", "text-black");
-            plusOneText.classList.add("pe-1", "ps-2");
+            plusOne.classList.add("button-highlight", "text-black");
             plusShapeOne.style.transform = "translate(0%)";
             iconPlusOne.style.display = "inline-flex";
-            iconPlusOne.classList.add("dark-yellow");
           }, 500);
         }
 
