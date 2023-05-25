@@ -14,6 +14,10 @@ p {
 }
 
 .button-highlight {
+  padding: 1.5px 8px;
+}
+
+/* .button-highlight {
   padding-top: 2px;
   padding-bottom: 2px;
 }
@@ -24,7 +28,7 @@ p {
 
 .button-highlight:hover {
   color: #fff;
-}
+} */
 
 /* 
 @media screen and (max-width: 600px) {
