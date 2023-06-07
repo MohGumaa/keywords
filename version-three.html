@@ -404,6 +404,7 @@
           </div>
         </div>
       </div>
+      <i id="arrow" class="bi bi-chevron-down slide-chevron-down d-flex"></i>
     </div>
 
     <div id="modal-backdrop" class="modal-backdrop fade"></div>
@@ -427,10 +428,13 @@
 
         // Get the window container and link button elements
         const linkButton = document.querySelector("#slide-1 .link-button");
+        const modalBackdrop = document.getElementById("modal-backdrop");
         const btnArticle = document.getElementById("btn-article");
         const boxContainer = document.getElementById("box");
-        const modalBackdrop = document.getElementById("modal-backdrop");
+        const arrow = document.getElementById("arrow");
+
         const screenWindow = window;
+        let boxHeight = null;
 
         // Function to toggle the window visibility
         const toggleWindow = () => {
@@ -438,9 +442,12 @@
           let newHeight;
 
           if (screenWindow.innerWidth < 768) {
-            newHeight = windowHeight === 0 ? "95vh" : "0px";
+            const screenHeight = window.innerHeight - 50;
+            newHeight = windowHeight === 0 ? screenHeight + "px" : "0px";
+            boxHeight = windowHeight === 0 ? screenHeight : "0";
           } else {
             newHeight = windowHeight === 0 ? "328px" : "0px";
+            boxHeight = windowHeight === 0 ? "328" : "0";
           }
 
           boxContainer.style.height = newHeight;
@@ -451,6 +458,40 @@
 
         btnArticle.addEventListener("click", toggleWindow);
         linkButton.addEventListener("click", toggleWindow);
+
+        let initialY = null;
+        let currentY = null;
+        let initialHeight = null;
+
+        arrow.addEventListener("touchstart", function (event) {
+          initialY = event.touches[0].clientY;
+          currentY = initialY;
+          initialHeight = box.offsetHeight;
+        });
+
+        arrow.addEventListener("touchmove", function (event) {
+          currentY = event.touches[0].clientY;
+
+          const dragDistance = currentY - initialY;
+          const newHeight = Math.max(0, initialHeight - dragDistance);
+
+          if (newHeight === 50) {
+            boxContainer.style.height = "0px";
+
+            if (newHeight === 0) {
+              modalBackdrop.classList.toggle("show");
+              modalBackdrop.classList.toggle("d-block");
+              document.body.classList.toggle("overflow-hidden");
+            }
+          } else if (newHeight <= boxHeight) {
+            boxContainer.style.height = newHeight + "px";
+            if (newHeight === 0) {
+              modalBackdrop.classList.toggle("show");
+              modalBackdrop.classList.toggle("d-block");
+              document.body.classList.toggle("overflow-hidden");
+            }
+          }
+        });
       });
     </script>
   </body>

@@ -192,8 +192,7 @@ body {
     5px 0 5px -5px rgba(0, 0, 0, 0.2), -5px 0 5px -5px rgba(0, 0, 0, 0.2);
   overflow: hidden;
   z-index: 10000;
-  touch-action: none;
-  transition: height 0.2s ease-in-out;
+  transition: height 0.3s ease-in-out;
 }
 
 .slide-box .card-img-top {
@@ -238,6 +237,16 @@ body {
 
 .modal-backdrop {
   display: none;
+}
+
+.slide-chevron-down {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -9px;
+  font-size: 30px;
+  color: #777;
+  cursor: ns-resize;
 }
 
 /* Mobile */
