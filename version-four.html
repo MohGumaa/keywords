@@ -2,53 +2,84 @@
 <html>
   <head>
     <style>
-      #container {
-        width: 200px;
-        height: 200px;
-        background-color: blue;
-        transform: translateY(0);
-        transition: transform 0.3s ease;
+      body {
+        height: 2000px; /* To allow scrolling on mobile */
+      }
+
+      .fixed-box {
+        position: fixed;
+        top: 10%;
+        left: 10%;
+        width: 80%;
+        height: 100%;
+        background-color: #f0f0f0;
+        transition: transform 0.3s ease-in-out;
       }
     </style>
   </head>
   <body>
-    <div id="container"></div>
+    <div class="fixed-box"></div>
 
     <script>
-      // Get the container element
-      const container = document.getElementById("container");
+      // Get the fixed box element
+      const fixedBox = document.querySelector(".fixed-box");
 
-      // Variables to store initial touch position and container position
+      // Initialize variables
       let initialY = null;
-      let containerY = 0;
+      let currentY = null;
+      let translateY = 0;
 
-      // Function to handle touch start event
-      function handleTouchStart(event) {
+      // Function to update the translateY value and apply the transform
+      function updateTransform() {
+        fixedBox.style.transform = `translateY(${translateY}%)`;
+      }
+
+      // Event listener for touchstart (drag start)
+      fixedBox.addEventListener("touchstart", function (event) {
         initialY = event.touches[0].clientY;
-        containerY = parseFloat(
-          getComputedStyle(container).transform.split(",")[5]
-        );
-      }
+        currentY = initialY;
+      });
 
-      // Function to handle touch move event
-      function handleTouchMove(event) {
-        if (initialY === null) return;
+      // Event listener for touchmove (dragging)
+      fixedBox.addEventListener("touchmove", function (event) {
+        currentY = event.touches[0].clientY;
 
-        const currentY = event.touches[0].clientY;
-        const deltaY = currentY - initialY;
+        if (currentY > initialY) {
+          // Dragging down, increase translateY gradually up to 100%
+          translateY = Math.min(
+            100,
+            Math.max(0, ((currentY - initialY) / window.innerHeight) * 100)
+          );
+        } else {
+          // Dragging up, decrease translateY gradually to 0%
+          translateY = Math.min(
+            100,
+            Math.max(
+              0,
+              100 - ((initialY - currentY) / window.innerHeight) * 100
+            )
+          );
+        }
 
-        container.style.transform = `translateY(${containerY + deltaY}px)`;
-      }
+        updateTransform();
+      });
 
-      // Function to handle touch end event
-      function handleTouchEnd() {
+      // Event listener for touchend (drag end)
+      fixedBox.addEventListener("touchend", function () {
+        // Reset the variables
         initialY = null;
-      }
+        currentY = null;
 
-      // Add event listeners for touch events
-      container.addEventListener("touchstart", handleTouchStart);
-      container.addEventListener("touchmove", handleTouchMove);
-      container.addEventListener("touchend", handleTouchEnd);
+        // Snap back to 0% or 100% translateY
+        if (translateY < 50) {
+          translateY = 0;
+        } else {
+          translateY = 100;
+        }
+
+        // Apply the final transform
+        updateTransform();
+      });
     </script>
   </body>
 </html>
