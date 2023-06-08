@@ -179,6 +179,132 @@ body {
   height: 18px;
 }
 
+.fs-18 {
+  font-size: 18px;
+}
+
+.fs-16 {
+  font-size: 16px;
+}
+
+/* Slide Drawer */
+.related-keywords {
+  border-radius: 4px;
+  border: 1px solid #dadce0;
+  background-color: #f8f9fa;
+}
+
+.related-keywords .title {
+  font-size: 18px;
+  color: #4a4a4a;
+  margin-bottom: 10px;
+  margin-left: 16px;
+  margin-top: 10px;
+  padding-bottom: 4px;
+  padding-top: 4px;
+}
+
+.related-keywords .keywords {
+  border-top: 1px solid #dadce0;
+}
+
+.related-keywords .btn {
+  font-size: 18px;
+  color: #3c4043;
+  padding-bottom: 14px;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 14px;
+}
+
+.related-keywords .btn:not(:last-child) {
+  border-bottom: 1px solid #dadce0 !important;
+}
+
+.slide-container {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: auto;
+  z-index: 100;
+}
+
+.slide-container .slide-modal {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: opacity 0.5s ease-in-out;
+  width: 100%;
+  height: 100%;
+}
+
+.slide-container .slide-revealer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 95%;
+  transition: transform 0.5s ease-in-out;
+  transform: translateY(0%);
+}
+
+.slide-container .slide-revealer .content {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  clip-path: inset(0 0 -50px 0 round 20px);
+}
+
+#ved-scroller {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  overflow-y: scroll;
+  overscroll-behavior: none;
+  scroll-snap-type: y mandatory;
+}
+
+.moving-handle-holder {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
+.moving-handle-holder .handle {
+  align-items: flex-end;
+  border-radius: 20px 20px 0 0;
+  background: white;
+  display: flex;
+  height: 30px;
+  justify-content: center;
+  cursor: grab;
+}
+
+.moving-handle-holder .handle-icon {
+  background: #dadce0;
+  border-radius: 2px;
+  height: 4px;
+  margin-bottom: 8px;
+  width: 50px;
+}
+
+.content-background {
+  width: 100%;
+  height: 100%;
+  flex-grow: 1;
+  padding-top: 1px;
+  margin-top: -1px;
+  background-color: white;
+}
+
 /* Mobile */
 @media screen and (max-width: 600px) {
   body {
