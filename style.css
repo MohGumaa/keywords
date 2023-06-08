@@ -221,7 +221,7 @@ body {
   border-bottom: 1px solid #dadce0 !important;
 }
 
-.slide-container {
+.container-drawer {
   position: fixed;
   left: 0;
   top: 0;
@@ -229,30 +229,40 @@ body {
   height: 100%;
   overflow: hidden;
   pointer-events: auto;
+  display: none;
   z-index: 100;
 }
 
-.slide-container .slide-modal {
+.visibility-show {
+  display: block;
+}
+
+.drawer-modal {
   position: absolute;
   left: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: #000;
   transition: opacity 0.5s ease-in-out;
   width: 100%;
   height: 100%;
+  opacity: 0;
 }
 
-.slide-container .slide-revealer {
+.drawer-modal.show {
+  opacity: 0.5;
+}
+
+.drawer-content {
   position: absolute;
   left: 0;
   bottom: 0;
   width: 100%;
   height: 95%;
   transition: transform 0.5s ease-in-out;
-  transform: translateY(0%);
+  transform: translateY(100%);
 }
 
-.slide-container .slide-revealer .content {
+.drawer-content .content {
   position: absolute;
   left: 0;
   bottom: 0;
@@ -261,7 +271,7 @@ body {
   clip-path: inset(0 0 -50px 0 round 20px);
 }
 
-#ved-scroller {
+.content-scroller {
   position: relative;
   width: 100%;
   height: 100%;
@@ -296,7 +306,7 @@ body {
   width: 50px;
 }
 
-.content-background {
+.content-items {
   width: 100%;
   height: 100%;
   flex-grow: 1;
