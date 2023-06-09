@@ -187,6 +187,14 @@ body {
   font-size: 16px;
 }
 
+.p-20 {
+  padding: 20px;
+}
+
+.mb-10 {
+  margin-bottom: 10px;
+}
+
 /* Slide Drawer */
 .related-keywords {
   border-radius: 4px;
@@ -219,6 +227,134 @@ body {
 
 .related-keywords .btn:not(:last-child) {
   border-bottom: 1px solid #dadce0 !important;
+}
+
+/* Slide Drawer */
+.slide-drawer {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: auto;
+  display: none;
+  z-index: 100;
+}
+
+.drawer-modal {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: #000;
+  transition: opacity 0.5s ease-in-out;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+
+.visibility-show {
+  display: block;
+}
+
+.drawer-modal.show {
+  opacity: 0.5;
+}
+
+.slide-revealer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 95%;
+  transition: transform 0.5s ease-in-out;
+  transform: translateY(100%);
+}
+
+#scroller-container {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  clip-path: inset(0 0 -50px 0 round 20px);
+}
+
+#scroller {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  overflow-y: scroll;
+  overscroll-behavior: none;
+  scroll-snap-type: y mandatory;
+}
+
+#scrolled-stack {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+#visible-scrolled-items {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.moving-handle-holder {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
+.moving-handle-holder .handle {
+  align-items: flex-end;
+  border-radius: 20px 20px 0 0;
+  background: white;
+  display: flex;
+  height: 30px;
+  justify-content: center;
+  cursor: grab;
+}
+
+.moving-handle-holder .handle-icon {
+  background: #dadce0;
+  border-radius: 2px;
+  height: 4px;
+  margin-bottom: 8px;
+  width: 50px;
+}
+
+#content-background {
+  width: 100%;
+  height: 100%;
+  flex-grow: 1;
+  padding-top: 1px;
+  margin-top: -1px;
+  background-color: white;
+}
+
+.slide-drawer .card {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.5s ease-in;
+}
+
+.btn-price {
+  box-shadow: 0 2px 5px 0 rgba(213, 217, 217, 0.5);
+  border-radius: 100px;
+}
+
+.btn-price.btn-primary {
+  background: #0d6efd;
+  border-color: #0d6efd;
+}
+
+.btn-price.btn-warning {
+  background: #ffd814;
+  border-color: #fcd200;
 }
 
 /* Mobile */

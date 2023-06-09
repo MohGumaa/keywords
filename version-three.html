@@ -367,17 +367,80 @@
       <p>UAE24</p>
     </footer>
 
-    <div id="drawer" class="container-drawer">
+    <div id="drawer" class="slide-drawer">
       <div id="drawer-modal" class="drawer-modal"></div>
-      <div class="drawer-content">
-        <div class="content">
-          <div class="content-scroller">
-            <div class="moving-handle-holder">
-              <div class="handle">
-                <div class="handle-icon"></div>
+      <div class="slide-revealer">
+        <!-- <div id="over-scroll-block"></div> -->
+        <div id="scroller-container">
+          <div id="scroller">
+            <div id="scrolled-stack">
+              <div id="visible-scrolled-items">
+                <div class="moving-handle-holder">
+                  <div class="handle">
+                    <div class="handle-icon"></div>
+                  </div>
+                </div>
+                <div id="content-background">
+                  <div
+                    id="card-content"
+                    class="card border-0 rounded-0 flex-column flex-md-row align-items-center p-20 pb-0 h-100"
+                  >
+                    <img
+                      src="img/Breville.jpg"
+                      alt="Breville"
+                      class="card-img-top"
+                    />
+                    <div class="card-body px-0">
+                      <h5 class="card-title mb-4">
+                        Breville Bes870 Barista Express Espresso Machine,
+                        Silver, Bes870XL"Min 1 year manufacturer warranty"
+                      </h5>
+                      <div>
+                        <a
+                          href="#"
+                          class="d-flex justify-content-between align-items-center btn btn-warning btn-price mb-10"
+                        >
+                          <i class="fa-brands fa-amazon fs-16"></i>
+                          <span>$450</span>
+                        </a>
+                        <a
+                          href="#"
+                          class="d-flex justify-content-between align-items-center btn btn-warning btn-price mb-10"
+                        >
+                          <img
+                            src="img/carrefour.svg"
+                            alt="carrefour"
+                            width="20"
+                            height="20"
+                            class="img-fluid"
+                          />
+                          <span>$470</span>
+                        </a>
+                        <a
+                          href="#"
+                          class="d-flex justify-content-between align-items-center btn btn-warning btn-price mb-10"
+                        >
+                          <img
+                            src="img/noon.svg"
+                            alt="carrefour"
+                            width="54"
+                            class="img-fluid"
+                          />
+                          <span>$450</span>
+                        </a>
+                        <a
+                          href="#"
+                          class="d-flex justify-content-between align-items-center btn btn-primary btn-price"
+                        >
+                          <i class="fa-brands fa-alipay fs-16"></i>
+                          <span>$450</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="content-items"></div>
           </div>
         </div>
       </div>
@@ -388,5 +451,66 @@
       integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
       crossorigin="anonymous"
     ></script>
+
+    <!-- Slide Script -->
+    <script>
+      const drawerContent = document.querySelector("#drawer .slide-revealer");
+      const drawerModal = document.getElementById("drawer-modal");
+      const cardContent = document.getElementById("card-content");
+      const buttons = document.querySelectorAll("button");
+      const drawer = document.getElementById("drawer");
+
+      // Flag to track if the modal is currently shown
+      let isModalShown = false;
+
+      const showModal = () => {
+        drawer.classList.add("visibility-show");
+        setTimeout(() => {
+          drawerModal.classList.add("show");
+          drawerContent.style.transform = "translateY(0%)";
+          cardContent.style.display = "flex";
+          setTimeout(() => (cardContent.style.opacity = 1), 150);
+        }, 50);
+        document.body.classList.add("overflow-hidden");
+        isModalShown = true;
+      };
+
+      const hideModal = () => {
+        drawer.classList.remove("visibility-show");
+        setTimeout(() => {
+          drawerModal.classList.remove("show");
+          drawerContent.style.transform = "translateY(100%)";
+          cardContent.style.display = "none";
+          setTimeout(() => (cardContent.style.opacity = 0), 150);
+        }, 50);
+        document.body.classList.remove("overflow-hidden");
+        isModalShown = false;
+      };
+
+      const buttonClickHandler = () => {
+        if (isModalShown) {
+          hideModal();
+        } else {
+          showModal();
+        }
+      };
+
+      buttons.forEach((button) => {
+        button.addEventListener("click", buttonClickHandler);
+      });
+
+      // Add scroll event listener on mobile devices
+      if (
+        /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+          navigator.userAgent
+        )
+      ) {
+        const handleScroll = () => {
+          console.log("scroll");
+        };
+
+        drawerContent.addEventListener("scroll", handleScroll);
+      }
+    </script>
   </body>
 </html>
