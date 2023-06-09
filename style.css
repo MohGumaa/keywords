@@ -271,6 +271,10 @@ body {
   transform: translateY(100%);
 }
 
+.no-transition {
+  transition: none;
+}
+
 .slide-container {
   position: absolute;
   left: 0;
