@@ -199,7 +199,7 @@
             magnetically-controlled nano optical AR layer, which reduces
             reflections by 60 per cent.
           </p>
-          <div class="related-keywords overflow-hidden my-3 d-block d-md-none">
+          <div class="related-keywords overflow-hidden my-3">
             <h5 class="title">Related keywords</h5>
             <div class="keywords overflow-hidden">
               <button
@@ -388,51 +388,5 @@
       integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
       crossorigin="anonymous"
     ></script>
-
-    <script>
-      const drawerContent = document.querySelector("#drawer .drawer-content");
-      const drawerModal = document.getElementById("drawer-modal");
-      const buttons = document.querySelectorAll("button");
-      const drawer = document.getElementById("drawer");
-
-      // Flag to track if the modal is currently shown
-      let isModalShown = false;
-
-      // Function to show the modal with slide-up animation
-      function showModal() {
-        drawer.classList.add("visibility-show");
-        setTimeout(() => {
-          drawerModal.classList.add("show");
-          drawerContent.style.transform = "translateY(0%)";
-        }, 50);
-        document.body.classList.add("overflow-hidden");
-        isModalShown = true;
-      }
-
-      // Function to hide the modal with slide-down animation
-      function hideModal() {
-        drawer.classList.remove("visibility-show");
-
-        setTimeout(() => {
-          drawerModal.classList.remove("show");
-          drawerContent.style.transform = "translateY(100%)";
-        }, 50);
-        document.body.classList.remove("overflow-hidden");
-        isModalShown = false;
-      }
-
-      // Function to handle the click event on the button
-      function buttonClickHandler() {
-        if (isModalShown) {
-          hideModal();
-        } else {
-          showModal();
-        }
-      }
-
-      buttons.forEach((button) => {
-        button.addEventListener("click", buttonClickHandler);
-      });
-    </script>
   </body>
 </html>
