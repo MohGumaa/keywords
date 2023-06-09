@@ -328,6 +328,11 @@ body {
   background-color: white;
 }
 
+.content .card-img-top {
+  height: 240px;
+  object-fit: contain;
+}
+
 #card-content {
   display: none;
   opacity: 0;
