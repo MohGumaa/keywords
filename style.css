@@ -230,6 +230,124 @@ body {
 }
 
 /* Slide */
+.sliding-window {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: auto;
+  display: none;
+  z-index: 100;
+}
+
+.sliding-modal {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: #000;
+  transition: opacity 0.5s ease-in-out;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+
+.visibility-show {
+  display: block;
+}
+
+.sliding-modal.show {
+  opacity: 0.5;
+}
+
+.slide-content {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 95%;
+  transition: transform 0.5s ease-in-out;
+  transform: translateY(100%);
+}
+
+.slide-container {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  clip-path: inset(0 0 -50px 0 round 20px);
+}
+
+.content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  overflow-y: scroll;
+  overscroll-behavior: none;
+  scroll-snap-type: y mandatory;
+}
+
+.content .items {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.moving-handle-holder {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
+.moving-handle-holder .handle {
+  align-items: flex-end;
+  border-radius: 20px 20px 0 0;
+  background: white;
+  display: flex;
+  height: 30px;
+  justify-content: center;
+  cursor: grab;
+}
+
+.moving-handle-holder .handle-icon {
+  background: #dadce0;
+  border-radius: 2px;
+  height: 4px;
+  margin-bottom: 8px;
+  width: 50px;
+}
+
+.content .card {
+  width: 100%;
+  height: 100%;
+  flex-grow: 1;
+  background-color: white;
+}
+
+#card-content {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.5s ease-in;
+}
+
+.btn-price {
+  box-shadow: 0 2px 5px 0 rgba(213, 217, 217, 0.5);
+  border-radius: 100px;
+}
+
+.btn-price.btn-primary {
+  background: #0d6efd;
+  border-color: #0d6efd;
+}
+
+.btn-price.btn-warning {
+  background: #ffd814;
+  border-color: #fcd200;
+}
 
 /* Mobile */
 @media screen and (max-width: 600px) {

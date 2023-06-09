@@ -367,10 +367,138 @@
       <p>UAE24</p>
     </footer>
 
+    <div class="sliding-window">
+      <div class="sliding-modal"></div>
+      <div class="slide-content">
+        <div class="slide-container">
+          <div class="content">
+            <div class="items">
+              <div id="btn-close" class="moving-handle-holder">
+                <div class="handle">
+                  <div class="handle-icon"></div>
+                </div>
+              </div>
+              <div class="card border-0 rounded-0 p-20 pb-0">
+                <div id="card-content" class="flex-column flex-grow-1">
+                  <img
+                    src="img/Breville.jpg"
+                    alt="Breville"
+                    class="card-img-top"
+                  />
+                  <div class="card-body px-0">
+                    <h5 class="card-title fs-18 mb-4">
+                      Breville Bes870 Barista Express Espresso Machine, Silver,
+                      Bes870XL"Min 1 year manufacturer warranty"
+                    </h5>
+                    <div>
+                      <a
+                        href="#"
+                        class="d-flex justify-content-between align-items-center btn btn-warning btn-price mb-10"
+                      >
+                        <i class="fa-brands fa-amazon fs-16"></i>
+                        <span>$450</span>
+                      </a>
+                      <a
+                        href="#"
+                        class="d-flex justify-content-between align-items-center btn btn-warning btn-price mb-10"
+                      >
+                        <img
+                          src="img/carrefour.svg"
+                          alt="carrefour"
+                          width="20"
+                          height="20"
+                          class="img-fluid"
+                        />
+                        <span>$470</span>
+                      </a>
+                      <a
+                        href="#"
+                        class="d-flex justify-content-between align-items-center btn btn-warning btn-price mb-10"
+                      >
+                        <img
+                          src="img/noon.svg"
+                          alt="carrefour"
+                          width="54"
+                          class="img-fluid"
+                        />
+                        <span>$450</span>
+                      </a>
+                      <a
+                        href="#"
+                        class="d-flex justify-content-between align-items-center btn btn-primary btn-price"
+                      >
+                        <i class="fa-brands fa-alipay fs-16"></i>
+                        <span>$450</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
       crossorigin="anonymous"
     ></script>
+
+    <!-- Slide Script -->
+    <script>
+      const slidingWindow = document.querySelector(".sliding-window");
+      const slideContent = document.querySelector(".slide-content");
+      const slidingModal = document.querySelector(".sliding-modal");
+      const cardContent = document.getElementById("card-content");
+      const btnClose = document.getElementById("btn-close");
+      const buttons = document.querySelectorAll("button");
+
+      // Flag to track if the modal is currently shown
+      let isModalShown = false;
+
+      const showModal = () => {
+        slidingWindow.classList.add("visibility-show");
+        setTimeout(() => {
+          slidingModal.classList.add("show");
+          slideContent.style.transform = "translateY(0%)";
+
+          cardContent.style.display = "flex";
+          setTimeout(() => (cardContent.style.opacity = 1), 450);
+        }, 50);
+        document.body.classList.add("overflow-hidden");
+        isModalShown = true;
+      };
+
+      const hideModal = () => {
+        slideContent.style.transform = "translateY(100%)";
+        setTimeout(() => {
+          slidingModal.classList.remove("show");
+
+          cardContent.style.display = "none";
+          setTimeout(() => {
+            cardContent.style.opacity = 0;
+            slidingWindow.classList.remove("visibility-show");
+          }, 400);
+        }, 500);
+        document.body.classList.remove("overflow-hidden");
+        isModalShown = false;
+      };
+
+      const buttonClickHandler = () => {
+        if (isModalShown) {
+          hideModal();
+        } else {
+          showModal();
+        }
+      };
+
+      buttons.forEach((button) => {
+        button.addEventListener("click", buttonClickHandler);
+      });
+
+      btnClose.addEventListener("click", buttonClickHandler);
+    </script>
   </body>
 </html>
