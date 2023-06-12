@@ -580,9 +580,10 @@
                 slidingWindow.classList.remove("visibility-show");
               }, 400);
             }, 500);
+
+            document.body.classList.remove("overflow-hidden");
+            isModalShown = false;
           }
-          document.body.classList.remove("overflow-hidden");
-          isModalShown = false;
 
           document.removeEventListener("touchmove", dragCurtain);
           document.removeEventListener("touchend", stopDrag);
