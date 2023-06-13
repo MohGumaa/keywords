@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Slide UP Window</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/4c9f666489.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="./css/modal.css" />
+  </head>
+  <body class="overflow">
+    <div class="container mb-3">
+      <header class="blog-header lh-1 py-3 mb-3">
+        <div class="row flex-nowrap justify-content-between align-items-center">
+          <div class="col-4 pt-1">
+            <a
+              class="btn btn-dark text-white rounded-2px py-1 d-inline-flex align-items-center"
+              href="#"
+              ><i class="bi bi-envelope small me-2"></i> Newsletter</a
+            >
+          </div>
+          <div class="col-4 text-center">
+            <a class="blog-header-logo text-body-emphasis" href="#"
+              ><svg
+                width="180"
+                height="50"
+                viewBox="0 0 202 77"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g clip-path="url(#clip0_111_4928)">
+                  <rect
+                    width="201.865"
+                    height="77"
+                    transform="translate(0.0673828)"
+                    fill="white"
+                  />
+                  <path
+                    d="M15.6753 41.6239V23.8325H26.5169V41.19C26.5169 42.5786 26.8782 43.649 27.601 44.4011C28.3238 45.1533 29.3357 45.5294 30.6367 45.5294C31.9376 45.5294 32.9495 45.1533 33.6723 44.4011C34.3951 43.649 34.7565 42.5786 34.7565 41.19V23.8325H45.598V41.6239C45.598 45.7029 44.2681 48.9719 41.6083 51.4309C38.9774 53.8609 35.3202 55.076 30.6367 55.076C25.9531 55.076 22.2814 53.8609 19.6216 51.4309C16.9907 48.9719 15.6753 45.7029 15.6753 41.6239Z"
+                    fill="#141416"
+                  />
+                  <path
+                    d="M47.541 54.2081L55.9975 23.8325H73.1271L81.3667 54.2081H70.5252L69.0073 48.5669H59.6836L58.1658 54.2081H47.541ZM61.4182 40.973H67.2727L65.3212 32.9452H63.5866L61.4182 40.973Z"
+                    fill="#141416"
+                  />
+                  <path
+                    d="M83.5249 54.2081V23.8325H108.46V32.5113H94.3664V35.3319H105.425V42.7088H94.3664V45.5294H108.46V54.2081H83.5249Z"
+                    fill="#141416"
+                  />
+                  <path
+                    d="M111.916 54.2081V45.3124L122.324 39.8882C125.244 38.3839 127.094 37.3135 127.875 36.6771C128.656 36.0117 129.046 35.274 129.046 34.464C129.046 33.8275 128.771 33.2779 128.222 32.815C127.702 32.3232 126.964 32.0773 126.01 32.0773C124.738 32.0773 123.784 32.5113 123.148 33.3791C122.888 33.7263 122.686 34.1602 122.541 34.6809H111.699C112.104 32.5113 112.885 30.5585 114.041 28.8228C116.73 24.9174 120.864 22.9647 126.444 22.9647C130.723 22.9647 134.105 24.0061 136.592 26.089C139.078 28.143 140.321 30.6453 140.321 33.5961C140.321 34.9268 140.047 36.1853 139.497 37.3714C138.948 38.5574 138.283 39.541 137.502 40.3221C136.751 41.0743 135.869 41.7686 134.857 42.405C133.845 43.0415 132.992 43.5188 132.298 43.837C131.633 44.1263 130.968 44.3867 130.304 44.6181L129.48 44.8785L128.612 45.0954L127.962 45.3124V45.7897L130.997 45.3124H140.321V54.2081H111.916Z"
+                    fill="#141416"
+                  />
+                  <path
+                    d="M142.906 49.4348V40.3221L153.314 23.8325H165.24L154.832 40.3221H159.602V37.9355L161.727 34.8979H170.01V40.3221H173.479V49.4348H170.01V54.2081H159.169V49.4348H142.906Z"
+                    fill="#141416"
+                  />
+                  <rect
+                    x="178.066"
+                    y="44.9839"
+                    width="8.25719"
+                    height="8.25719"
+                    fill="#BF2600"
+                  />
+                  <rect
+                    x="2.06738"
+                    y="2"
+                    width="197.865"
+                    height="73"
+                    stroke="#353945"
+                    stroke-width="4"
+                  />
+                </g>
+                <defs>
+                  <clipPath id="clip0_111_4928">
+                    <rect
+                      width="201.865"
+                      height="77"
+                      fill="white"
+                      transform="translate(0.0673828)"
+                    />
+                  </clipPath>
+                </defs>
+              </svg>
+            </a>
+          </div>
+          <div class="col-4 d-flex justify-content-end align-items-center">
+            <a
+              href="version-two.html"
+              class="btn btn-outline-light text-dark border-dark"
+              >AR</a
+            >
+          </div>
+        </div>
+      </header>
+
+      <div class="nav-scroller py-1 mb-2">
+        <nav class="nav d-flex justify-content-between">
+          <a class="p-2 link-secondary" href="index.html"
+            >Keywords Deducation</a
+          >
+          <a class="p-2 link-secondary" href="version-three.html">Slide Up</a>
+          <a class="p-2 link-secondary" href="#">Technology</a>
+          <a class="p-2 link-secondary" href="#">Sports</a>
+          <a class="p-2 link-secondary" href="#">Culture</a>
+          <a class="p-2 link-secondary" href="#">Business</a>
+          <a class="p-2 link-secondary" href="#">Politics</a>
+          <a class="p-2 link-secondary" href="#">Opinion</a>
+          <a class="p-2 link-secondary" href="#">Science</a>
+          <a class="p-2 link-secondary" href="#">Health</a>
+          <a class="p-2 link-secondary" href="#">Style</a>
+          <a class="p-2 link-secondary" href="#">Travel</a>
+        </nav>
+      </div>
+    </div>
+
+    <div class="container">
+      <h1>
+        Flagship Laptops Battle of 2023: HUAWEI MateBook X Pro Vs. 14-inch Apple
+        MacBook Pro
+      </h1>
+      <div class="row mt-5">
+        <div class="col-md-8">
+          <img
+            src="img/HUAWEI MateBook X Pro.jpg"
+            alt="news"
+            class="img-fluid mb-3 rounded w-100"
+          />
+          <small class="text-center text-muted d-block mb-3 pb-3"
+            >Image Credit: Midjourney</small
+          >
+          <h6 class="my-3 lh-base">
+            Huawei just announced the latest addition to its MateBook series,
+            the HUAWEI MateBook X Pro, as the latest smart flagship laptop from
+            the iconic tech brand. So, we think it is the right time to compare
+            it against another popular laptop of the same class, the 14-inch
+            MacBook Pro M2. Not only is it going to be fun, but it will also
+            help you look at all the features side by side and figure out the
+            right laptop to choose from. Let’s get started without further ado.
+          </h6>
+          <h5 class="mt-5 fs-semibold">Display and Design</h5>
+          <p id="slide-1">
+            The display on the new HUAWEI MateBook X Pro is outstanding. The
+            14.2-inch 3.1K HUAWEI Real Colour FullView Display has a whopping
+            screen-to-body ratio of 92.5%. The colour accuracy of 1 with support
+            for both the P3 and sRGB dual colour gamut means that you can use
+            this laptop for colour-sensitive tasks like photo and video editing.
+            Furthermore, the Magnetically-controlled Nano Optical AR Layer
+            available on the Premium Edition effectively reduces reflection for
+            greater clarity, even in extremely bright environments.
+          </p>
+          <img src="./img/export.jpg" alt="Image" class="img-fluid mb-4" />
+          <p>
+            HUAWEI MateBook X Pro redefines PC aesthetics with new material
+            processing techniques. It sports a skin-soothing metallic body,
+            delivering a unique matte surface and offering a comfortable grip.
+            The Premium Edition of the HUAWEI MateBook X Pro’s body is made of
+            lightweight and strong magnesium alloy. The innovative Micro-arc
+            Oxidation Coating process is applied to the magnesium alloy airy
+            body, which not only improves the hardness and wear resistance of
+            the product body but also makes the production process more
+            environmentally friendly.
+          </p>
+          <img
+            src="./img/Apple-MacBook.jpg"
+            alt="Image"
+            class="img-fluid mb-4"
+          />
+          <p id="slide-2">
+            The Breville features a Liquid Retina XDR Display that uses mini
+            LEDs, which should give better picture quality than traditional LCD
+            screens. This is a non-touch display, though. The bezels around the
+            screen are smaller. However, there is a notch at the top of the
+            screen for housing the 1080p web camera. This time around, the
+            laptop has actually gotten a tad bit thicker because of the
+            inclusion of more ports. Now it comes with three Thunderbolt 4
+            ports, an SD card slot, an HDMI port that supports 8K, the MagSafe 3
+            charging port, and a headphone jack.
+          </p>
+          <p>
+            Screen and aesthetics-wise, we think that the HUAWEI MateBook X Pro
+            is a game changer!
+          </p>
+          <h5 class="mt-5 fs-semibold">Performance</h5>
+          <p>
+            Featuring a powerful 13th Gen Intel Core processor in its
+            lightweight body, the performance of the new HUAWEI MateBook X Pro
+            is the best in class. The fact that all versions of the HUAWEI
+            MateBook X Pro have been certified by Intel Evo is a testimony to
+            its capabilities. But if you want even more power to handle multiple
+            complex tasks simultaneously, you can enable the 30W Performance
+            Mode by pressing the Fn + P key. The laptop supports up to 32 GB
+            LPDDR5 5600 MHz dual-channel high-speed memory and supports up to 2
+            TB NVMe PCIe SSD.
+          </p>
+          <img src="./img/export.jpg" alt="Image" class="img-fluid mb-4" />
+          <p>
+            The 14-inch MacBook Pro comes with two options for processors; you
+            can either choose the model with M2 Pro or the more expensive one
+            featuring M2 Max. Compared to the M2 Pro, the beefier M2 Max offers
+            better graphics performance with all the extra GPU cores.
+          </p>
+          <h5 class="mt-5 fs-semibold">Smart Features</h5>
+          <p>
+            The HUAWEI MateBook X Pro take multi-device collaboration to a whole
+            new level, thanks to Super Device, bringing super productivity with
+            a cohesive multi-device experience. It lets you effortlessly connect
+            to other Huawei devices nearby and collaborate between them all.
+            Simply place your HUAWEI FreeBuds 5, mouse, keyboard, speakers and
+            printers close to the HUAWEI MateBook X Pro, and the laptop will
+            automatically discover them and provide a prompt for quick and easy
+            pairing.
+          </p>
+          <p>
+            With tablets like the HUAWEI MatePad Pro, it is even more useful. In
+            Mirror Mode, the laptop screen is projected onto the tablet, with
+            both devices showing the same content: the tablet can benefit from
+            the laptop’s incredible performance, while the laptop can access the
+            tablet’s stylus, making drawing even easier. With Extend Mode, the
+            laptop display is extended to the tablet, allowing the tablet to
+            serve as an external monitor so you can scroll and browse easily
+            between the two – perfect for making notes during a class or
+            meeting. Finally, Collaborate Mode lets you share content between
+            the devices via a simple drag and drop, so anything left on one can
+            easily be transferred to the other. Notably, you can control your
+            tablet with your fingers in any of these modes without having to
+            rely on a stylus for everything.
+          </p>
+          <p id="slide-3">
+            Apple offers something called Continuity that helps tie together
+            multiple Apple devices, like Macs, iPhones, and iPads. Notably, this
+            feature allows you to connect between an iPad and the MacBook to use
+            it as an extra display or collaborate together. You will be able to
+            mirror your MacBook display to the iPad and use the tablet as an
+            input device for the laptop using the Apple Pencil but not your
+            fingers. The tablet can also extend the laptop’s display, and you
+            will be able to drag and drop files between the devices
+            simultaneously. And you can control both devices with a single
+            keyboard and mouse. Continuity also allows you to mirror your tablet
+            display on the MacBook screen.
+          </p>
+          <img
+            src="./img/Apple-MacBook-Pro-M2-Pro.jpg"
+            alt="Image"
+            class="img-fluid mb-4"
+          />
+          <p>
+            Overall, the implementation of the features feels a lot more
+            complete and more seamless on Huawei’s Super Device. Also, with the
+            flexibility of the Windows ecosystem and seamless integration of
+            multiple devices, Super Device offers the best of both worlds.
+          </p>
+          <h5 class="mt-5 fs-semibold">Verdict</h5>
+          <p>
+            When you weigh all the features, it is easy to see that the HUAWEI
+            MateBook X Pro gives you the best flagship experience. It boasts
+            some unmatchable features; the 3.1K HUAWEI Real Colour FullView
+            Display has all the resolution you want, the processor is powerful
+            enough to handle anything you throw at it, and the visionary Super
+            Device features make it easier to manage multiple devices. So, if
+            what you want is an all-rounded and stylish laptop that you can use
+            for everything, including productivity and entertainment, HUAWEI
+            MateBook X Pro is the right choice.
+          </p>
+        </div>
+        <div class="col-md-4">
+          <a href="version-two.html" class="card text-decoration-none">
+            <img src="./img/Mac.jfif" class="card-img-top" alt="Post" />
+            <div class="card-body">
+              <h5 class="card-title text-primary">
+                Here is why the HUAWEI MateBook X Pro should be your next
+                flagship laptop in 2023
+              </h5>
+              <p class="card-text mt-0 small text-muted">
+                Flagship laptops are for those who want a laptop that doesn't
+                compromise....
+              </p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <footer class="blog-footer">
+      <p>UAE24</p>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Slide Window -->
+    <script>
+      const keywordOne = "HUAWEI MateBook X Pro";
+      const keywordTwo = "Breville";
+      const keywordThree = "IPhones";
+      const paragraphOne = document.getElementById("slide-1");
+      const paragraphTwo = document.getElementById("slide-2");
+      const paragraphThree = document.getElementById("slide-3");
+
+      // Add Slide Btn
+      const modifiedParagraphOne = paragraphOne.innerHTML.replace(
+        new RegExp(keywordOne, "gi"),
+        `<span class="text-primary cursor-pointer slide-btn">$&</span>`
+      );
+      const modifiedParagraphTwo = paragraphTwo.innerHTML.replace(
+        new RegExp(keywordTwo, "gi"),
+        `<span class="text-primary cursor-pointer slide-btn">$&</span>`
+      );
+      const modifiedParagraphThree = paragraphThree.innerHTML.replace(
+        new RegExp(keywordThree, "gi"),
+        `<span class="text-primary cursor-pointer slide-btn">$&</span>`
+      );
+      paragraphOne.innerHTML = modifiedParagraphOne;
+      paragraphTwo.innerHTML = modifiedParagraphTwo;
+      paragraphThree.innerHTML = modifiedParagraphThree;
+
+      // GET Slide Button
+      const slidebuttons = document.querySelectorAll(".slide-btn");
+
+      // Flag to track if the modal is currently shown
+      let isModalShown = false;
+
+      const showModal = () => {
+        console.log(isModalShown);
+      };
+
+      const hideModal = () => {
+        console.log(isModalShown);
+      };
+
+      const buttonClickHandler = () => {
+        if (isModalShown) {
+          hideModal();
+        } else {
+          showModal();
+        }
+      };
+
+      slidebuttons.forEach((button) => {
+        button.addEventListener("click", buttonClickHandler);
+      });
+    </script>
+  </body>
+</html>
