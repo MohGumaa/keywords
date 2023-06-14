@@ -10,6 +10,14 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"
       rel="stylesheet"
     />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,500;0,600;0,700;0,800;0,900;1,400&display=swap"
+      rel="stylesheet"
+    />
+
     <script
       src="https://kit.fontawesome.com/4c9f666489.js"
       crossorigin="anonymous"
@@ -303,6 +311,52 @@
       <p>UAE24</p>
     </footer>
 
+    <div class="bottom-sheet">
+      <div class="sheet-overlay"></div>
+      <div class="content">
+        <div class="header">
+          <div class="drag-icon"><span></span></div>
+        </div>
+        <div class="modal-body">
+          <h2>Draggable Bottom Modal</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio et
+            provident, vel nobis veritatis cum quidem natus quo tempora iste
+            sequi, voluptatem architecto laborum laudantium doloremque
+            perspiciatis quaerat ipsam consectetur! Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. Odio et provident, vel nobis veritatis
+            cum quidem natus quo tempora iste sequi, voluptatem architecto
+            laborum laudantium doloremque perspiciatis quaerat ipsam
+            consectetur! Lorem ipsum dolor sit amet consectetur adipisicing
+            elit. Odio et provident, vel nobis veritatis cum quidem natus quo
+            tempora iste sequi, voluptatem architecto laborum laudantium
+            doloremque perspiciatis quaerat ipsam consectetur! Lorem ipsum dolor
+            sit amet consectetur adipisicing elit. Odio et provident, vel nobis
+            veritatis cum quidem natus quo tempora iste sequi, voluptatem
+            architecto laborum laudantium doloremque perspiciatis quaerat ipsam
+            consectetur!
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio et
+            provident, vel nobis veritatis cum quidem natus quo tempora iste
+            sequi, voluptatem architecto laborum laudantium doloremque
+            perspiciatis quaerat ipsam consectetur! Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. Odio et provident, vel nobis veritatis
+            cum quidem natus quo tempora iste sequi, voluptatem architecto
+            laborum laudantium doloremque perspiciatis quaerat ipsam
+            consectetur! Lorem ipsum dolor sit amet consectetur adipisicing
+            elit. Odio et provident, vel nobis veritatis cum quidem natus quo
+            tempora iste sequi, voluptatem architecto laborum laudantium
+            doloremque perspiciatis quaerat ipsam consectetur! Lorem ipsum dolor
+            sit amet consectetur adipisicing elit. Odio et provident, vel nobis
+            veritatis cum quidem natus quo tempora iste sequi, voluptatem
+            architecto laborum laudantium doloremque perspiciatis quaerat ipsam
+            consectetur!
+          </p>
+        </div>
+      </div>
+    </div>
+
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
@@ -336,29 +390,78 @@
       paragraphThree.innerHTML = modifiedParagraphThree;
 
       // GET Slide Button
-      const slidebuttons = document.querySelectorAll(".slide-btn");
+      const showModalBtns = document.querySelectorAll(".slide-btn");
+      const bottomSheet = document.querySelector(".bottom-sheet");
+      const sheetOverlay = document.querySelector(".sheet-overlay");
+      const sheetContent = document.querySelector(".content");
+      const dragIcon = document.querySelector(".drag-icon");
 
-      // Flag to track if the modal is currently shown
-      let isModalShown = false;
+      // Global variables for tracking drag events
+      let isDragging = false,
+        startY,
+        startHeight;
 
-      const showModal = () => {
-        console.log(isModalShown);
+      // Show the bottom Sheet, hide body vertical scrollbar, and call updateSheetHeight
+      const showBottomSheet = () => {
+        bottomSheet.classList.add("show");
+        document.body.style.overflowY = "hidden";
+        updateSheetHeight(50);
       };
 
-      const hideModal = () => {
-        console.log(isModalShown);
+      const updateSheetHeight = (height) => {
+        sheetContent.style.height = `${height}vh`; // Updates the height of the sheet content
+
+        // Toggle the fullscreen class to bottomSheet if the height is equal to 100
+        bottomSheet.classList.toggle("fullscreen", height === 100);
       };
 
-      const buttonClickHandler = () => {
-        if (isModalShown) {
-          hideModal();
-        } else {
-          showModal();
-        }
+      // Hide the bottom sheet and show body vertical scrollbar
+      const hideBottomSheet = () => {
+        bottomSheet.classList.remove("show");
+        document.body.style.overflowY = "auto";
       };
 
-      slidebuttons.forEach((button) => {
-        button.addEventListener("click", buttonClickHandler);
+      // Sets inital drag position, sheetContent height and add dragging class to the bottom sheet
+      const dragStart = (e) => {
+        isDragging = true;
+        startY = e.pageY || e.touches?.[0].pageY;
+        startHeight = parseInt(sheetContent.style.height);
+        bottomSheet.classList.add("dragging");
+      };
+
+      // Calculates the new height for the sheet content and call the updateSheetHeight function
+      const dragging = (e) => {
+        if (!isDragging) return;
+        const delta = startY - (e.pageY || e.touches?.[0].pageY);
+        const newHeight = startHeight + (delta / window.innerHeight) * 100;
+        updateSheetHeight(newHeight);
+      };
+
+      // Determines whether to hide, set to fullscreen, or set to default
+      // Height based on the current height of the sheet content
+      const dragStop = () => {
+        isDragging = false;
+        bottomSheet.classList.remove("dragging");
+        const sheetHeight = parseInt(sheetContent.style.height);
+        sheetHeight < 25
+          ? hideBottomSheet()
+          : sheetHeight > 75
+          ? updateSheetHeight(100)
+          : updateSheetHeight(50);
+      };
+
+      dragIcon.addEventListener("mousedown", dragStart);
+      document.addEventListener("mousemove", dragging);
+      document.addEventListener("mouseup", dragStop);
+
+      dragIcon.addEventListener("touchstart", dragStart);
+      document.addEventListener("touchmove", dragging);
+      document.addEventListener("touchemd", dragStop);
+
+      sheetOverlay.addEventListener("click", hideBottomSheet);
+
+      showModalBtns.forEach((button) => {
+        button.addEventListener("click", showBottomSheet);
       });
     </script>
   </body>
