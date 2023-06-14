@@ -400,12 +400,13 @@
       let isDragging = false,
         startY,
         startHeight;
+      const isMobile = window.innerWidth <= 768;
 
       // Show the bottom Sheet, hide body vertical scrollbar, and call updateSheetHeight
       const showBottomSheet = () => {
         bottomSheet.classList.add("show");
         document.body.style.overflowY = "hidden";
-        updateSheetHeight(50);
+        updateSheetHeight(isMobile ? 95 : 40);
       };
 
       const updateSheetHeight = (height) => {
@@ -446,8 +447,8 @@
         sheetHeight < 25
           ? hideBottomSheet()
           : sheetHeight > 75
-          ? updateSheetHeight(100)
-          : updateSheetHeight(50);
+          ? updateSheetHeight(isMobile ? 95 : 40)
+          : updateSheetHeight(isMobile ? 95 : 40);
       };
 
       dragIcon.addEventListener("mousedown", dragStart);
@@ -456,7 +457,14 @@
 
       dragIcon.addEventListener("touchstart", dragStart);
       document.addEventListener("touchmove", dragging);
-      document.addEventListener("touchemd", dragStop);
+      document.addEventListener("touchend", dragStop);
+
+      sheetContent.addEventListener("touchmove  ", (event) => {
+        // Handle drag event
+        console.log("Drag event occurred");
+      });
+
+      sheetContent.addEventListener("touchmove", dragging);
 
       sheetOverlay.addEventListener("click", hideBottomSheet);
 
