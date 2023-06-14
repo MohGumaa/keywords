@@ -409,7 +409,9 @@
         if (!isDragging) return;
         const delta = startY - (e.pageY || e.touches?.[0].pageY);
         const newHeight = startHeight + (delta / window.innerHeight) * 100;
-        updateSheetHeight(newHeight);
+        updateSheetHeight(
+          isMobile ? (newHeight === 100 ? 95 : newHeight) : newHeight
+        );
       };
 
       // Determines whether to hide, set to fullscreen, or set to default

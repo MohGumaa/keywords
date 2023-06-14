@@ -93,7 +93,8 @@ body {
   align-items: center;
   flex-direction: column;
   justify-content: flex-end;
-  transition: 0.1s linear;
+  /* transition: 0.1s linear; */
+  transition: all 0.5s ease-in-out;
   opacity: 0;
   pointer-events: none;
 }
@@ -125,7 +126,8 @@ body {
   padding: 25px 30px;
   position: relative;
   transform: translateY(100%);
-  transition: 0.3s ease;
+  /* transition: 0.3s ease; */
+  transition: all 0.5s ease-in-out;
 }
 
 .bottom-sheet.show .content {
