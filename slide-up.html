@@ -325,33 +325,6 @@
             sequi, voluptatem architecto laborum laudantium doloremque
             perspiciatis quaerat ipsam consectetur! Lorem ipsum dolor sit amet
             consectetur adipisicing elit. Odio et provident, vel nobis veritatis
-            cum quidem natus quo tempora iste sequi, voluptatem architecto
-            laborum laudantium doloremque perspiciatis quaerat ipsam
-            consectetur! Lorem ipsum dolor sit amet consectetur adipisicing
-            elit. Odio et provident, vel nobis veritatis cum quidem natus quo
-            tempora iste sequi, voluptatem architecto laborum laudantium
-            doloremque perspiciatis quaerat ipsam consectetur! Lorem ipsum dolor
-            sit amet consectetur adipisicing elit. Odio et provident, vel nobis
-            veritatis cum quidem natus quo tempora iste sequi, voluptatem
-            architecto laborum laudantium doloremque perspiciatis quaerat ipsam
-            consectetur!
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio et
-            provident, vel nobis veritatis cum quidem natus quo tempora iste
-            sequi, voluptatem architecto laborum laudantium doloremque
-            perspiciatis quaerat ipsam consectetur! Lorem ipsum dolor sit amet
-            consectetur adipisicing elit. Odio et provident, vel nobis veritatis
-            cum quidem natus quo tempora iste sequi, voluptatem architecto
-            laborum laudantium doloremque perspiciatis quaerat ipsam
-            consectetur! Lorem ipsum dolor sit amet consectetur adipisicing
-            elit. Odio et provident, vel nobis veritatis cum quidem natus quo
-            tempora iste sequi, voluptatem architecto laborum laudantium
-            doloremque perspiciatis quaerat ipsam consectetur! Lorem ipsum dolor
-            sit amet consectetur adipisicing elit. Odio et provident, vel nobis
-            veritatis cum quidem natus quo tempora iste sequi, voluptatem
-            architecto laborum laudantium doloremque perspiciatis quaerat ipsam
-            consectetur!
           </p>
         </div>
       </div>
@@ -394,6 +367,7 @@
       const bottomSheet = document.querySelector(".bottom-sheet");
       const sheetOverlay = document.querySelector(".sheet-overlay");
       const sheetContent = document.querySelector(".content");
+      const modalBody = document.querySelector(".modal-body");
       const dragIcon = document.querySelector(".drag-icon");
 
       // Global variables for tracking drag events
@@ -459,12 +433,7 @@
       document.addEventListener("touchmove", dragging);
       document.addEventListener("touchend", dragStop);
 
-      sheetContent.addEventListener("touchmove  ", (event) => {
-        // Handle drag event
-        console.log("Drag event occurred");
-      });
-
-      sheetContent.addEventListener("touchmove", dragging);
+      modalBody.addEventListener("touchstart", dragStart);
 
       sheetOverlay.addEventListener("click", hideBottomSheet);
 
