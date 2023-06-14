@@ -34,7 +34,7 @@
     />
     <link rel="stylesheet" href="./css/modal.css" />
   </head>
-  <body class="overflow">
+  <body>
     <div class="container mb-3">
       <header class="blog-header lh-1 py-3 mb-3">
         <div class="row flex-nowrap justify-content-between align-items-center">
@@ -324,10 +324,11 @@
             <img
               src="img/Breville.png"
               alt="Breville"
+              id="cardImage"
               class="d-block card-img-top mx-auto"
             />
             <div class="card-body flex-grow-1 px-0 px-md-3">
-              <h5 class="card-title fs-18 mb-4">
+              <h5 class="card-title fs-18 mb-4" id="cardTitle">
                 Breville Bes870 Barista Express Espresso Machine, Silver,
                 Bes870XL"Min 1 year manufacturer warranty"
               </h5>
@@ -418,6 +419,23 @@
 
     <!-- Slide Window -->
     <script>
+      const products = {
+        item1: {
+          title:
+            "HUAWEI MateBook X Pro 2022 Windows 11 Home i7/16GB/1TB/Touch Screen/Magnesium/Blue",
+          pic: "img/HUAWEI-MateBook.png",
+        },
+        item2: {
+          title:
+            "Breville Bes870 Barista Express Espresso Machine, Silver, Bes870XLMin 1 year manufacturer warranty",
+          pic: "img/Breville.png",
+        },
+        item3: {
+          title: "Apple iPhone 14 Pro Max (512 GB) - Deep Purple",
+          pic: "img/Iphone14.png",
+        },
+      };
+
       const keywordOne = "HUAWEI MateBook X Pro";
       const keywordTwo = "Breville";
       const keywordThree = "IPhones";
@@ -428,15 +446,15 @@
       // Add Slide Btn
       const modifiedParagraphOne = paragraphOne.innerHTML.replace(
         new RegExp(keywordOne, "gi"),
-        `<span class="text-primary cursor-pointer slide-btn">$&</span>`
+        `<span class="text-primary cursor-pointer slide-btn" id="item1">$&</span>`
       );
       const modifiedParagraphTwo = paragraphTwo.innerHTML.replace(
         new RegExp(keywordTwo, "gi"),
-        `<span class="text-primary cursor-pointer slide-btn">$&</span>`
+        `<span class="text-primary cursor-pointer slide-btn" id="item2">$&</span>`
       );
       const modifiedParagraphThree = paragraphThree.innerHTML.replace(
         new RegExp(keywordThree, "gi"),
-        `<span class="text-primary cursor-pointer slide-btn">$&</span>`
+        `<span class="text-primary cursor-pointer slide-btn" id="item3">$&</span>`
       );
       paragraphOne.innerHTML = modifiedParagraphOne;
       paragraphTwo.innerHTML = modifiedParagraphTwo;
@@ -449,6 +467,8 @@
       const sheetContent = document.querySelector(".content");
       const modalBody = document.querySelector(".modal-body");
       const dragIcon = document.querySelector(".drag-icon");
+      const cardImage = document.querySelector("#cardImage");
+      const cardTitle = document.querySelector("#cardTitle");
 
       // Global variables for tracking drag events
       let isDragging = false,
@@ -457,11 +477,21 @@
       const isMobile = window.innerWidth <= 768;
 
       // Show the bottom Sheet, hide body vertical scrollbar, and call updateSheetHeight
-      const showBottomSheet = () => {
+      const showBottomSheet = (event) => {
+        const productID = event.target.id;
+        cardImage.src = products[productID]["pic"];
+        cardTitle.textContent = products[productID]["title"];
+
+        console.log("Done");
+
         bottomSheet.classList.add("show");
         // document.body.style.overflowY = "hidden";
-        document.body.classList.add("overflow-hidden");
+
         updateSheetHeight(isMobile ? 88 : 40);
+
+        setTimeout(() => {
+          document.body.classList.add("overflow-hidden");
+        }, 50);
       };
 
       const updateSheetHeight = (height) => {
@@ -474,8 +504,10 @@
       // Hide the bottom sheet and show body vertical scrollbar
       const hideBottomSheet = () => {
         bottomSheet.classList.remove("show");
-        // document.body.style.overflowY = "auto";
-        document.body.classList.remove("overflow-hidden");
+        setTimeout(() => {
+          // document.body.style.overflowY = "auto";
+          document.body.classList.remove("overflow-hidden");
+        }, 50);
       };
 
       // Sets inital drag position, sheetContent height and add dragging class to the bottom sheet
