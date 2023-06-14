@@ -482,11 +482,7 @@
         cardImage.src = products[productID]["pic"];
         cardTitle.textContent = products[productID]["title"];
 
-        console.log("Done");
-
         bottomSheet.classList.add("show");
-        // document.body.style.overflowY = "hidden";
-
         updateSheetHeight(isMobile ? 88 : 40);
 
         setTimeout(() => {
@@ -505,7 +501,6 @@
       const hideBottomSheet = () => {
         bottomSheet.classList.remove("show");
         setTimeout(() => {
-          // document.body.style.overflowY = "auto";
           document.body.classList.remove("overflow-hidden");
         }, 50);
       };
