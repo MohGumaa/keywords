@@ -318,14 +318,80 @@
           <div class="drag-icon"><span></span></div>
         </div>
         <div class="modal-body">
-          <h2>Draggable Bottom Modal</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio et
-            provident, vel nobis veritatis cum quidem natus quo tempora iste
-            sequi, voluptatem architecto laborum laudantium doloremque
-            perspiciatis quaerat ipsam consectetur! Lorem ipsum dolor sit amet
-            consectetur adipisicing elit. Odio et provident, vel nobis veritatis
-          </p>
+          <div
+            class="card border-0 rounded-0 d-flex flex-column flex-md-row product-card h-100"
+          >
+            <img
+              src="img/Breville.png"
+              alt="Breville"
+              class="d-block card-img-top mx-auto"
+            />
+            <div class="card-body flex-grow-1 px-0 px-md-3">
+              <h5 class="card-title fs-18 mb-4">
+                Breville Bes870 Barista Express Espresso Machine, Silver,
+                Bes870XL"Min 1 year manufacturer warranty"
+              </h5>
+              <div class="d-flex flex-wrap align-items-center flex-gap buttons">
+                <a
+                  href="#"
+                  class="d-flex justify-content-between align-items-center btn btn-price py-2"
+                >
+                  <img src="img/amazon.svg" alt="amazon" class="img-fluid" />
+                  <span class="fw-semibold mx-4">$450</span>
+                  <span class="d-flex align-items-center text-primary">
+                    <span>visit site</span>
+                    <i
+                      class="d-flex align-items-center bi bi-chevron-right"
+                    ></i>
+                  </span>
+                </a>
+                <a
+                  href="#"
+                  class="d-flex justify-content-between align-items-center btn btn-price py-2"
+                >
+                  <img
+                    src="img/carrefour.svg"
+                    alt="carrefour"
+                    class="img-fluid"
+                    width="31"
+                  />
+                  <span class="fw-semibold mx-4">$480</span>
+                  <span class="d-flex align-items-center text-primary">
+                    <span>visit site</span>
+                    <i
+                      class="d-flex align-items-center bi bi-chevron-right"
+                    ></i>
+                  </span>
+                </a>
+                <a
+                  href="#"
+                  class="d-flex justify-content-between align-items-center btn btn-price py-2"
+                >
+                  <img src="img/noon.svg" alt="noon" class="img-fluid" />
+                  <span class="fw-semibold mx-4">$465</span>
+                  <span class="d-flex align-items-center text-primary">
+                    <span>visit site</span>
+                    <i
+                      class="d-flex align-items-center bi bi-chevron-right"
+                    ></i>
+                  </span>
+                </a>
+                <a
+                  href="#"
+                  class="d-flex justify-content-between align-items-center btn btn-price py-2"
+                >
+                  <img src="img/walmart.svg" alt="walmart" class="img-fluid" />
+                  <span class="fw-semibold mx-4">$490</span>
+                  <span class="d-flex align-items-center text-primary">
+                    <span>visit site</span>
+                    <i
+                      class="d-flex align-items-center bi bi-chevron-right"
+                    ></i>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -379,7 +445,8 @@
       // Show the bottom Sheet, hide body vertical scrollbar, and call updateSheetHeight
       const showBottomSheet = () => {
         bottomSheet.classList.add("show");
-        document.body.style.overflowY = "hidden";
+        // document.body.style.overflowY = "hidden";
+        document.body.classList.add("overflow-hidden");
         updateSheetHeight(isMobile ? 95 : 40);
       };
 
@@ -393,7 +460,8 @@
       // Hide the bottom sheet and show body vertical scrollbar
       const hideBottomSheet = () => {
         bottomSheet.classList.remove("show");
-        document.body.style.overflowY = "auto";
+        // document.body.style.overflowY = "auto";
+        document.body.classList.remove("overflow-hidden");
       };
 
       // Sets inital drag position, sheetContent height and add dragging class to the bottom sheet
@@ -435,7 +503,7 @@
       document.addEventListener("touchmove", dragging);
       document.addEventListener("touchend", dragStop);
 
-      modalBody.addEventListener("touchstart", dragStart);
+      modalBody.addEventListener("touchmove", dragging);
 
       sheetOverlay.addEventListener("click", hideBottomSheet);
 

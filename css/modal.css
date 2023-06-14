@@ -183,6 +183,30 @@ body {
   font-size: 1.05rem;
 }
 
+.product-card .card-img-top {
+  width: fit-content;
+  height: 250px;
+  object-fit: cover;
+}
+
+.product-card .btn {
+  background: #ffffff;
+  border: 1px solid #ececec;
+  box-shadow: 2px 15px 9px rgba(0, 0, 0, 0.01), 1px 7px 7px rgba(0, 0, 0, 0.02),
+    0px 2px 4px rgba(0, 0, 0, 0.02), 0px 0px 0px rgba(0, 0, 0, 0.03);
+  border-radius: 64px;
+}
+
+.product-card .bi {
+  font-size: 12px;
+  vertical-align: middle;
+  margin-left: 2px;
+}
+
+.flex-gap {
+  gap: 1rem;
+}
+
 /* Mobile */
 @media (min-width: 768px) {
   .display-4 {
@@ -203,5 +227,19 @@ body {
   .svg-size {
     width: 16px;
     height: 16px;
+  }
+
+  .bottom-sheet .content {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .product-card .card-title {
+    font-size: 16px;
+    line-height: 1.4;
+  }
+
+  .product-card .btn {
+    width: 100%;
   }
 }
