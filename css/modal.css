@@ -251,4 +251,14 @@ body.overflow-hidden {
   .product-card .btn {
     width: 100%;
   }
+
+  .product-card .brand {
+    width: 82px;
+  }
+
+  .product-card .brand img {
+    display: block;
+    margin-right: auto;
+    margin-left: 4px;
+  }
 }
