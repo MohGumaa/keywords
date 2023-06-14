@@ -447,7 +447,7 @@
         bottomSheet.classList.add("show");
         // document.body.style.overflowY = "hidden";
         document.body.classList.add("overflow-hidden");
-        updateSheetHeight(isMobile ? 86 : 40);
+        updateSheetHeight(isMobile ? 88 : 40);
       };
 
       const updateSheetHeight = (height) => {
@@ -478,7 +478,7 @@
         const delta = startY - (e.pageY || e.touches?.[0].pageY);
         const newHeight = startHeight + (delta / window.innerHeight) * 100;
         updateSheetHeight(
-          isMobile ? (newHeight >= 95 ? 86 : newHeight) : newHeight
+          isMobile ? (newHeight >= 95 ? 88 : newHeight) : newHeight
         );
       };
 
@@ -491,8 +491,8 @@
         sheetHeight < 25
           ? hideBottomSheet()
           : sheetHeight > 75
-          ? updateSheetHeight(isMobile ? 86 : 40)
-          : updateSheetHeight(isMobile ? 86 : 40);
+          ? updateSheetHeight(isMobile ? 88 : 40)
+          : updateSheetHeight(isMobile ? 88 : 40);
       };
 
       dragIcon.addEventListener("mousedown", dragStart);

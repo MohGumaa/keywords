@@ -82,6 +82,11 @@ body {
   font-size: 18px;
 }
 
+body.overflow-hidden {
+  padding-right: 16px;
+  height: 100%;
+}
+
 /* Bottom Modal */
 .bottom-sheet {
   position: fixed;
@@ -222,6 +227,10 @@ body {
   body {
     font-size: 16px;
     line-height: 2;
+  }
+
+  body.overflow-hidden {
+    padding-right: initial;
   }
 
   .svg-size {
