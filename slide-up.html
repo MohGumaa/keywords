@@ -478,7 +478,7 @@
         const delta = startY - (e.pageY || e.touches?.[0].pageY);
         const newHeight = startHeight + (delta / window.innerHeight) * 100;
         updateSheetHeight(
-          isMobile ? (newHeight === 100 ? 95 : newHeight) : newHeight
+          isMobile ? (newHeight >= 95 ? 86 : newHeight) : newHeight
         );
       };
 
@@ -491,8 +491,8 @@
         sheetHeight < 25
           ? hideBottomSheet()
           : sheetHeight > 75
-          ? updateSheetHeight(isMobile ? 95 : 40)
-          : updateSheetHeight(isMobile ? 95 : 40);
+          ? updateSheetHeight(isMobile ? 86 : 40)
+          : updateSheetHeight(isMobile ? 86 : 40);
       };
 
       dragIcon.addEventListener("mousedown", dragStart);
