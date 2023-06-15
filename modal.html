@@ -450,6 +450,8 @@
       const productCard = document.querySelector("#productCard");
       const sheetContent = document.querySelector(".content");
       const dragIcon = document.querySelector(".drag-icon");
+      const isMobile = window.innerWidth <= 768;
+      const isMac = navigator.platform.toUpperCase().indexOf("MAC") >= 0;
 
       // Flag to track if the modal is currently shown
       let isModalShown = false;
@@ -464,6 +466,11 @@
           setTimeout(() => (productCard.style.opacity = 1), 250);
         }, 50);
         document.body.classList.add("overflow-hidden");
+
+        if (!isMac) {
+          document.body.classList.add("p-16");
+        }
+
         isModalShown = true;
       };
 
@@ -481,6 +488,9 @@
         }, 500);
 
         document.body.classList.remove("overflow-hidden");
+        if (!isMac) {
+          document.body.classList.remove("p-16");
+        }
         isModalShown = false;
       };
 
@@ -493,7 +503,6 @@
       };
 
       // Global variables for tracking drag events
-      const isMobile = window.innerWidth <= 768;
       let isDragging = false,
         startY,
         currentY,

@@ -83,8 +83,11 @@ body {
 }
 
 body.overflow-hidden {
-  padding-right: 16px;
   height: 100%;
+}
+
+body.p-16 {
+  padding-right: 16px;
 }
 
 /* Modal */
@@ -232,7 +235,7 @@ body.overflow-hidden {
     line-height: 2;
   }
 
-  body.overflow-hidden {
+  body.p-16 {
     padding-right: initial;
   }
 
