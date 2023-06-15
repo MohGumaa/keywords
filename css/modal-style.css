@@ -218,6 +218,11 @@ body.p-16 {
   gap: 1rem;
 }
 
+.btn-close:focus,
+.btn-close:focus-visible {
+  box-shadow: none;
+}
+
 /* Mobile */
 @media (min-width: 768px) {
   .display-4 {
