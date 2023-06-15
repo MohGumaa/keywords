@@ -223,6 +223,51 @@ body.p-16 {
   box-shadow: none;
 }
 
+.table-container {
+  font-size: 14px;
+}
+
+.table-container .table > thead {
+  vertical-align: middle;
+}
+
+.table-container th {
+  text-align: left;
+  color: #70757a;
+  font-size: 12px;
+  font-weight: 400;
+  white-space: nowrap;
+  padding: 12px 24px;
+  vertical-align: middle;
+  width: 200px;
+}
+
+.table-container td {
+  padding: 12px 24px;
+  vertical-align: middle;
+}
+
+.table-container td div {
+  color: #70757a;
+  font-size: 12px;
+}
+
+.table-container td div:nth-child(2) {
+  text-decoration: underline;
+}
+
+.table-container .btn {
+  background-color: #e8f0fe;
+  color: #1a73e8;
+  font-size: 12px;
+  line-height: 20px;
+  padding: 6px 10px;
+  width: 124px;
+  display: block;
+  margin-left: auto;
+  text-transform: capitalize;
+}
+
 /* Mobile */
 @media (min-width: 768px) {
   .display-4 {
