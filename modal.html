@@ -315,7 +315,12 @@
       <div class="sheet-overlay"></div>
       <div class="content">
         <div class="header">
-          <div class="drag-icon"><span></span></div>
+          <div class="drag-icon d-flex d-md-none"><span></span></div>
+          <button
+            type="button"
+            class="btn-close d-none d-md-flex ms-auto mb-3"
+            aria-label="Close"
+          ></button>
         </div>
         <div class="modal-body">
           <div
@@ -449,6 +454,7 @@
       const bottomSheet = document.querySelector(".bottom-sheet");
       const productCard = document.querySelector("#productCard");
       const sheetContent = document.querySelector(".content");
+      const btnClose = document.querySelector(".btn-close");
       const dragIcon = document.querySelector(".drag-icon");
       const isMobile = window.innerWidth <= 768;
       const isMac = navigator.platform.toUpperCase().indexOf("MAC") >= 0;
@@ -487,10 +493,12 @@
           }, 400);
         }, 500);
 
-        document.body.classList.remove("overflow-hidden");
-        if (!isMac) {
-          document.body.classList.remove("p-16");
-        }
+        setTimeout(() => {
+          document.body.classList.remove("overflow-hidden");
+          if (!isMac) {
+            document.body.classList.remove("p-16");
+          }
+        }, 50);
         isModalShown = false;
       };
 
@@ -583,6 +591,7 @@
       dragIcon.addEventListener("touchstart", startDrag);
 
       sheetOverlay.addEventListener("click", showBottomSheet);
+      btnClose.addEventListener("click", showBottomSheet);
 
       showModalBtns.forEach((button) => {
         button.addEventListener("click", showBottomSheet);
