@@ -469,6 +469,23 @@
     ></script>
 
     <script>
+      const products = {
+        item1: {
+          title:
+            "HUAWEI MateBook X Pro 2022 Windows 11 Home i7/16GB/1TB/Touch Screen/Magnesium/Blue",
+          pic: "img/HUAWEI-MateBook.png",
+        },
+        item2: {
+          title:
+            "Breville Bes870 Barista Express Espresso Machine, Silver, Bes870XLMin 1 year manufacturer warranty",
+          pic: "img/Breville.png",
+        },
+        item3: {
+          title: "Apple iPhone 14 Pro Max (512 GB) - Deep Purple",
+          pic: "img/Iphone14.png",
+        },
+      };
+
       const keywordOne = "HUAWEI MateBook X Pro";
       const keywordTwo = "Breville";
       const keywordThree = "IPhones";
@@ -501,6 +518,9 @@
       const sheetContent = document.querySelector(".content");
       const btnClose = document.querySelector(".btn-close");
       const dragIcon = document.querySelector(".drag-icon");
+      const cardImage = document.querySelector("#cardImage");
+      const cardTitle = document.querySelector("#cardTitle");
+
       const isMobile = window.innerWidth <= 768;
       const isMac = navigator.platform.toUpperCase().indexOf("MAC") >= 0;
 
@@ -547,10 +567,13 @@
         isModalShown = false;
       };
 
-      const showBottomSheet = () => {
+      const showBottomSheet = (event) => {
         if (isModalShown) {
           hideModal();
         } else {
+          const productID = event.target.id;
+          cardImage.src = products[productID]["pic"];
+          cardTitle.textContent = products[productID]["title"];
           showModal();
         }
       };
@@ -571,15 +594,11 @@
 
         sheetContent.classList.add("no-transition");
 
-        // if (diffY === 0) {
-        //   console.log("Top");
-        // } else if (diffY === initialHeight) {
-        //   console.log("End");
-        // } else if (diffY > 0 && diffY < initialHeight) {
-        //   sheetContent.style.transform = "translateY(" + diffY + "px)";
-        // }
-
-        if (diffY > 0 && diffY < initialHeight) {
+        if (diffY === 0) {
+          console.log("Top");
+        } else if (diffY === initialHeight) {
+          console.log("End");
+        } else if (diffY > 0 && diffY < initialHeight) {
           sheetContent.style.transform = "translateY(" + diffY + "px)";
         }
       };

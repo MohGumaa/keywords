@@ -132,7 +132,7 @@ body.p-16 {
   border-radius: 12px 12px 0 0;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
   width: 100%;
-  height: 50vh;
+  height: 55vh;
   padding: 0 30px 25px;
   position: relative;
   transform: translateY(100%);
@@ -295,7 +295,11 @@ body.p-16 {
   }
 
   .bottom-sheet .content {
-    height: 95vh;
+    height: 90vh;
+  }
+
+  .product-card .card-img-top {
+    height: 220px;
   }
 
   .product-card .card-title {
