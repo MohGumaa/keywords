@@ -609,7 +609,6 @@
 
       const stopDrag = (event) => {
         event.preventDefault();
-        sheetContent.classList.remove("no-transition");
 
         if (initialHeight / 1.5 < lastScroll) {
           sheetContent.style.transform = "translateY(0%)";
@@ -630,6 +629,7 @@
           isModalShown = false;
         }
 
+        sheetContent.classList.remove("no-transition");
         document.removeEventListener("mousemove", dragCurtain);
         document.removeEventListener("mouseup", stopDrag);
 
