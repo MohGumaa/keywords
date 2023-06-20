@@ -611,9 +611,9 @@
         event.preventDefault();
         sheetContent.classList.remove("no-transition");
 
-        if (initialHeight / 2 < lastScroll) {
+        if (initialHeight / 1.5 < lastScroll) {
           sheetContent.style.transform = "translateY(0%)";
-        } else if (initialHeight / 2 > lastScroll) {
+        } else if (initialHeight / 1.5 > lastScroll) {
           sheetContent.style.transform = "translateY(100%)";
 
           setTimeout(() => {
