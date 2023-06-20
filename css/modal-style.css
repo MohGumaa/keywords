@@ -136,7 +136,7 @@ body.p-16 {
   padding: 0 30px 25px;
   position: relative;
   transform: translateY(100%);
-  transition: transform 0.5s ease-in-out;
+  transition: transform 0.2s ease-in-out;
 }
 
 .bottom-sheet .content.no-transition {
