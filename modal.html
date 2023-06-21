@@ -596,12 +596,13 @@
 
       const dragCurtain = (event) => {
         event.preventDefault();
+        sheetContent.classList.add("no-transition");
         currentY = event.clientY || event.touches[0].clientY;
         let diffY = currentY - startY;
         let translateY = Math.max(0, initialHeight - diffY);
         lastScroll = translateY;
 
-        sheetContent.classList.add("no-transition");
+        console.log(diffY, translateY, initialHeight);
 
         if (diffY > 0 && diffY < initialHeight) {
           sheetContent.style.transform = "translateY(" + diffY + "px)";
@@ -623,8 +624,8 @@
             setTimeout(() => {
               productCard.style.opacity = 0;
               bottomSheet.classList.remove("show-sheet");
-            }, 400);
-          }, 500);
+            }, 250);
+          }, 50);
 
           document.body.classList.remove("overflow-hidden");
           isModalShown = false;
