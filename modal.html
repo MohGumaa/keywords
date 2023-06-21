@@ -538,7 +538,10 @@
           sheetOverlay.classList.add("show-overlay");
           sheetContent.style.transform = "translateY(0%)";
           productCard.style.display = "flex";
-          setTimeout(() => (productCard.style.opacity = 1), 250);
+          setTimeout(() => {
+            productCard.style.opacity = 1;
+            sheetContent.classList.add("no-transition");
+          }, 250);
         }, 50);
         document.body.classList.add("overflow-hidden");
 
@@ -550,6 +553,7 @@
       };
 
       const hideModal = () => {
+        sheetContent.classList.remove("no-transition");
         sheetContent.style.transform = "translateY(100%)";
 
         setTimeout(() => {
@@ -598,11 +602,15 @@
 
         sheetContent.classList.add("no-transition");
 
-        if (diffY === 0) {
-          console.log("Top");
-        } else if (diffY === initialHeight) {
-          console.log("End");
-        } else if (diffY > 0 && diffY < initialHeight) {
+        // if (diffY === 0) {
+        //   console.log("Top");
+        // } else if (diffY === initialHeight) {
+        //   console.log("End");
+        // } else if (diffY > 0 && diffY < initialHeight) {
+        //   sheetContent.style.transform = "translateY(" + diffY + "px)";
+        // }
+
+        if (diffY > 0 && diffY < initialHeight) {
           sheetContent.style.transform = "translateY(" + diffY + "px)";
         }
       };
@@ -657,7 +665,7 @@
 
       dragIcon.addEventListener("mousedown", startDrag);
       dragIcon.addEventListener("touchstart", startDrag);
-      // productCard.addEventListener("touchstart", startDrag);
+      bottomSheet.addEventListener("touchstart", startDrag);
 
       sheetOverlay.addEventListener("click", showBottomSheet);
       btnClose.addEventListener("click", showBottomSheet);
