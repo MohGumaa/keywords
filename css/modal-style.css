@@ -300,10 +300,17 @@ body.p-16 {
 
   .bottom-sheet .content {
     height: 95%;
+    padding: 0;
+  }
+
+  .bottom-sheet .modal-body {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 10px;
   }
 
   .product-card .card-img-top {
-    height: 220px;
+    height: 200px;
   }
 
   .product-card .card-title {
