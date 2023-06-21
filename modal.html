@@ -602,14 +602,6 @@
 
         sheetContent.classList.add("no-transition");
 
-        // if (diffY === 0) {
-        //   console.log("Top");
-        // } else if (diffY === initialHeight) {
-        //   console.log("End");
-        // } else if (diffY > 0 && diffY < initialHeight) {
-        //   sheetContent.style.transform = "translateY(" + diffY + "px)";
-        // }
-
         if (diffY > 0 && diffY < initialHeight) {
           sheetContent.style.transform = "translateY(" + diffY + "px)";
         }
@@ -630,6 +622,7 @@
             setTimeout(() => {
               productCard.style.opacity = 0;
               bottomSheet.classList.remove("show-sheet");
+              sheetContent.classList.remove("no-transition");
             }, 400);
           }, 500);
 
@@ -637,7 +630,6 @@
           isModalShown = false;
         }
 
-        sheetContent.classList.remove("no-transition");
         document.removeEventListener("mousemove", dragCurtain);
         document.removeEventListener("mouseup", stopDrag);
 
@@ -665,7 +657,7 @@
 
       dragIcon.addEventListener("mousedown", startDrag);
       dragIcon.addEventListener("touchstart", startDrag);
-      bottomSheet.addEventListener("touchstart", startDrag);
+      productCard.addEventListener("touchstart", startDrag);
 
       sheetOverlay.addEventListener("click", showBottomSheet);
       btnClose.addEventListener("click", showBottomSheet);
