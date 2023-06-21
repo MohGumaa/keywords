@@ -303,12 +303,6 @@ body.p-16 {
     padding: 0;
   }
 
-  .bottom-sheet .modal-body {
-    padding-left: 30px;
-    padding-right: 30px;
-    padding-bottom: 10px;
-  }
-
   .product-card .card-img-top {
     height: 200px;
   }
