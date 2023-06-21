@@ -532,6 +532,7 @@
       let isModalShown = false;
 
       const showModal = () => {
+        sheetContent.classList.remove("no-transition");
         bottomSheet.classList.add("show-sheet");
 
         setTimeout(() => {
@@ -622,7 +623,6 @@
             setTimeout(() => {
               productCard.style.opacity = 0;
               bottomSheet.classList.remove("show-sheet");
-              sheetContent.classList.remove("no-transition");
             }, 400);
           }, 500);
 
