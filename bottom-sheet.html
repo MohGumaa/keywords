@@ -540,6 +540,10 @@
         updateSheetHeight(isMobile ? 95 : 48);
 
         setTimeout(() => {
+          productCard.style.opacity = 1;
+        }, 250);
+
+        setTimeout(() => {
           document.body.classList.add("overflow-hidden");
           postContent.classList.add("overflow-hidden");
           if (!isMac) {
@@ -558,6 +562,7 @@
         setTimeout(() => {
           document.body.classList.remove("overflow-hidden");
           postContent.classList.remove("overflow-hidden");
+          productCard.style.opacity = 0;
           if (!isMac) {
             document.body.classList.remove("p-16");
           }
