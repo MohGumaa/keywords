@@ -138,7 +138,7 @@
       </div>
     </div>
 
-    <div class="container">
+    <div class="container post-content">
       <h1>
         Flagship Laptops Battle of 2023: HUAWEI MateBook X Pro Vs. 14-inch Apple
         MacBook Pro
@@ -515,6 +515,7 @@
       const showModalBtns = document.querySelectorAll(".slide-btn");
       const sheetOverlay = document.querySelector(".sheet-overlay");
       const bottomSheet = document.querySelector(".bottom-sheet");
+      const postContent = document.querySelector(".post-content");
       const productCard = document.querySelector("#productCard");
       const sheetContent = document.querySelector(".content");
       const cardImage = document.querySelector("#cardImage");
@@ -540,6 +541,7 @@
 
         setTimeout(() => {
           document.body.classList.add("overflow-hidden");
+          postContent.body.classList.add("overflow-hidden");
           if (!isMac) {
             document.body.classList.add("p-16");
           }
@@ -555,6 +557,7 @@
         bottomSheet.classList.remove("show");
         setTimeout(() => {
           document.body.classList.remove("overflow-hidden");
+          postContent.body.classList.remove("overflow-hidden");
           if (!isMac) {
             document.body.classList.remove("p-16");
           }
