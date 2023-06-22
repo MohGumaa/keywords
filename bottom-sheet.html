@@ -547,7 +547,7 @@
       };
 
       const updateSheetHeight = (height) => {
-        sheetContent.style.height = `${height}${isMobile ? "%" : "vh"}`;
+        sheetContent.style.height = `${height}${isMobile ? "%" : "%"}`;
         bottomSheet.classList.toggle("fullscreen", height === 100);
       };
 
