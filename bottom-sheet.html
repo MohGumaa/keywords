@@ -546,6 +546,7 @@
         setTimeout(() => {
           document.body.classList.add("overflow-hidden");
           postContent.classList.add("overflow-hidden");
+          document.documentElement.style.overflow = "hidden";
           if (!isMac) {
             document.body.classList.add("p-16");
           }
@@ -562,6 +563,7 @@
         setTimeout(() => {
           document.body.classList.remove("overflow-hidden");
           postContent.classList.remove("overflow-hidden");
+          document.documentElement.style.overflow = "initial";
           productCard.style.opacity = 0;
           if (!isMac) {
             document.body.classList.remove("p-16");
@@ -594,7 +596,7 @@
         const sheetHeight = parseInt(sheetContent.style.height);
         sheetHeight < 55
           ? hideBottomSheet()
-          : sheetHeight > 75
+          : sheetHeight > 80
           ? updateSheetHeight(isMobile ? 95 : 48)
           : updateSheetHeight(isMobile ? 95 : 48);
       };
