@@ -541,7 +541,7 @@
 
         setTimeout(() => {
           document.body.classList.add("overflow-hidden");
-          postContent.body.classList.add("overflow-hidden");
+          postContent.classList.add("overflow-hidden");
           if (!isMac) {
             document.body.classList.add("p-16");
           }
@@ -557,7 +557,7 @@
         bottomSheet.classList.remove("show");
         setTimeout(() => {
           document.body.classList.remove("overflow-hidden");
-          postContent.body.classList.remove("overflow-hidden");
+          postContent.classList.remove("overflow-hidden");
           if (!isMac) {
             document.body.classList.remove("p-16");
           }
