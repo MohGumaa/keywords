@@ -224,6 +224,16 @@ body.p-16 {
   text-decoration: underline;
 }
 
+.table-container .brand {
+  display: flex;
+  align-items: center;
+  height: 24px;
+}
+
+.table-container .brand img {
+  height: 100%;
+}
+
 .table-container .btn {
   background-color: #e8f0fe;
   color: #1a73e8;
