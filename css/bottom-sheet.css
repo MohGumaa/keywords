@@ -108,6 +108,7 @@ body.p-16 {
   opacity: 0;
   pointer-events: none;
   transition: all 0.5s ease-in-out;
+  z-index: 10000;
 }
 
 .bottom-sheet.show {
@@ -309,7 +310,13 @@ body.p-16 {
     height: 95%;
     padding-left: 0;
     padding-right: 0;
+    padding-top: 0;
     transition: 0.3s ease;
+  }
+
+  .header .drag-icon {
+    padding: 20px 15px 20px;
+    margin-top: 0;
   }
 
   .mx-30 {

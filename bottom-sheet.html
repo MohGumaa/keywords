@@ -315,7 +315,11 @@
       <div class="sheet-overlay"></div>
       <div class="content">
         <div class="header">
-          <div class="drag-icon d-flex d-md-none"><span></span></div>
+          <div
+            class="drag-icon d-flex d-md-none justify-content-center align-items-center w-100"
+          >
+            <span></span>
+          </div>
           <button
             type="button"
             class="btn-close d-none d-md-flex ms-auto"
@@ -596,7 +600,7 @@
         const sheetHeight = parseInt(sheetContent.style.height);
         sheetHeight < 55
           ? hideBottomSheet()
-          : sheetHeight > 80
+          : sheetHeight > 60
           ? updateSheetHeight(isMobile ? 95 : 48)
           : updateSheetHeight(isMobile ? 95 : 48);
       };
