@@ -35,6 +35,11 @@ body {
   -webkit-overflow-scrolling: touch;
 }
 
+.nav .link-secondary {
+  font-size: 18px;
+  font-weight: 600;
+}
+
 .blog-header {
   border-bottom: 3px solid #141416;
 }
@@ -188,4 +193,13 @@ p {
 .fa-chevron-left,
 .bi-caret-left-fill {
   font-size: 15px;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+  line-height: 1.8;
 }
