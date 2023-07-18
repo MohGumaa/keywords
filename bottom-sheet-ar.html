@@ -503,7 +503,7 @@
         },
         arrow: {
           title:
-            "المبرد الذكي هو مكيف هواء شخصي صغير وصديق للبيئة يبقيك مرتاحا داخل البيت أو في الخارج. يعمل المبرد الذكي على تبريد وترطيب وتنظيف جزيئات الغبار للحصول على هواء أنظف",
+            "المبرد الذكي هو مكيف هواء شخصي صغير وصديق للبيئة يبقيك مرتاحا داخل البيت أو في الخارج",
           pic: "img/arctic-air.jpg",
         },
       };
@@ -590,7 +590,7 @@
         }
 
         bottomSheet.classList.add("show");
-        updateSheetHeight(isMobile ? 95 : 54);
+        updateSheetHeight(isMobile ? 95 : 50);
 
         setTimeout(() => {
           productCard.style.opacity = 1;
@@ -650,8 +650,8 @@
         sheetHeight < 55
           ? hideBottomSheet()
           : sheetHeight > 60
-          ? updateSheetHeight(isMobile ? 95 : 54)
-          : updateSheetHeight(isMobile ? 95 : 54);
+          ? updateSheetHeight(isMobile ? 95 : 50)
+          : updateSheetHeight(isMobile ? 95 : 50);
       };
 
       productCard.addEventListener("touchstart", dragStart);
