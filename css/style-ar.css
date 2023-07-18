@@ -161,6 +161,7 @@ p {
 }
 
 .button-highlight:hover {
+  color: #fff;
   opacity: 0.85;
 }
 
