@@ -590,7 +590,7 @@
         }
 
         bottomSheet.classList.add("show");
-        updateSheetHeight(isMobile ? 95 : 48);
+        updateSheetHeight(isMobile ? 95 : "fit-content");
 
         setTimeout(() => {
           productCard.style.opacity = 1;
@@ -650,8 +650,8 @@
         sheetHeight < 55
           ? hideBottomSheet()
           : sheetHeight > 60
-          ? updateSheetHeight(isMobile ? 95 : 48)
-          : updateSheetHeight(isMobile ? 95 : 48);
+          ? updateSheetHeight(isMobile ? 95 : "fit-content")
+          : updateSheetHeight(isMobile ? 95 : "fit-content");
       };
 
       productCard.addEventListener("touchstart", dragStart);
