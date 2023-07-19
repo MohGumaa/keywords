@@ -48,11 +48,6 @@ body {
 .display-4 {
   font-size: 2.5rem;
 }
-@media (min-width: 768px) {
-  .display-4 {
-    font-size: 3rem;
-  }
-}
 
 .flex-auto {
   flex: 0 0 auto;
@@ -66,10 +61,8 @@ body {
   font-weight: 500;
 }
 
-@media (min-width: 768px) {
-  .h-md-250 {
-    height: 250px;
-  }
+.fw-600 {
+  font-weight: 600;
 }
 
 .blog-footer {
@@ -80,6 +73,7 @@ body {
   border-top: 0.05rem solid #e5e5e5;
   margin-top: 4rem;
 }
+
 .blog-footer p:last-child {
   margin-bottom: 0;
 }
@@ -108,7 +102,35 @@ body {
   cursor: pointer;
 }
 
-/* Amazon Button */
+.fs-18 {
+  font-size: 18px;
+}
+
+.fs-16 {
+  font-size: 16px;
+}
+
+.fs-15 {
+  font-size: 15px;
+}
+
+.fs-12 {
+  font-size: 12px;
+}
+
+.ml-2px {
+  margin-left: 2px;
+}
+
+.p-20 {
+  padding: 20px;
+}
+
+.mb-10 {
+  margin-bottom: 10px;
+}
+
+/* Button */
 .button {
   display: inline-flex;
   justify-content: center;
@@ -116,6 +138,7 @@ body {
   text-align: center;
   line-height: initial;
   position: relative;
+  color: #0d6efd;
   overflow: hidden;
   cursor: pointer;
 }
@@ -135,7 +158,7 @@ body {
 
 .button-highlight {
   border-radius: 24px;
-  box-shadow: 0px 1px 0px 0px #dcdcdc;
+  box-shadow: 0 2px 5px 0 rgba(213, 217, 217, 0.5);
   color: #fff;
   padding: 3px 8px;
   line-height: initial;
@@ -144,7 +167,12 @@ body {
   transition: all 0.3s ease;
 }
 
+.button-highlight.text-black {
+  box-shadow: 0px 1px 0px 0px #dcdcdc;
+}
+
 .button-highlight:hover {
+  color: #fff;
   opacity: 0.85;
 }
 
@@ -160,12 +188,8 @@ body {
 
 .fa-chevron-right,
 .fa-chevron-left {
-  font-size: 13px;
+  font-size: 14px;
   margin-top: 2.5px;
-}
-
-.flex-gap {
-  column-gap: 4px;
 }
 
 .bi-caret-right-fill,
@@ -179,188 +203,24 @@ body {
   height: 18px;
 }
 
-.fs-18 {
-  font-size: 18px;
+.flex-gap {
+  column-gap: 4px;
 }
 
-.fs-16 {
-  font-size: 16px;
-}
-
-.fs-12 {
-  font-size: 12px;
-}
-
-.ml-2px {
-  margin-left: 2px;
-}
-
-.p-20 {
-  padding: 20px;
-}
-
-.mb-10 {
-  margin-bottom: 10px;
-}
-
-/* Slide Drawer */
-.related-keywords {
-  border-radius: 4px;
-  border: 1px solid #dadce0;
-  background-color: #f8f9fa;
-}
-
-.related-keywords .title {
-  font-size: 18px;
-  color: #4a4a4a;
-  margin-bottom: 10px;
-  margin-left: 16px;
-  margin-top: 10px;
-  padding-bottom: 4px;
-  padding-top: 4px;
-}
-
-.related-keywords .keywords {
-  border-top: 1px solid #dadce0;
-}
-
-.related-keywords .btn {
-  font-size: 18px;
-  color: #3c4043;
-  padding-bottom: 14px;
-  padding-left: 16px;
-  padding-right: 16px;
-  padding-top: 14px;
-}
-
-.related-keywords .btn:not(:last-child) {
-  border-bottom: 1px solid #dadce0 !important;
-}
-
-/* Slide */
-.sliding-window {
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100vw;
-  height: 100%;
-  overflow: hidden;
-  pointer-events: auto;
-  display: none;
-  z-index: 100;
-}
-
-.sliding-modal {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  background-color: #000;
-  transition: opacity 0.5s ease-in-out;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-}
-
-.visibility-show {
-  display: block;
-}
-
-.sliding-modal.show {
-  opacity: 0.5;
-}
-
-.slide-content {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 95%;
-  transition: transform 0.5s ease-in-out;
-  transform: translateY(100%);
-}
-
-.no-transition {
-  transition: none;
-}
-
-.slide-container {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  clip-path: inset(0 0 -50px 0 round 20px);
-}
-
-.content {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  overflow-y: scroll;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-  overflow-y: scroll;
-  overscroll-behavior: none;
-  scroll-snap-type: y mandatory;
-}
-
-.content .items {
-  display: flex;
-  flex-direction: column;
-  min-height: 100%;
-}
-
-.moving-handle-holder {
-  scroll-snap-align: start;
-  scroll-snap-stop: always;
-}
-
-.moving-handle-holder .handle {
-  align-items: flex-end;
-  border-radius: 20px 20px 0 0;
-  background: #f9f9f9;
-  display: flex;
-  height: 30px;
-  justify-content: center;
-  cursor: grab;
-}
-
-.moving-handle-holder .handle-icon {
-  background: #dadce0;
-  border-radius: 2px;
-  height: 4px;
-  margin-bottom: 8px;
-  width: 50px;
-}
-
-.content .card {
-  width: 100%;
-  height: calc(100% - 30px);
-  flex-grow: 1;
-  background-color: #f9f9f9;
-  margin-top: -1px;
-}
-
-.content .card-img-top {
-  height: 240px;
-  object-fit: contain;
-}
-
-#card-content {
-  display: none;
-  opacity: 0;
-  transition: opacity 0.5s ease-in;
-}
-
-.btn-price {
-  background: #ffffff;
-  border: 1px solid #ececec;
-  box-shadow: 2px 15px 9px rgba(0, 0, 0, 0.01), 1px 7px 7px rgba(0, 0, 0, 0.02),
-    0px 2px 4px rgba(0, 0, 0, 0.02), 0px 0px 0px rgba(0, 0, 0, 0.03);
-  border-radius: 64px;
+.flex-gap-16 {
+  gap: 1rem;
 }
 
 /* Mobile */
+@media (min-width: 768px) {
+  .display-4 {
+    font-size: 3rem;
+  }
+  .h-md-250 {
+    height: 250px;
+  }
+}
+
 @media screen and (max-width: 600px) {
   body {
     font-size: 16px;
