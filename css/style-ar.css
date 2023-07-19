@@ -285,7 +285,7 @@ body.p-16 {
   border-radius: 50px;
 }
 .bottom-sheet .body {
-  height: calc(100% - 10px);
+  height: calc(100% - 16px);
   overflow-y: auto;
   scrollbar-width: none;
 }
@@ -452,7 +452,7 @@ body.p-16 {
   }
 
   .bottom-sheet .body {
-    height: calc(100% - 24px);
+    height: calc(100% - 36px);
   }
 
   .header .drag-icon {
