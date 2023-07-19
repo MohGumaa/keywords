@@ -432,6 +432,10 @@ body.p-16 {
     transition: 0.1s linear;
   }
 
+  .button-highlight {
+    padding: 0px 8px;
+  }
+
   .product-card .card-title {
     font-size: 15px;
     line-height: 1.4;
@@ -461,7 +465,7 @@ body.p-16 {
   }
 
   .btn-price .bi {
-    margin-top: 1px;
+    margin-top: 4px;
   }
 
   .mx-30 {
