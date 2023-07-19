@@ -171,13 +171,13 @@
             alt="export"
             class="img-fluid rounded mb-4 pb-2"
           />
-          <p>
+          <p id="slide-4">
             يعيد MateBook X Pro تعريف جماليات الكمبيوتر باستخدام تقنيات معالجة
             المواد الجديدة. تتميز بجسم معدني مهدئ للبشرة ، مما يوفر سطحًا غير
-            لامع فريدًا ويوفر قبضة مريحة. يتكون الإصدار المتميز من جسم HUAWEI من
-            سبائك المغنيسيوم خفيفة الوزن وقوية. يتم تطبيق عملية طلاء أكسدة القوس
-            المصغر المبتكرة على الجسم المتجدد من سبائك المغنيسيوم ، والذي لا
-            يحسن فقط صلابة ومقاومة التآكل لجسم المنتج ، بل يجعل أيضًا عملية
+            لامع فريدًا ويوفر قبضة مريحة. يتكون الإصدار المتميز من جسم هواوي برو
+            30 من سبائك المغنيسيوم خفيفة الوزن وقوية. يتم تطبيق عملية طلاء أكسدة
+            القوس المصغر المبتكرة على الجسم المتجدد من سبائك المغنيسيوم ، والذي
+            لا يحسن فقط صلابة ومقاومة التآكل لجسم المنتج ، بل يجعل أيضًا عملية
             الإنتاج أكثر صداقة للبيئة.
           </p>
           <img
@@ -212,7 +212,7 @@
             alt="export"
             class="img-fluid rounded mb-4 pb-2"
           />
-          <p>
+          <p id="slide-5">
             يأتي جهاز HUAWEI MateBook Pro مقاس 14 بوصة بخيارين للمعالجات ؛ يمكنك
             إما اختيار الطراز مع M2 Pro أو الطراز الأغلى الذي يتميز بـ M2 Max.
             مقارنةً بـ M2 Pro ، يوفر M2 Max الأفضل أداءً أفضل للرسومات مع جميع
@@ -497,6 +497,11 @@
             "مولد الطاقة المحمول محطة طاقة متنقلة من الشحن السريع, اينما كنت في أي وقت جهاز الشحن السريع صديقك المفضل",
           pic: "img/ORICO.jpg",
         },
+        plusOne: {
+          title:
+            "HUAWEI MateBook X Pro 2022 Windows 11 Home i7/16GB/1TB/Touch Screen/Magnesium/Blue",
+          pic: "img/HUAWEI-MateBook.png",
+        },
         arrow: {
           title:
             "المبرد الذكي هو مكيف هواء شخصي صغير وصديق للبيئة يبقيك مرتاحا داخل البيت أو في الخارج",
@@ -528,10 +533,13 @@
       const keywordOne = "بلايستيشن 5";
       const keywordTwo = "مولد الطاقة المحمول";
       const keywordThree = "المبرد الذكي ARCTIC AIR";
+      const keywordFour = "هواوي برو";
 
       const paragraphOne = document.getElementById("slide-1");
       const paragraphTwo = document.getElementById("slide-2");
       const paragraphThree = document.getElementById("slide-3");
+      const paragraphFour = document.getElementById("slide-4");
+      const paragraphFive = document.getElementById("slide-5");
 
       // Cart
       const modifiedParagraphOne = paragraphOne.innerHTML.replace(
@@ -546,10 +554,19 @@
       // Plus
       const modifiedParagraphTwo = paragraphTwo.innerHTML.replace(
         new RegExp(keywordTwo, "gi"),
-        `<span target="_blank"class="button slide-button flex-gap"id="plus">
+        `<span target="_blank" class="button slide-button flex-gap" id="plus">
           <span class="text">$&</span>
           <i class="fa-solid fa-plus fs-15"></i>
           <span class="button-shape yellow"></span>
+        </span>`
+      );
+
+      const modifiedParagraphPlus = paragraphFour.innerHTML.replace(
+        new RegExp(keywordFour, "gi"),
+        `<span target="_blank" class="button slide-button flex-gap" id="plusOne">
+          <span class="text">$&</span>
+          <i class="fa-solid fa-plus fs-15"></i>
+          <span class="button-shape"></span>
         </span>`
       );
 
@@ -566,6 +583,7 @@
       paragraphOne.innerHTML = modifiedParagraphOne;
       paragraphTwo.innerHTML = modifiedParagraphTwo;
       paragraphThree.innerHTML = modifiedParagraphThree;
+      paragraphFour.innerHTML = modifiedParagraphPlus;
 
       // Select DOM elements
       const showModalBtns = document.querySelectorAll(".slide-button");
@@ -695,6 +713,12 @@
         const plusPosition = plus.getBoundingClientRect();
         const plusShape = document.querySelector("#plus .button-shape");
         const iconPlus = document.querySelector("#plus .fa-plus");
+
+        const plusOne = document.getElementById("plusOne");
+        const plusOnePosition = plusOne.getBoundingClientRect();
+        const plusOneShape = document.querySelector("#plusOne .button-shape");
+        const iconPlusOne = document.querySelector("#plusOne .fa-plus");
+
         if (
           plusPosition.top < middleOfViewport &&
           plusPosition.bottom > middleOfViewport
@@ -703,6 +727,17 @@
             plus.classList.add("button-highlight", "text-black");
             plusShape.style.transform = "translate(0%)";
             iconPlus.style.display = "inline-flex";
+          }, 500);
+        }
+
+        if (
+          plusOnePosition.top < middleOfViewport &&
+          plusOnePosition.bottom > middleOfViewport
+        ) {
+          setTimeout(() => {
+            plusOne.classList.add("button-highlight");
+            plusOneShape.style.transform = "translate(0%)";
+            iconPlusOne.style.display = "inline-flex";
           }, 500);
         }
 
