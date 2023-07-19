@@ -193,12 +193,10 @@ body.p-16 {
 .fa-chevron-right,
 .fa-chevron-left {
   font-size: 14px;
-  margin-top: 2.5px;
 }
 
 .bi-caret-right-fill,
-.bi-caret-left-fill,
-.fa-plus {
+.bi-caret-left-fill {
   padding: 5.5px 4px;
 }
 
@@ -213,12 +211,6 @@ body.p-16 {
 
 .flex-gap-16 {
   gap: 1rem;
-}
-
-.fa-plus,
-.fa-chevron-left,
-.bi-caret-left-fill {
-  font-size: 15px;
 }
 
 /* Bottom Modal */

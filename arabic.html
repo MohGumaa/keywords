@@ -316,7 +316,7 @@
       const paragraphOne = document.getElementById("price-link");
       const modifiedParagraphOne = paragraphOne.innerHTML.replace(
         new RegExp(keywordOne, "gi"),
-        `<a href="#" target="_blank"class="text-decoration-none"id="amazon-1">
+        `<a href="#" target="_blank" class="text-decoration-none">
           <span>$&</span>
           <span>(اشتر الآن مقابل 45 جنيهًا)</span>
         </a>`
@@ -329,10 +329,9 @@
 
       const paragraphCartOne = document.getElementById("cartOne");
       const paragraphCartTwo = document.getElementById("cartTwo");
-
       const modifiedParagraphCartOne = paragraphCartOne.innerHTML.replace(
         new RegExp(keywordCartOne, "gi"),
-        `<a href="#" target="_blank"class="text-decoration-none button flex-gap"id="cart-1">
+        `<a href="#" target="_blank" class="text-decoration-none button flex-gap" id="cart-1">
           <span>$&</span>
           ${SVGICON}
           <span class="button-shape"></span>
@@ -340,7 +339,7 @@
       );
       const modifiedParagraphCartTwo = paragraphCartTwo.innerHTML.replace(
         new RegExp(keywordCartTwo, "gi"),
-        `<a href="#" target="_blank"class="text-decoration-none button flex-gap"id="cart-2">
+        `<a href="#" target="_blank" class="text-decoration-none button flex-gap" id="cart-2">
           <span>$&</span>
           ${SVGICONBlack}
           <span class="button-shape yellow"></span>
@@ -353,12 +352,11 @@
       // Plus
       const keywordPlusOne = "مويست-1";
       const paragraphPlusOne = document.getElementById("plusOne");
-
       const modifiedParagraphPlusOne = paragraphPlusOne.innerHTML.replace(
         new RegExp(keywordPlusOne, "gi"),
-        `<a href="#" target="_blank"class="text-decoration-none button flex-gap"id="plus-1">
+        `<a href="#" target="_blank" class="text-decoration-none button flex-gap" id="plus-1">
           <span class="text">$&</span>
-          <i class="fa-solid fa-plus p-0"></i>
+          <i class="fa-solid fa-plus fs-15"></i>
           <span class="button-shape yellow"></span>
         </a>`
       );
@@ -369,21 +367,19 @@
       const keywordArrowTwo = "الجوجوبا";
       const paragraphArrowOne = document.getElementById("arrowOne");
       const paragraphArrowTwo = document.getElementById("arrowTwo");
-
-      // Add Link Arrow
       const modifiedParagraphArrowOne = paragraphArrowOne.innerHTML.replace(
         new RegExp(keywordArrowOne, "gi"),
-        `<a href="#" target="_blank"class="text-decoration-none button"id="arrow-1">
+        `<a href="#" target="_blank" class="text-decoration-none button" id="arrow-1">
           <span class="text">$&</span>
-          <i class="bi bi-caret-left-fill"></i>
+          <i class="bi bi-caret-left-fill fs-15"></i>
           <span class="button-shape"></span>
         </a>`
       );
       const modifiedParagraphArrowTwo = paragraphArrowTwo.innerHTML.replace(
         new RegExp(keywordArrowTwo, "gi"),
-        `<a href="#" target="_blank"class="text-decoration-none button"id="arrow-2">
+        `<a href="#" target="_blank" class="text-decoration-none button" id="arrow-2">
           <span class="text">$&</span>
-          <i class="bi bi-caret-left-fill"></i>
+          <i class="bi bi-caret-left-fill fs-15"></i>
           <span class="button-shape yellow"></span>
         </a>`
       );
@@ -395,10 +391,9 @@
       const keywordChevronOne = "اتوديرم";
       const paragraphChevronOne = document.getElementById("chevronOne");
 
-      // Add Chevron Arrow
       const modifiedParagraphChevronOne = paragraphChevronOne.innerHTML.replace(
         new RegExp(keywordChevronOne, "gi"),
-        `<a href="#" target="_blank"class="text-decoration-none button flex-gap"id="chevron-1">
+        `<a href="#" target="_blank" class="text-decoration-none button flex-gap" id="chevron-1">
           <span class="text">$&</span>
           <i class="fa-solid fa-chevron-left"></i>
           <span class="button-shape"></span>
@@ -424,7 +419,6 @@
         const cartShapeTwo = document.querySelector("#cart-2 .button-shape");
         const cartSVGTwo = document.querySelector("#cart-2 svg");
 
-        // Show Cart Buttons
         if (
           cartOnePosition.top < middleOfViewport &&
           cartOnePosition.bottom > middleOfViewport
@@ -453,7 +447,6 @@
         const plusShapeOne = document.querySelector("#plus-1 .button-shape");
         const iconPlusOne = document.querySelector("#plus-1 .fa-plus");
 
-        // Show Plus Buttons
         if (
           plusOnePosition.top < middleOfViewport &&
           plusOnePosition.bottom > middleOfViewport
