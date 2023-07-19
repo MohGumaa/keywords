@@ -106,7 +106,7 @@ body {
   font-size: 18px;
 }
 
-.fs-16 {
+.fs-15 {
   font-size: 16px;
 }
 
@@ -114,20 +114,12 @@ body {
   font-size: 15px;
 }
 
-.fs-12 {
-  font-size: 12px;
+body.overflow-hidden {
+  height: 100%;
 }
 
-.ml-2px {
-  margin-left: 2px;
-}
-
-.p-20 {
-  padding: 20px;
-}
-
-.mb-10 {
-  margin-bottom: 10px;
+body.p-16 {
+  padding-right: 17px;
 }
 
 /* Button */
@@ -193,9 +185,8 @@ body {
 }
 
 .bi-caret-right-fill,
-.bi-caret-left-fill,
-.fa-plus {
-  padding: 4.5px 4px;
+.bi-caret-left-fill {
+  padding: 5.5px 4px;
 }
 
 .svg-size {
