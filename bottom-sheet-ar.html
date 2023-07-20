@@ -265,15 +265,14 @@
             MateBook Super. أيضًا ، مع مرونة نظام Windows البيئي والتكامل السلس
             للأجهزة المتعددة ، يوفر Super Device أفضل ما في العالمين.
           </p>
-          <p>
-            الحكم عندما تزن جميع الميزات ، من السهل أن ترى أن HUAWEI MateBook X
-            Pro يمنحك أفضل تجربة رائدة. يضم بعض الميزات التي لا تضاهى. تتميز
-            شاشة العرض الكاملة بالألوان الحقيقية 3.1K HUAWEI Real Color FullView
-            Display بكل الدقة التي تريدها ، والمعالج قوي بما يكفي للتعامل مع أي
-            شيء ترميه عليه ، كما تسهل ميزات Super Device من إدارة الأجهزة
-            المتعددة. لذا ، إذا كان ما تريده هو جهاز كمبيوتر محمول أنيق وشامل
-            يمكنك استخدامه في كل شيء ، بما في ذلك الإنتاجية والترفيه ، فإن
-            HUAWEI MateBook X Pro هو الخيار الصحيح.
+          <p id="slide-6">
+            الحكم عندما تزن جميع الميزات ، من السهل أن ترى أن ايفون 14 برو max
+            يمنحك أفضل تجربة رائدة. يضم بعض الميزات التي لا تضاهى. تتميز شاشة
+            العرض الكاملة بالألوان الحقيقية 3.1K Display بكل الدقة التي تريدها ،
+            والمعالج قوي بما يكفي للتعامل مع أي شيء ترميه عليه ، كما تسهل ميزات
+            Super Device من إدارة الأجهزة المتعددة. لذا ، إذا كان ما تريده هو
+            جهاز كمبيوتر محمول أنيق وشامل يمكنك استخدامه في كل شيء ، بما في ذلك
+            الإنتاجية والترفيه ، فإن HUAWEI MateBook X Pro هو الخيار الصحيح.
           </p>
         </div>
 
@@ -514,6 +513,11 @@
             "المبرد الذكي هو مكيف هواء شخصي صغير وصديق للبيئة يبقيك مرتاحا داخل البيت أو في الخارج",
           pic: "img/arctic-air.jpg",
         },
+        text: {
+          title:
+            "أبل أيفون 14 برو ماكس 256 جيجابايت أسود فلكي - إصدار الشرق الأوسط",
+          pic: "img/Iphone14.png",
+        },
       };
 
       const SVGICON = `<svg width="723" height="588" viewBox="0 0 723 588" fill="none" class="svg-size" xmlns="http://www.w3.org/2000/svg">
@@ -542,12 +546,14 @@
       const keywordThree = "المبرد الذكي ARCTIC AIR";
       const keywordFour = "هواوي برو";
       const keywordFive = "الة بريفيل باريستا";
+      const keywordSix = "ايفون 14 برو max";
 
       const paragraphOne = document.getElementById("slide-1");
       const paragraphTwo = document.getElementById("slide-2");
       const paragraphThree = document.getElementById("slide-3");
       const paragraphFour = document.getElementById("slide-4");
       const paragraphFive = document.getElementById("slide-5");
+      const paragraphSix = document.getElementById("slide-6");
 
       // Cart
       const modifiedParagraphOne = paragraphOne.innerHTML.replace(
@@ -597,11 +603,20 @@
         </span>`
       );
 
+      const modifiedParagraphSix = paragraphSix.innerHTML.replace(
+        new RegExp(keywordSix, "gi"),
+        `<span class="slide-button text-link" id="text">
+          <span>$&</span>
+          <span>(اشتر الآن مقابل 4500 درهم)</span>
+        </span>`
+      );
+
       paragraphOne.innerHTML = modifiedParagraphOne;
       paragraphTwo.innerHTML = modifiedParagraphTwo;
       paragraphThree.innerHTML = modifiedParagraphThree;
       paragraphFour.innerHTML = modifiedParagraphPlus;
       paragraphFive.innerHTML = modifiedParagraphFive;
+      paragraphSix.innerHTML = modifiedParagraphSix;
 
       // Select DOM elements
       const showModalBtns = document.querySelectorAll(".slide-button");
