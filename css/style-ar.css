@@ -461,7 +461,7 @@ body.p-16 {
   }
 
   .bottom-sheet .body {
-    height: calc(100% - 36px);
+    height: calc(100% - 28px);
   }
 
   .header .drag-icon {
