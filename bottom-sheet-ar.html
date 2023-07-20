@@ -213,10 +213,10 @@
             class="img-fluid rounded mb-4 pb-2"
           />
           <p id="slide-5">
-            يأتي جهاز HUAWEI MateBook Pro مقاس 14 بوصة بخيارين للمعالجات ؛ يمكنك
-            إما اختيار الطراز مع M2 Pro أو الطراز الأغلى الذي يتميز بـ M2 Max.
-            مقارنةً بـ M2 Pro ، يوفر M2 Max الأفضل أداءً أفضل للرسومات مع جميع
-            أنوية وحدة معالجة الرسومات الإضافية.
+            يأتي جهاز الة بريفيل باريستا اكسبرس مقاس 14 بوصة بخيارين للمعالجات ؛
+            يمكنك إما اختيار الطراز مع M2 Pro أو الطراز الأغلى الذي يتميز بـ M2
+            Max. مقارنةً بـ M2 Pro ، يوفر M2 Max الأفضل أداءً أفضل للرسومات مع
+            جميع أنوية وحدة معالجة الرسومات الإضافية.
           </p>
           <h5 class="my-3">الميزات الذكية</h5>
           <p>
@@ -494,6 +494,11 @@
           title: "سوني جهاز ألعاب بلايستيشن 5 (إصدار الأقراص) مع ذراع تحكم",
           pic: "img/playstation-5.jpg",
         },
+        cartOne: {
+          title:
+            "ماكينة تحضير قهوة الإسبرسو للباريستا 2 لتر 1700 وات BES870 كروم",
+          pic: "img/Breville.png",
+        },
         plus: {
           title:
             "مولد الطاقة المحمول محطة طاقة متنقلة من الشحن السريع, اينما كنت في أي وقت جهاز الشحن السريع صديقك المفضل",
@@ -536,6 +541,7 @@
       const keywordTwo = "مولد الطاقة المحمول";
       const keywordThree = "المبرد الذكي ARCTIC AIR";
       const keywordFour = "هواوي برو";
+      const keywordFive = "الة بريفيل باريستا";
 
       const paragraphOne = document.getElementById("slide-1");
       const paragraphTwo = document.getElementById("slide-2");
@@ -563,15 +569,6 @@
         </span>`
       );
 
-      const modifiedParagraphPlus = paragraphFour.innerHTML.replace(
-        new RegExp(keywordFour, "gi"),
-        `<span class="button slide-button flex-gap" id="plusOne">
-          <span class="text">$&</span>
-          <i class="fa-solid fa-plus fs-15"></i>
-          <span class="button-shape"></span>
-        </span>`
-      );
-
       // Arrow
       const modifiedParagraphThree = paragraphThree.innerHTML.replace(
         new RegExp(keywordThree, "gi"),
@@ -582,10 +579,29 @@
         </span>`
       );
 
+      const modifiedParagraphPlus = paragraphFour.innerHTML.replace(
+        new RegExp(keywordFour, "gi"),
+        `<span class="button slide-button flex-gap" id="plusOne">
+          <span class="text">$&</span>
+          <i class="fa-solid fa-plus fs-15"></i>
+          <span class="button-shape"></span>
+        </span>`
+      );
+
+      const modifiedParagraphFive = paragraphFive.innerHTML.replace(
+        new RegExp(keywordFive, "gi"),
+        `<span class="button slide-button flex-gap" id="cartOne">
+          <span>$&</span>
+          ${SVGICONBlack}
+          <span class="button-shape yellow"></span>
+        </span>`
+      );
+
       paragraphOne.innerHTML = modifiedParagraphOne;
       paragraphTwo.innerHTML = modifiedParagraphTwo;
       paragraphThree.innerHTML = modifiedParagraphThree;
       paragraphFour.innerHTML = modifiedParagraphPlus;
+      paragraphFive.innerHTML = modifiedParagraphFive;
 
       // Select DOM elements
       const showModalBtns = document.querySelectorAll(".slide-button");
@@ -699,6 +715,12 @@
         const cartPosition = cart.getBoundingClientRect();
         const cartShape = document.querySelector("#cart .button-shape");
         const cartSVG = document.querySelector("#cart svg");
+
+        const cartOne = document.getElementById("cartOne");
+        const cartOnePosition = cartOne.getBoundingClientRect();
+        const cartOneShape = document.querySelector("#cartOne .button-shape");
+        const cartOneSVG = document.querySelector("#cartOne svg");
+
         if (
           cartPosition.top < middleOfViewport &&
           cartPosition.bottom > middleOfViewport
@@ -707,6 +729,17 @@
             cart.classList.add("button-highlight");
             cartShape.style.transform = "translate(0%)";
             cartSVG.style.display = "inline-flex";
+          }, 500);
+        }
+
+        if (
+          cartOnePosition.top < middleOfViewport &&
+          cartOnePosition.bottom > middleOfViewport
+        ) {
+          setTimeout(() => {
+            cartOne.classList.add("button-highlight", "text-black");
+            cartOneShape.style.transform = "translate(0%)";
+            cartOneSVG.style.display = "inline-flex";
           }, 500);
         }
 
