@@ -279,7 +279,7 @@ body.p-16 {
   border-radius: 50px;
 }
 .bottom-sheet .body {
-  height: calc(100% - 10px);
+  height: calc(100% - 12px);
   overflow-y: auto;
   scrollbar-width: none;
 }
@@ -389,9 +389,9 @@ body.p-16 {
 }
 
 .footer-text {
-  color: #5a5a5a;
+  color: #70757a;
   font-size: 12px;
-  font-weight: 200;
+  font-weight: 400;
 }
 
 /* Mobile */
@@ -412,6 +412,11 @@ body.p-16 {
 
   body.p-16 {
     padding-right: initial;
+  }
+
+  .bi-caret-right-fill,
+  .bi-caret-left-fill {
+    padding: 5px 4px;
   }
 
   .svg-size {
@@ -443,7 +448,7 @@ body.p-16 {
   }
 
   .bottom-sheet .body {
-    height: calc(100% - 24px);
+    height: calc(100% - 28px);
   }
 
   .header .drag-icon {

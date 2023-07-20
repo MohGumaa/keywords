@@ -424,6 +424,11 @@ body.p-16 {
     padding-right: initial;
   }
 
+  .bi-caret-right-fill,
+  .bi-caret-left-fill {
+    padding: 5px 4px;
+  }
+
   .svg-size {
     width: 16px;
     height: 16px;

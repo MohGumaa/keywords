@@ -316,7 +316,7 @@
             aria-label="Close"
           ></button>
         </div>
-        <div class="d-flex flex-column body pt-4">
+        <div class="d-flex flex-column body pt-3 pt-md-4">
           <div
             id="productCard"
             class="card border-0 rounded-0 flex-column flex-md-row product-card"
@@ -674,6 +674,8 @@
           postContent.classList.remove("overflow-hidden");
           document.documentElement.style.overflow = "initial";
           productCard.style.opacity = 0;
+          cardImage.src = "#";
+          cardTitle.textContent = "#";
           if (!isMac) {
             document.body.classList.remove("p-16");
           }
