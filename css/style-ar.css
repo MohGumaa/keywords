@@ -252,7 +252,7 @@ body.p-16 {
   width: 100%;
   max-height: 100vh;
   height: 48%;
-  padding: 20px 30px 10px;
+  padding: 20px 30px;
   position: relative;
   transform: translateY(100%);
   transition: all 0.5s ease-in-out;
@@ -285,7 +285,7 @@ body.p-16 {
   border-radius: 50px;
 }
 .bottom-sheet .body {
-  height: calc(100% - 16px);
+  height: calc(100% - 12px);
   overflow-y: auto;
   scrollbar-width: none;
 }
@@ -401,7 +401,7 @@ body.p-16 {
 .footer-text {
   color: #5a5a5a;
   font-size: 12px;
-  font-weight: 200;
+  font-weight: 400;
 }
 
 /* Mobile */
@@ -426,7 +426,7 @@ body.p-16 {
 
   .bi-caret-right-fill,
   .bi-caret-left-fill {
-    padding: 5px 4px;
+    padding: 6px 4px;
   }
 
   .svg-size {
@@ -476,5 +476,9 @@ body.p-16 {
   .mx-30 {
     margin-right: 20px;
     margin-left: 20px;
+  }
+
+  .text-height {
+    line-height: 1.5;
   }
 }

@@ -317,7 +317,7 @@
             aria-label="Close"
           ></button>
         </div>
-        <div class="d-flex flex-column body pt-4">
+        <div class="d-flex flex-column body pt-3 pt-md-4">
           <div
             id="productCard"
             class="card border-0 rounded-0 flex-column flex-md-row product-card"
@@ -458,7 +458,9 @@
                         <td class="border-bottom-0 text-success">
                           780.00 درهم إماراتي
                         </td>
-                        <td><a href="#" class="btn">تفضل بزيارة الموقع</a></td>
+                        <td class="border-bottom-0">
+                          <a href="#" class="btn">تفضل بزيارة الموقع</a>
+                        </td>
                       </tr>
                     </tbody>
                   </table>
@@ -544,7 +546,7 @@
       // Cart
       const modifiedParagraphOne = paragraphOne.innerHTML.replace(
         new RegExp(keywordOne, "gi"),
-        `<span target="_blank" class="button slide-button flex-gap" id="cart">
+        `<span class="button slide-button flex-gap" id="cart">
           <span>$&</span>
           ${SVGICON}
           <span class="button-shape"></span>
@@ -554,7 +556,7 @@
       // Plus
       const modifiedParagraphTwo = paragraphTwo.innerHTML.replace(
         new RegExp(keywordTwo, "gi"),
-        `<span target="_blank" class="button slide-button flex-gap" id="plus">
+        `<span class="button slide-button flex-gap" id="plus">
           <span class="text">$&</span>
           <i class="fa-solid fa-plus fs-15"></i>
           <span class="button-shape yellow"></span>
@@ -563,7 +565,7 @@
 
       const modifiedParagraphPlus = paragraphFour.innerHTML.replace(
         new RegExp(keywordFour, "gi"),
-        `<span target="_blank" class="button slide-button flex-gap" id="plusOne">
+        `<span class="button slide-button flex-gap" id="plusOne">
           <span class="text">$&</span>
           <i class="fa-solid fa-plus fs-15"></i>
           <span class="button-shape"></span>
@@ -573,7 +575,7 @@
       // Arrow
       const modifiedParagraphThree = paragraphThree.innerHTML.replace(
         new RegExp(keywordThree, "gi"),
-        `<span target="_blank" class="button slide-button" id="arrow">
+        `<span class="button slide-button" id="arrow">
           <span class="text">$&</span>
           <i class="bi bi-caret-left-fill fs-15"></i>
           <span class="button-shape"></span>
@@ -643,8 +645,6 @@
           postContent.classList.remove("overflow-hidden");
           document.documentElement.style.overflow = "initial";
           productCard.style.opacity = 0;
-          cardImage.src = "#";
-          cardTitle.textContent = "#";
           if (!isMac) {
             document.body.classList.remove("p-16");
           }

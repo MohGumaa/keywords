@@ -170,7 +170,7 @@
             <strong>2- مويست-1 Moist</strong>
           </p>
           <p id="plusOne">
-            يلعب الكريمات مويست-1 دورًا كبيرًا في علاج جفاف البشرة وحمايتها من
+            تلعب كريمات مويست دورًا كبيرًا في علاج جفاف البشرة وحمايتها من
             التقشر والالتهاب في الشتاء، ويرجع السبب إلى احتوائها على عناصر
             طبيعية، تمد الجلد بالترطيب اللازم، مثل الجلسرين و زيت البرافين وشمع
             العسل.
@@ -340,7 +340,7 @@
       const modifiedParagraphCartTwo = paragraphCartTwo.innerHTML.replace(
         new RegExp(keywordCartTwo, "gi"),
         `<a href="#" target="_blank" class="text-decoration-none button flex-gap" id="cart-2">
-          <span>$&</span>
+          <span class="text-height">$&</span>
           ${SVGICONBlack}
           <span class="button-shape yellow"></span>
         </a>`
@@ -350,7 +350,7 @@
       paragraphCartTwo.innerHTML = modifiedParagraphCartTwo;
 
       // Plus
-      const keywordPlusOne = "مويست-1";
+      const keywordPlusOne = "كريمات مويست";
       const paragraphPlusOne = document.getElementById("plusOne");
       const modifiedParagraphPlusOne = paragraphPlusOne.innerHTML.replace(
         new RegExp(keywordPlusOne, "gi"),
