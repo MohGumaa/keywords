@@ -281,7 +281,7 @@ body.p-16 {
   height: 4px;
   width: 40px;
   display: block;
-  background: #c7d0e1;
+  background: #f0f0f0;
   border-radius: 50px;
 }
 .bottom-sheet .body {
@@ -415,22 +415,12 @@ body.p-16 {
 }
 
 @media screen and (max-width: 768px) {
-  .x-close-btn {
-    background-color: #c7d0e1;
-    border-radius: 50%;
+  .btn-close {
+    background: url(../img//close-btn.svg) no-repeat center/cover;
     position: absolute;
     top: 8px;
     left: 12px;
     z-index: 5;
-    width: 24px;
-    height: 24px;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .x-close-btn .btn-close {
-    padding: 0;
-    background-size: 10px;
   }
 }
 
