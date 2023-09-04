@@ -419,7 +419,7 @@ body.p-16 {
     background: url(../img/close-btn-new.svg) no-repeat center/cover;
     position: absolute;
     top: 8px;
-    left: 12px;
+    left: 8px;
     z-index: 5;
   }
 }
