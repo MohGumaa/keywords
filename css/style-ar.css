@@ -416,11 +416,22 @@ body.p-16 {
 
 @media screen and (max-width: 768px) {
   .x-close-btn {
+    background-color: rgba(60, 64, 67, 0.08);
+    border-radius: 50%;
     position: absolute;
-    left: 13px;
-    top: 13px;
+    top: 8px;
+    left: 12px;
     z-index: 5;
+    width: 24px;
+    height: 24px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .x-close-btn .btn-close {
     padding: 0;
+    background-size: 10px;
+    opacity: 0.75;
   }
 }
 
