@@ -415,6 +415,10 @@ body.p-16 {
 }
 
 @media screen and (max-width: 768px) {
+  .bottom-sheet .header {
+    position: relative;
+  }
+
   .btn-close {
     background: url(../img/close-btn-new.svg) no-repeat center/cover;
     position: absolute;
