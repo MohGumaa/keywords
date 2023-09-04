@@ -406,7 +406,7 @@ body.p-16 {
 
 @media screen and (max-width: 768px) {
   .btn-close {
-    background: url(../img//close-btn-dark.svg) no-repeat center/cover;
+    background: url(../img/close-btn-dark.svg) no-repeat center/cover;
     position: absolute;
     top: 8px;
     right: 12px;
