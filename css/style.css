@@ -408,9 +408,10 @@ body.p-16 {
   .btn-close {
     background: url(../img/close-btn-new.svg) no-repeat center/cover;
     position: absolute;
-    top: 8px;
+    top: 50%;
     right: 8px;
     z-index: 5;
+    transform: translateY(-50%);
   }
 }
 
