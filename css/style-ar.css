@@ -416,7 +416,7 @@ body.p-16 {
 
 @media screen and (max-width: 768px) {
   .x-close-btn {
-    background-color: rgba(60, 64, 67, 0.08);
+    background-color: #c7d0e1;
     border-radius: 50%;
     position: absolute;
     top: 8px;
